@@ -11,8 +11,8 @@ from Bio import Entrez
 
 Entrez.email = "<ghvprr@gmail.com>"
 
-def esearch_tax_ids(term: str, max_return: int=5) -> List[str]:
-    with Entrez.esearch(db= "taxonomy", term=term, retmax=max_return) as handle:
+def esearch_tax_ids(term: str, retmax: int=5) -> List[str]:
+    with Entrez.esearch(db= "taxonomy", term=term, retmax=retmax) as handle:
         records = Entrez.read(handle)
     return list(records.get["IdList"])
 
@@ -23,8 +23,8 @@ def fetch_tax_ids(ids: List[str]) -> List[Dict]:
         records = Entrez.read(handle)
         return records.get["IdList"]
 
-def best_taxon_match(name: str,  return_max: int=5, pause: float= 0.34) -> Tuple[str, str, str]:
-    ids = esearch_tax_ids(f'"{name}"[Scientific Name]', max_return=return_max)
+def best_taxon_match(name: str,  retmax: int=5, pause: float= 0.34) -> Tuple[str, str, str]:
+    ids = esearch_tax_ids(f'"{name}"[Scientific Name]', retmax=retmax)
     time.sleep(pause)
     if not ids:
         ids = esearch_tax_ids(name)
@@ -103,7 +103,7 @@ def main() -> None:
             key = name.casefold()
             try:
                 if key not in cache:
-                    cache[key] = best_taxon_match(name, return_max=args.retmax)
+                    cache[key] = best_taxon_match(name, retmax=args.retmax)
                 tax_id, matched, rank = cache[key]
                 out_row.update({"tax_id": tax_id, "matched_name": matched, "rank": rank, "status": "ok"})
             except Exception as e:
@@ -120,7 +120,7 @@ def main() -> None:
 
         for name in args.terms:
             try:
-                tax_id, matched, rank = best_taxon_match(name, return_max=args.retmax)
+                tax_id, matched, rank = best_taxon_match(name, retmax=args.retmax)
                 print(f"{name}\t{matched}\t{rank}\t{tax_id}")
             except Exception as e:
                 print(f"{name}\t\t\tstatus={e}")
