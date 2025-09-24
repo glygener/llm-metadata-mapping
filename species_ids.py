@@ -74,7 +74,7 @@ def write_out_csv(csv_path: str, rows: List[Dict[str, str]], extra_cols: List[st
         writer.writerows(rows)
     return csv_path
 
-def build_arg_parser() -> argparse:
+def build_arg_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         description="Match species names (from CSV or args) to NCBI Taxonomy IDs."
     )
@@ -85,6 +85,7 @@ def build_arg_parser() -> argparse:
     p.add_argument("--email", help="Your email (or set NCBI_EMAIL).")
     p.add_argument("--api-key", help="NCBI API key (or set NCBI_API_KEY).")
     p.add_argument("terms", nargs="*", help="Optional: species names as positional args (if no CSV).")
+    return p 
 def main() -> None:
     args = build_arg_parser().parse_args()
     cache: Dict[str, Tuple[str, str, str]] = {}
