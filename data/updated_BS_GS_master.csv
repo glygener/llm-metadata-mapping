@@ -1,0 +1,118 @@
+ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
+25255,1,digitalis lutea,Digitalis lutea,285825,,species,1,Digitalis purpurea
+25257,1,citrobacter freundii,Citrobacter freundii,546,,species,1,"Citrobacter freundii, Citrobacter freundii"
+25261,1,abelmoschus esculentus,Abelmoschus esculentus,455045,,species,1,"Abelmoschus esculentus, Abelmoschus esculentus"
+25264,1,codium latum,Codium latum,221047,,species,1,Codium fragile
+25265,1,acetobacter methanolicus,Acidomonas methanolica,437,acetobacter methanolicus,species,1,"Acetobacter methanolicus, Acetobacter aceti"
+25267,1,chlorostoma argyrostoma turbinatum,Tegula turbinatum,761901,chlorostoma argyrostoma turbinatum,species,1,Chlorostoma argyrostoma
+25272,1,polygala klotzschii,Acanthocladus brasiliensis,2698660,polygala klotzschii,species,1,"Polygala klotzschii, Polygala klotzschiana"
+25275,1,tivela mactroides,Tivela mactroides,345374,,species,1,Tivela mactroides
+25279,1,aesculus indica,Aesculus indica,531823,,species,1,Aesculus hippocastanum
+25283,1,lipomyces starkeyi,Lipomyces starkeyi,29829,,species,1,lipomyces starkii
+25521,1,liriope spicata,Liriope spicata,100521,,species,1,Liriope muscari
+25523,1,furcellaria lumbricalis,Furcellaria lumbricalis,28020,,species,1,"Furcellaria lumbricalis, Furcellaria lumbricalis"
+25526,1,nocardia corynebacteroides,Rhodococcoides corynebacterioides,53972,nocardia corynebacteroides,species,1,Nocardia asteroides
+26526,1,laminaria japonica,Saccharina japonica,88149,laminaria japonica,species,1,"Laminaria japonica, Laminaria japonica"
+26530,1,mycobacterium avium,Mycobacterium avium,1764,,species,1,"Mycobacterium avium, Mycobacterium avium"
+26532,1,porphyra umbilicalis,Porphyra umbilicalis,2786,,species,1,"Porphyra umbilicalis, Porphyra tenera"
+26534,1,mycobacterium peregrinum,Mycolicibacterium peregrinum,43304,mycobacterium peregrinum,species,1,"Mycobacterium peregrinum, Mycobacterium porcinum"
+26538,1,beta vulgaris,Beta vulgaris,161934,,species,1,"Beta vulgaris, Beta vulgaris"
+26541,1,khaya ivorensis,Khaya ivorensis,486173,,species,1,Khaya senegalensis
+26547,1,chlorophytum,Chlorophytum,16046,,genus,1,Chlorophytum comosum
+25285,1,erwinia amylovora t,Podospora comata,48703,erwinia amylovora t,species,1,"Erwinia amylovora, Erwinia amylovora"
+25290,1,volvariella volvacea,Volvariella volvacea,36659,,species,1,"Volvariella volvacea, Volvariella volvacea"
+25292,1,mycobacterium haemophilum,Mycobacterium haemophilum,29311,,species,1,"
+Mycobacterium haemophilum, Mycobacterium marinum"
+25294,1,trifolium pratense,Trifolium pratense,57577,,species,1,"Trifolium pratense, Trifolium pratense"
+25298,1,verbascum songaricum,Verbascum songaricum,1685578,,species,1,"
+Verbascum songaricum, Verbascum thapsus"
+25300,1,bupleurum fruticosum,Bupleurum fruticosum,48103,,species,1,Bupleurum rotundifolium
+25304,1,lactococcus garvieae,Lactococcus garvieae,1363,,species,1,"Lactococcus garvieae, Lactococcus garvieae"
+25307,1,chironomus tentans,Chironomus tentans,7153,,species,1,"Chironomus tentans, Chironomus tentans"
+25310,1,laminaria digitata,Laminaria digitata,80365,,species,1,"Laminaria digitata, Laminaria digitata"
+25312,1,cistus salvifolius,Cistus salviifolius,335170,cistus salvifolius,species,1,"Cistus salvifolius, Cistus salvifolius"
+25315,1,staphylococcus aureus,Staphylococcus aureus,1280,,species,1,"Staphylococcus aureus, Staphylococcus aureus"
+25318,1,albizzia julibrissin,Albizia julibrissin,3813,albizzia julibrissin,species,1,"
+Albizia julibrissin, Albizia julibrissin"
+25322,1,verbascum nigrum,Verbascum nigrum,90364,,species,1,"
+Verbascum nigrum, Verbascum thapsus"
+25323,1,crocosmia crocosmiiflora,Crocosmia x crocosmiiflora,1053288,crocosmia crocosmiiflora,species,1,"Crocosmia crocosmiiflora, Crocosmia x crocosmiiflora"
+25327,1,ricinus communis,Ricinus communis,3988,,species,1,"Ricinus communis, Ricinus communis"
+25329,1,plantago depressa,Plantago depressa,411227,,species,1,"
+Plantago lanceolata"
+25333,1,trypanosoma brucei brucei,Trypanosoma brucei brucei,5702,,subspecies,1,"Trypanosoma brucei, Trypanosoma brucei brucei"
+25336,1,randia dumetorum,Catunaregam spinosa,136894,randia dumetorum,species,1,"
+Randia formosa"
+25339,1,solanum anguivi,Solanum anguivi,329760,,species,1,"
+Solanum aethiopicum"
+25342,1,tubocapsicum,Tubocapsicum,180579,,genus,1,"Capsicum tubocapsicum, Capsicum tubocapsicum"
+25345,1,aralia decaisneana,Aralia decaisneana,1603692,,species,1,"
+Aralia decaisneana, Aralia decaisneana"
+25347,1,phyllanthus emblica,Emblica officinalis,296036,phyllanthus emblica,species,1,"Phyllanthus emblica, Phyllanthus emblica"
+25349,1,streptosporangium viridogriseum,Kutzneria viridogrisea,47990,streptosporangium viridogriseum,species,1,"Streptomyces viridogriseus, Streptomyces viridogriseus"
+25352,1,crotalaria thebaica,Crotalaria thebaica,1978221,,species,1,"Crotalaria thebaica, Crotalaria thebaica"
+25354,1,lithospermum erythrorhizon,Lithospermum erythrorhizon,34254,,species,1,"
+lithospermum erythrorhizon, lithospermum erythrorhizon"
+25357,1,hibiscus moscheutos,Hibiscus moscheutos,241598,,species,1,"Hibiscus moscheutos, Hibiscus moscheutos"
+25359,1,serratia marcescens,Serratia marcescens,615,,species,1,"Serratia marcescens, Serratia marcescens"
+25361,1,streptococcus faecium,Enterococcus faecium,1352,streptococcus faecium,species,1,Enterococcus faecium
+25364,1,pseudomonas atlantica,Pseudoalteromonas atlantica,288,pseudomonas atlantica,species,1,"Pseudomonas atlantica, Pseudomonas atlantica"
+25369,1,simmondsia chinensis,Simmondsia chinensis,3999,,species,1,"
+Simmondsia chinensis, Simmondsia chinensis"
+25371,1,acacia senegal,Senegalia senegal,138043,acacia senegal,species,1,"Acacia senegal, Vachellia senegal"
+25375,1,asclepias fruticosa,Gomphocarpus fruticosus,219240,asclepias fruticosa,species,1,"
+Asclepias fruticosa  
+Asclepias tuberosa"
+25377,1,blastocrithidia culicis,Strigomonas culicis,28005,blastocrithidia culicis,species,1,Blastocrithidia sp.
+25380,1,aspergillus giganteus,Aspergillus giganteus,5060,,species,1,"Aspergillus giganteus, Aspergillus niger"
+25383,1,bufo japonicus japonicus,Bufo japonicus japonicus,1175986,,subspecies,1,"Bufo japonicus, Bufo japonicus"
+25385,1,balaenoptera edeni,Balaenoptera edeni,9769,,species,1,"Balaenoptera edeni, Balaenoptera edeni"
+25389,1,porphyromonas gingivalis,Porphyromonas gingivalis,837,,species,1,"Porphyromonas gingivalis, Porphyromonas gingivalis"
+25396,1,dactylis glomerata,Dactylis glomerata,4509,,species,1,"Dactylis glomerata, Dactylis glomerata"
+25398,1,clostridium thermocellum,Acetivibrio thermocellus,1515,clostridium thermocellum,species,1,"Clostridium thermocellum, Clostridium thermocellum"
+25401,1,phlomis medicinalis,Phlomoides medicinalis,1138144,phlomis medicinalis,species,1,"
+Phlomis fruticosa"
+25404,1,serratia plymuthica,Serratia plymuthica,82996,,species,1,"Serratia plymuthica, Serratia plymuthica"
+25406,1,fraxinus malacophylla,Fraxinus malacophylla,880141,,species,1,"
+Fraxinus excelsior"
+25410,1,rana catesbeiana,Aquarana catesbeiana,8400,rana catesbeiana,species,1,Lithobates catesbeianus
+25415,1,klebsiella pneumoniae,Klebsiella pneumoniae,573,,species,1,"Klebsiella pneumoniae, Klebsiella pneumoniae"
+25417,1,aphanoascus fulvescens,Aphanoascus fulvescens,73174,,species,1,"
+Aphanocladium fulvescens"
+25420,1,evolvulus pilosus,Evolvulus pilosus,1037433,,species,1,"
+Evolvulus alsinoides"
+25422,1,thladiantha dubia,Thladiantha dubia,210344,,species,1,"
+Thladiantha dubia, Thladiantha villosa"
+25425,1,erwinia carotovora,Pectobacterium carotovorum,554,erwinia carotovora,species,1,"Erwinia carotovora, Pectobacterium carotovorum"
+25429,1,rhodobacter sphaeroides,Cereibacter sphaeroides,1063,rhodobacter sphaeroides,species,1,"Rhodobacter sphaeroides, Rhodobacter sphaeroides"
+25433,1,schizosaccharomyces japonicus,Schizosaccharomyces japonicus,4897,,species,1,Schizosaccharomyces pombe
+25435,1,streptomyces ribosidificus,Streptomyces ribosidificus,80859,,species,1,Streptomyces ribosidifaciens
+25438,1,oreochromis mossambicus,Oreochromis mossambicus,8127,,species,1,"Oreochromis mossambicus, Oreochromis mossambicus"
+25441,1,mycobacterium malmoense,Mycobacterium malmoense,1780,,species,1,"Mycobacterium malmoense, Mycobacterium malmoense"
+25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,"Streptococcus rattus, Streptococcus mutans"
+25447,1,microsporum gypseum,Nannizzia gypsea,63402,microsporum gypseum,species,1," Microsporum gypseum, Microsporum canis"
+25449,1,streptococcus thermophilus,Streptococcus thermophilus,1308,,species,1,"Streptococcus thermophilus, Streptococcus thermophilus"
+25455,1,lilium longiflorum,Lilium longiflorum,4690,,species,1,"Lilium longiflorum, Lilium longiflorum"
+25457,1,mucor hiemalis,Mucor hiemalis,64493,,species,1,"Mucor hiemalis, Mucor hiemalis"
+25461,1,acropora formosa,Acropora formosa,126732,,species,1,"Acropora formosa, Acropora formosa"
+25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,"Sophora japonica, Styphnolobium japonicum"
+25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa
+25470,1,moringa oleifera,Moringa oleifera,3735,,species,1,"Moringa oleifera, Moringa oleifera"
+25474,1,paris axialis,Paris axialis,221258,,species,1,Paris polyphylla
+25477,1,paris polyphylla,Paris polyphylla,49666,,species,1,"Paris polyphylla, Paris polyphylla"
+25481,1,hydrangea,Hydrangea,23109,,genus,1,"Hydrangea macrophylla, Hydrangea macrophylla"
+25484,1,leishmania adleri,Leishmania adleri,5674,,species,1,"Leishmania adleri, Leishmania braziliensis"
+25487,1,crotalaria juncea,Crotalaria juncea,3829,,species,1,"Crotalaria juncea, Crotalaria juncea"
+25489,1,leuconostoc mesenteroides,Leuconostoc mesenteroides,1245,,species,1,"Leuconostoc mesenteroides, Leuconostoc mesenteroides"
+25491,1,trachycarpus fortunei,Trachycarpus fortunei,14027,,species,1,Trachycarpus fortunei
+25495,1,erythrina caffra,Erythrina caffra,3842,,species,1,"Erythrina caffra, Erythrina caffra"
+25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,"pseudomonas diminuta, Pseudomonas putida"
+25500,1,pereskia grandifolia,Pereskia grandifolia,307724,,species,1,Pereskia aculeata
+25503,1,hirudinaria manillensis,Hirudinaria manillensis,1348078,,species,1,"Hirudinaria manillensis, Hirudinaria manillensis"
+25506,1,smilax lebrunii,Smilax lebrunii,1045152,,species,1,Smilax pumila
+25508,1,aster tataricus,Aster tataricus,588669,,species,1,"Aster tataricus, Aster tataricus"
+25512,1,achyranthes aspera,Achyranthes aspera,240005,,species,1,"Achyranthes aspera, Achyranthes aspera"
+25514,1,aerococcus viridans,Aerococcus viridans,1377,,species,1,"Aerococcus viridans, Aerococcus viridans"
+25515,1,lysimachia sikokiana,Lysimachia sikokiana,1736094,,species,1,"Lysimachia sikokiana, Lysimachia japonica"
+25516,1,leptadenia reticulata,Leptadenia reticulata,492004,,species,1,"leptadenia reticulata, leptadenia pyrotechnica"
+25519,1,prunus padus,Prunus padus,97307,,species,1,"Prunus padus, Prunus avium"
