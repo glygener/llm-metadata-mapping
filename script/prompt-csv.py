@@ -4,7 +4,7 @@ from pathlib import Path
 from openai import OpenAI
 
 CSV_IN = Path("/Users/harivinaygujjula/Documents/GitHub/llm-metadata-mapping/data/mapping_BS_GS-mapped.csv")
-CSV_OUT = Path("/Users/harivinaygujjula/Documents/GitHub/llm-metadata-mapping/data/updated__BS_GS-mapped10.csv")
+CSV_OUT = Path("/Users/harivinaygujjula/Documents/GitHub/llm-metadata-mapping/data/updated__BS_GS-mapped20.csv")
 PROMPT_FILE = Path("prompt2.txt")
 API_FILE = Path("api_key.txt")
 SPECIES_COL = "name"
@@ -14,7 +14,7 @@ MODEL = "gpt-4o-mini"
 api_key = API_FILE.read_text(encoding="utf-8").strip()
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
 df = pd.read_csv(CSV_IN)
-df = df.iloc [90:100]
+df = df.iloc [190:200]
 
 if TARGET_COL not in df.columns:
     df[TARGET_COL] = pd.NA
