@@ -30,26 +30,30 @@ The following are some examples of synonyms/currently used names for scientific 
 4. Clostridium difficile—> synonym/currently used name: Clostridioides difficile
 5. escherichia hermanii—> synonym/currently used name: Atlantibacter hermannii
 
+REASONING:
+Upon generating a “Match” or “ALTERNATE” result, you need to mention how you ended up with that result in less than 1 sentence or approximately 10 words. Please fill in this reasoning under the column "reasoning".Do not come up with more than 1 sentence or an entire paragraph, stick to the limit mentioned to you.
+
+
 
 DISCLAIMER:
 Upon being given the scientific name do not jump to looking for “ALTERNATE” before you arrive at the conclusion of “No Match Found”. Do not come up with more than one match.
 
 RESULT:
 Return the name that follows the "MATCHED" instructions.
-Do not return "No Match", continue to "ALTERNATE" instructions and return that result
+Do not return "No Match", continue to "ALTERNATE" instructions and return that result.
 Your result should look similar to the examples given to you below
 
 Example 1:
-name,chatgpt_name
-Homo Sapiens, Homo sapiens
+name,chatgpt_name,reasoning
+Homo Sapiens, Homo sapiens, I found an article with the PMID mentioning the currently used species name.
 
 Example 2:
-name, chatgpt_name
-Aloe vahombe, Aloe vaombe
+name, chatgpt_name, reasoning
+Aloe vahombe, Aloe vaombe, I found a journal online that mentioned this name
 
 Example 3:
-name, chatgpt_name
-anomantidae, Nanomantidae
+name, chatgpt_name, reasoning
+anomantidae, Nanomantidae, I found an alternative name on NCBI database itself.
 
 At the end only return if there is a matched NCBI species name.
 Result should not exceed more than 2 words.
