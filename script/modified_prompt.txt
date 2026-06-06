@@ -82,7 +82,7 @@ The “species name” has to be replaced by the name given to you to find a mat
 	{
 		"taxon_id": "7215",
 		"species_name": "Drosophila",
-		“Reasoning”:”it was a perfect match in the NCBI database”
+		“reasoning”:”it was a perfect match in the NCBI database”
 		“input_name”: “drosophila”
  		}
 ]
