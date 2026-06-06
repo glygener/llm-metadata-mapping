@@ -18,7 +18,7 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
 25307,1,chironomus tentans,Chironomus tentans,7153,,species,1,,,,,
 25310,1,laminaria digitata,Laminaria digitata,80365,,species,1,,,,,
 25312,1,cistus salvifolius,Cistus salviifolius,335170,cistus salvifolius,species,1,,,,,
-25315,1,staphylococcus aureus,Staphylococcus aureus,1280,,species,1,Staphylococcus aureus,,1280,,it was a perfect match in the NCBI database
+25315,1,staphylococcus aureus,Staphylococcus aureus,1280,,species,1,Staphylococcus aureus,Yes,1280,Yes,it was a perfect match in the NCBI database
 25318,1,albizzia julibrissin,Albizia julibrissin,3813,albizzia julibrissin,species,1,,,,,
 25322,1,verbascum nigrum,Verbascum nigrum,90364,,species,1,,,,,
 25323,1,crocosmia crocosmiiflora,Crocosmia x crocosmiiflora,1053288,crocosmia crocosmiiflora,species,1,,,,,
