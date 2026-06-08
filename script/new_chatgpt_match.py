@@ -17,11 +17,11 @@ NAMESPACEID_COL = "namespaceid"
 #output column name
 CHATGPT_COL = "chatgpt_name"
 #output column name
-NAME_MATCH_COL = "name_match"
+NAME_MATCH_COL = "name_match_?"
 #output column name
 TAXON_COL = "chatgpt_taxon_id"
 #output column name
-TAXON_MATCH_COL = "taxon_id_match"
+TAXON_MATCH_COL = "taxon_id_match_?"
 #output column name
 REASON_COL = "chatgpt_reasoning"
 
@@ -107,6 +107,7 @@ for idx, row in df.iterrows():
                f"species_name: {chatgpt_species_name},"
                f"chatgpt_reasoning: {chatgpt_reasoning}"
                )
+         
          #comparing values
          input_name = str(row.get(SPECIES_COL, "")).strip()
          input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip()
