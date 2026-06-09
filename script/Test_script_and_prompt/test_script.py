@@ -33,8 +33,8 @@ df = pd.read_csv(CSV_IN)
 if CHATGPT_COL in df.columns:
     df[CHATGPT_COL] = df[CHATGPT_COL].astype("object")
 
-#skips row 0 and only keeps 1-99
-df = df.iloc[1:100]
+#skips row 0 and only keeps 1-149
+df = df.iloc[1:150]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
