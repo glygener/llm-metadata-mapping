@@ -5,8 +5,8 @@ import json
 from openai import OpenAI
 
 #file locations
-CSV_IN = Path("/Users/harivinaygujjula/Documents/GitHub/llm-metadata-mapping/data/mapping_BS_GS-mapped.csv")
-CSV_OUT = Path("/Users/harivinaygujjula/Documents/GitHub/llm-metadata-mapping/data/updated_BS_GS-mapped_with_reasoning2.csv")
+CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_mapping_BS_GS-mapped.csv")
+CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_BS_GS-mapped_with_reasoning2.csv")
 PROMPT_FILE = Path("modified_prompt.txt")
 API_FILE = Path("api_key.txt")
 
