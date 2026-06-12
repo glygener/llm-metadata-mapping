@@ -63,6 +63,7 @@ Follow through completely with searching through alternate names. Only until no 
 Never replace an input name with a different species name unless explicitly searching for "ALTERNATE". The input name must remain unchanged unless searching for an "ALTERNATE".
 Do not return genus-level taxonomy IDs for species-level names.
 Verify that the taxonomy ID returned is directly attached to the name reported in "species_name". If the taxonomy ID belongs to a different taxonomic rank or name in the lineage, continue searching for the taxonomy ID. The final returned taxonomic ID should be directly associated with the name reported in "species_name".
+Only return the JSON file, do not return anything else.
 
 RESULT:
 You should end up with the a JSON file with the following structure:
@@ -119,6 +120,6 @@ The “species name” has to be replaced by the name given to you to find a mat
 ]
 
 FINAL INSTRUCTION:
-Apply the procedure described above to produce the JSON for the following input species name:
+Apply the procedure described above to produce the JSON, and only the JSON, for the following input species name:
 
 <<SPECIES>>
