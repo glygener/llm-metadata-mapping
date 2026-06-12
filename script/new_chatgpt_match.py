@@ -1,7 +1,6 @@
 import pandas as pd
 from pathlib import Path
 import json
-
 from openai import OpenAI
 
 #tells the script where the prompt file is located
@@ -11,7 +10,9 @@ BASE_DIR = Path(__file__).parent
 CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_mapping_BS_GS-mapped.csv")
 CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_BS_GS-mapped_with_reasoning2.csv")
 PROMPT_FILE = BASE_DIR/"modified_prompt.txt"
-API_FILE = Path("api_key.txt")
+
+#API_FILE = Path("api_key.txt")
+#will use later when we get api key
 
 #input column name
 SPECIES_COL = "name"
@@ -28,18 +29,23 @@ TAXON_MATCH_COL = "taxon_id_match_?"
 #output column name
 REASON_COL = "chatgpt_reasoning"
 
-#API model name
-MODEL = "gpt-4o-mini"
+#API model name, for now we're using ollama
+MODEL = "llama3.2"
 
 #reading files
-api_key = API_FILE.read_text(encoding="utf-8").strip()
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
+
+#api_key = API_FILE.read_text(encoding="utf-8").strip()
+#will use later when we get api key
 
 #loads csv into pandas
 df = pd.read_csv(CSV_IN)
 
-#skips row 0 and only keeps 1-4
-df = df.iloc[1:5]
+if CHATGPT_COL in df.columns:
+    df[CHATGPT_COL] = df[CHATGPT_COL].astype("object")
+
+#skips row 0 and only keeps 1-9 for testing ollama
+df = df.iloc[1:10]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
@@ -47,7 +53,13 @@ for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]
     if col not in df.columns:
         df[col] = pd.NA
 
-client = OpenAI(api_key=api_key)
+client = OpenAI(
+     api_key="ollama",
+     base_url="http://localhost:11434/v1"
+)
+
+#client = OpenAI(api_key=api_key)
+#will use later after we get the api key
 
 #processes each row
 for idx, row in df.iterrows():
@@ -67,12 +79,26 @@ for idx, row in df.iterrows():
     #inserts "name" into the prompt
     prompt = prompt_template.replace("<<SPECIES>>", species)
 
+#calls the API with the prompt and gets a response
     try:
          response = client.chat.completions.create(
               model=MODEL,
               messages=[
-            {"role": "user", "content": prompt}
+            {
+                 #tells the model to only return valid JSON, with no explanations or extra text
+                 "role": "user",
+                 "content": (
+                      "Return ONLY valid JSON."
+                      "No explanations."
+                      "No text before or after the JSON."
+             )
+            },
+            {
+                 #gives the prompt with the species name
+                 "role": "user",
+                 "content": prompt}
             ],
+            #gets the most likely answer (not a random one)
             temperature=0
             )
          
@@ -143,5 +169,5 @@ for idx, row in df.iterrows():
          #moves to next row
          continue
 
-#prints "Done." when everything is finished
-print("Done.")
+#prints "Done testing ollama." when everything is finished
+print("Done testing ollama.")
