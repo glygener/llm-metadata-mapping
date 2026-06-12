@@ -4,10 +4,13 @@ import json
 
 from openai import OpenAI
 
+#tells the script where the prompt file is located
+BASE_DIR = Path(__file__).parent
+
 #file locations
 CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_mapping_BS_GS-mapped.csv")
 CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_BS_GS-mapped_with_reasoning2.csv")
-PROMPT_FILE = Path("modified_prompt.txt")
+PROMPT_FILE = BASE_DIR/"modified_prompt.txt"
 API_FILE = Path("api_key.txt")
 
 #input column name
@@ -35,8 +38,8 @@ prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
 #loads csv into pandas
 df = pd.read_csv(CSV_IN)
 
-#skips row 0 and only keeps 1-99
-df = df.iloc[1:100]
+#skips row 0 and only keeps 1-4
+df = df.iloc[1:5]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
@@ -139,5 +142,6 @@ for idx, row in df.iterrows():
          print(f"Row {idx}: Error calling API or processing result: {e}")
          #moves to next row
          continue
-    #prints "Done." when everything is finished
-    print("Done.")
+
+#prints "Done." when everything is finished
+print("Done.")
