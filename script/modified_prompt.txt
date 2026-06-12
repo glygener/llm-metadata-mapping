@@ -40,7 +40,7 @@ Before searching for alternate names, determine whether the input name itself ha
 If the input name appears in the NCBI taxonomy record either as the scientific name or as a synonym, equivalent name, currently used names, basioyms, homotypic synoyms, or heterotypic synonyms within another record, return the Taxonomy ID of the NCBI record in which that name occurs. Do not map to any other accepted name.
 An exact NCBI taxonomy record for the input name should always override any other accepted name relationship.
 If no exact match exist, proceed to search for alternate names when the input name itself does not have a corresponding NCBI taxonomy record. Search for alternate names based on synonyms, equivalents, currently used names, basionyms, homotypic synonyms, and heterotypic synonyms.
-If an alternative name is used to obtain a match, return the Taxonomy ID of the alternate name that exists in the NCBI taxonomy database.
+If an alternative name is used to obtain a match, return the Taxonomy ID of the alternate name that exists in the NCBI taxonomy database. This means that the returned taxonomic ID should be directly associated with the name reported in "species_name".
 If no taxonomy ID is confirmed to belong to the selected NCBI record, return "No Match Found". Make sure you follow through alternate names before returning "No Match Found".
 
 TAXONOMIC RANKING:
@@ -49,7 +49,7 @@ Do not stop at a parent taxon if a more specific taxon record exists.
 If the synonym, equivalent name, currently used name, basioym, homotypic synoym, or heterotypic synonym corresponds to a species, return the taxonomy ID of that species record.
 If the synonym, equivalent name, currently used name, basioym, homotypic synoym, or heterotypic synonym corresponds to a lower rank taxon, return the taxonomy ID of the most specific matching record.
 Never return a higher rank taxon ID when a lower rank taxon ID exists and corresponds to the matched name or accepted taxon.
-When multiple NCBI taxonomy records are related to a match, return the most specific valid taxonomy record.
+When multiple NCBI taxonomy records are related to a match, return the most specific valid taxonomy record of the lowest rank.
 
 REASONING:
 Upon generating a “Match” or “ALTERNATE” result, you need to mention how you ended up with that result in a paragraph but not more than 4 sentences. Do not come up with more than 4 sentences or an entire paragraph, stick to the limit mentioned to you.
@@ -62,6 +62,7 @@ Do not guess taxonomy ids.
 Follow through completely with searching through alternate names. Only until no taxonomy ID is explicitly confirmed to belong to the selected NCBI record can you return "No Match Found".
 Never replace an input name with a different species name unless explicitly searching for "ALTERNATE". The input name must remain unchanged unless searching for an "ALTERNATE".
 Do not return genus-level taxonomy IDs for species-level names.
+Verify that the taxonomy ID returned is directly attached to the name reported in "species_name". If the taxonomy ID belongs to a different taxonomic rank or name in the lineage, continue searching for the taxonomy ID. The final returned taxonomic ID should be directly associated with the name reported in "species_name".
 
 RESULT:
 You should end up with the a JSON file with the following structure:
