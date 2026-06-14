@@ -1,0 +1,275 @@
+ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount
+11127,3,schizosaccharomyces pombe,Schizosaccharomyces pombe,4896,,species,null
+11128,7,tetrahymena pyriformis,Tetrahymena pyriformis,5908,,species,null
+11130,2,schistosoma,Schistosoma,6181,,genus,null
+11133,1,erythrina,Erythrina,3841,,genus,null
+11136,2,avian influenza virus,unidentified influenza virus,11309,,species,null
+11138,6,corylus avellana,Corylus avellana,13451,,species,null
+11139,9,schistosoma mansoni,Schistosoma mansoni,6183,,species,null
+11142,2,oncorhynchus keta,Oncorhynchus keta,8018,,species,null
+11143,23,nicotiana alata,Nicotiana alata,4087,,species,null
+11145,5,actinidia chinensis,Actinidia chinensis,3625,,species,null
+11147,1,naja kaouthia,Naja kaouthia,8649,,species,null
+11148,3,brassica campestris,Brassica rapa subsp. oleifera,145471,,subspecies,null
+11150,13,lymnaea stagnalis,Lymnaea stagnalis,6523,,species,null
+11154,6,lake victoria marburgvirus,Orthomarburgvirus marburgense,3052505,,species,null
+11156,3,raja erinacea,Leucoraja erinaceus,7782,,species,null
+11157,1,dasyatis sabina,Hypanus sabinus,79690,,species,null
+11159,7,cyprinus carpio,Cyprinus carpio,7962,,species,null
+11161,2,paralichthys olivaceus,Paralichthys olivaceus,8255,,species,null
+11162,1,halobacterium volcanii,Haloferax volcanii,2246,,species,null
+11165,1,volvox carteri,Volvox carteri,3067,,species,null
+11166,1,penicillium decumbens,Penicillium decumbens,69771,,species,null
+11169,38,spodoptera frugiperda,Spodoptera frugiperda,7108,,species,null
+11173,5,ambrosia trifida,Ambrosia trifida,4214,,species,null
+11174,29,felis catus,Felis catus,9685,,species,null
+11176,16,styela plicata,Styela plicata,7726,,species,null
+11177,22,bothrops moojeni,Bothrops moojeni,98334,,species,null
+11179,2,escherichia coli k12,Escherichia coli K-12,83333,,strain,null
+11180,4,pistacia vera,Pistacia vera,55513,,species,null
+11182,1,macaca fuscata fuscata,Macaca fuscata fuscata,9543,,subspecies,null
+11184,6,ambystoma mexicanum,Ambystoma mexicanum,8296,,species,null
+11185,165,unknown,unidentified,32644,,species,null
+11188,152,gallus gallus,Gallus gallus,9031,,species,null
+11189,39,oncorhynchus mykiss,Oncorhynchus mykiss,8022,,species,null
+11191,26,acer pseudoplatanus,Acer pseudoplatanus,4026,,species,null
+11193,1,oryzias latipes,Oryzias latipes,8090,,species,null
+11196,39,helix pomatia,Helix pomatia,6536,,species,null
+11197,5,rana arvalis,Rana arvalis,156871,,species,null
+11198,11,pisum sativum,Pisum sativum,3888,,species,null
+11199,341,sus scrofa,Sus scrofa,9823,,species,null
+11201,95,pichia pastoris,Komagataella pastoris,4922,,species,null
+11203,1,caesalpinia pulcherrima,Caesalpinia pulcherrima,53846,,species,null
+11205,3,viscum album,Viscum album,3972,,species,null
+11206,2,hyriopsis schlegelii,Sinohyriopsis schlegelii,2706150,,species,null
+11208,18,bombyx mori,Bombyx mori,7091,,species,null
+11209,2,entamoeba histolytica,Entamoeba histolytica,5759,,species,null
+11211,14,carica papaya,Carica papaya,3649,,species,null
+11212,1,rhea,Rhea,8796,,genus,null
+11214,5,prunus dulcis,Prunus dulcis,3755,,species,null
+11216,121,rattus norvegicus,Rattus norvegicus,10116,,species,null
+11217,2,providencia rustigianii,Providencia rustigianii,158850,,species,null
+11219,10,androctonus australis,Androctonus australis,6858,,species,null
+11221,2,halobacterium halobium,Halobacterium salinarum,2242,,species,null
+11222,2,nicotiana tabacum,Nicotiana tabacum,4097,,species,null
+11224,1,schistosoma haematobium,Schistosoma haematobium,6185,,species,null
+11227,5,asterias rubens,Asterias rubens,7604,,species,null
+11228,3,macaca irus,Macaca fascicularis,9541,,species,null
+11230,4,pinus heldreichii,Pinus heldreichii,88729,,species,null
+11232,4,volvox carteri f. nagariensis,Volvox carteri f. nagariensis,3068,,forma,null
+11233,4,bufo japonicus,Bufo japonicus,8387,,species,null
+11235,3,vigna radiata,Vigna radiata,157791,,species,null
+11237,21,mamestra brassicae,Mamestra brassicae,55057,,species,null
+11239,1,vatairea macrocarpa,Vatairea macrocarpa,77050,,species,null
+11241,23,aspergillus niger,Aspergillus niger,5061,,species,null
+11243,3,fabaceae,Fabaceae,3803,,family,null
+11244,4,agelenopsis aperta,Agelenopsis aperta,6908,,species,null
+11245,23,mammalia,Mammalia,40674,,class,null
+11247,7,rana temporaria,Rana temporaria,8407,,species,null
+11249,2,ginkgo biloba,Ginkgo biloba,3311,,species,null
+11250,433,bos taurus,Bos taurus,9913,,species,null
+11252,5,leishmania mexicana amazonensis,Leishmania amazonensis,5659,,species,null
+11254,4,sporothrix schenckii,Sporothrix schenckii,29908,,species,null
+11255,3,arabidopsis thaliana,Arabidopsis thaliana,3702,,species,null
+11258,13,ambystoma tigrinum,Ambystoma tigrinum,8305,,species,null
+11259,32,friend murine leukemia virus,Friend murine leukemia virus,11795,,no rank,null
+11261,2,momordica charantia,Momordica charantia,3673,,species,null
+11262,22,xenopus laevis,Xenopus laevis,8355,,species,null
+11264,1,agaricus bisporus,Agaricus bisporus,5341,,species,null
+11266,5,blattella germanica,Blattella germanica,6973,,species,null
+11267,69,ovis aries,Ovis aries,9940,,species,null
+11269,6,abrus precatorius,Abrus precatorius,3816,,species,null
+11272,15,canis familiaris,Canis lupus familiaris,9615,,subspecies,null
+11273,11,macaca radiata,Macaca radiata,9548,,species,null
+11274,1,sindbis virus,Sindbis virus,11034,,species,null
+11277,1373,homo sapiens,Homo sapiens,9606,,species,null
+11279,1,astragalus lentiginosus,Astragalus lentiginosus,20416,,species,null
+11280,78,mesocricetus auratus,Mesocricetus auratus,10036,,species,null
+11283,15,escherichia coli,Escherichia coli,562,,species,null
+11285,2,spinacia oleracea,Spinacia oleracea,3562,,species,null
+11286,11,rana pipiens,Lithobates pipiens,8404,,species,null
+11288,5,aspergillus niger var. awamorii,Aspergillus awamori,105351,,species,null
+11289,1,rhizopus niveus,Rhizopus niveus,4844,,species,null
+11291,2,aspergillus saitoi,Aspergillus phoenicis,5063,,species,null
+11293,1,pagothenia borchgrevinki,Pagothenia borchgrevinki,8213,,species,null
+11294,3,silene,Silene,3573,,genus,null
+11295,135,rattus,Rattus,10114,,genus,null
+11297,52,apis mellifera,Apis mellifera,7460,,species,null
+11298,20,trichoplusia ni,Trichoplusia ni,7111,,species,null
+11300,2,pinus pinea,Pinus pinea,3346,,species,null
+11302,3,semliki forest virus,Semliki Forest virus,11033,,species,null
+11303,8,armoracia rusticana,Armoracia rusticana,3704,,species,null
+11305,21,agkistrodon rhodostoma,Calloselasma rhodostoma,8717,,species,null
+11307,10,sendai virus,Respirovirus muris,3052731,,species,null
+11308,1,mollusca,Mollusca,6447,,phylum,null
+11310,2,misgurnus anguillicaudatus,Misgurnus anguillicaudatus,75329,,species,null
+11311,4,juglans regia,Juglans regia,51240,,species,null
+11313,5,ambrosia elatior,Ambrosia artemisiifolia var. elatior,4215,,varietas,null
+11315,8,macaca mulatta,Macaca mulatta,9544,,species,null
+11317,18,calloselasma rhodostoma,Calloselasma rhodostoma,8717,,species,null
+11318,1,trypanosoma congolense,Trypanosoma congolense,5692,,species,null
+11320,21,synthetic,synthetic construct,32630,,species,null
+11321,5,secale cereale,Secale cereale,4550,,species,null
+11324,4,trichinella spiralis,Trichinella spiralis,6334,,species,null
+11325,3,mucor rouxii,Amylomyces rouxii,29923,,species,null
+11327,11,ambystoma maculatum,Ambystoma maculatum,43114,,species,null
+11329,7,phodopus sungorus,Phodopus sungorus,10044,,species,null
+11331,53,equus caballus,Equus caballus,9796,,species,null
+11333,10,daucus carota,Daucus carota,4039,,species,null
+11334,1,spirometra erinaceieuropaei,Spirometra erinaceieuropaei,99802,,species,null
+11336,4,butea monosperma,Butea monosperma,56060,,species,null
+11338,8,hemicentrotus pulcherrimus,Hemicentrotus pulcherrimus,7650,,species,null
+11339,1,arachis hypogaea,Arachis hypogaea,3818,,species,null
+11341,7,betula alba,Betula pubescens,38787,,species,null
+11343,1,candida albicans,Candida albicans,5476,,species,null
+11344,16,coturnix coturnix japonica,Coturnix japonica,93934,,species,null
+11346,3,canavalia ensiformis,Canavalia ensiformis,3823,,species,null
+11347,18,lycopersicon esculentum,Solanum lycopersicum,4081,,species,null
+11349,5,wisteria floribunda,Wisteria floribunda,3922,,species,null
+11350,31,phaseolus vulgaris,Phaseolus vulgaris,3885,,species,null
+11352,1,phormia terraenovae,Protophormia terraenovae,34676,,species,null
+11355,8,limulus polyphemus,Limulus polyphemus,6850,,species,null
+11357,12,olea europaea,Olea europaea,4146,,species,null
+11358,4,leishmania mexicana,Leishmania mexicana,5665,,species,null
+11360,2,nicotiana,Nicotiana,4085,,genus,null
+11361,4,human adenovirus type 2,Human adenovirus 2,10515,,no rank,null
+11365,1,cercopithecus aethiops,Chlorocebus aethiops,9534,,species,null
+11366,5,lolium perenne,Lolium perenne,4522,,species,null
+11368,6,providencia alcalifaciens,Providencia alcalifaciens,126385,,species,null
+11370,7,carpinus betulus,Carpinus betulus,12990,,species,null
+11371,11,bufo arenarum,Rhinella arenarum,38577,,species,null
+11373,27,human immunodeficiency virus,Human immunodeficiency virus,12721,,species,null
+11376,4,artemisia vulgaris,Artemisia vulgaris,4220,,species,null
+11377,10,cricetinae,Cricetinae,10026,,subfamily,null
+11379,1,naja naja kaouthia,Naja kaouthia,8649,,species,null
+11380,4,pyrus communis,Pyrus communis,23211,,species,null
+11382,1,myrmecia gulosa ,Myrmecia gulosa,36170,,species,null
+11383,5,dictyostelium discoideum,Dictyostelium discoideum,44689,,species,null
+11385,4,persea americana,Persea americana,3435,,species,null
+11282,1,mammal,Mammalia,40674,mammals,class,null
+11125,3,asterias amurensis,Asterias amurensis,7602,,species,null
+11126,7,tilapia mossambica,Oreochromis mossambicus,8127,,species,null
+11129,1,struthio camelus,Struthio camelus,8801,,species,null
+11135,1,haemonchus contortus,Haemonchus contortus,6289,,species,null
+11137,7,fundulus heteroclitus,Fundulus heteroclitus,8078,,species,null
+11141,7,chionodraco myersi,Chionodraco myersi,70433,,species,null
+11144,2,cercopithecus aethiops aethiops,Chlorocebus aethiops aethiops,101841,,subspecies,null
+11146,1,sophora japonica,Styphnolobium japonicum,3897,,species,null
+11149,5,rana dalmatina,Rana dalmatina,51331,,species,null
+11151,32,cavia porcellus,Cavia porcellus,10141,,species,null
+11155,4,silene alba,Silene latifolia subsp. alba,52853,,subspecies,null
+11158,1,lepidochelys kempii,Lepidochelys kempii,8472,,species,null
+11160,3,pleurodeles waltl,Pleurodeles waltl,8319,,species,null
+11163,1,robinia pseudoacacia,Robinia pseudoacacia,35938,,species,null
+11167,10,ananas comosus,Ananas comosus,4615,,species,null
+11172,69,oryctolagus cuniculus,Oryctolagus cuniculus,9986,,species,null
+11175,1,cucurbita pepo,Cucurbita pepo,3663,,species,null
+11178,1,erythrina corallodendron,Erythrina corallodendron,3843,,species,null
+11181,1,haloferax volcanii,Haloferax volcanii,2246,,species,null
+11183,1,sambucus nigra,Sambucus nigra,4202,,species,null
+11186,5,bacteroides cellulosisolvens,Pseudobacteroides cellulosolvens,35825,,species,null
+11190,219,mus musculus,Mus musculus,10090,,species,null
+11192,1,echinocardium cordatum,Echinocardium cordatum,39298,,species,null
+11194,1,sphingomonas paucimobilis,Sphingomonas paucimobilis,13689,,species,null
+11200,1,aspergillus,Aspergillus,5052,,genus,null
+11202,1,toxocara cati,Toxocara cati,6266,,species,null
+11204,5,oncorhynchus masou ishikawai,Oncorhynchus masou ishikawae,8021,,subspecies,null
+11207,2,dirofilaria immitis,Dirofilaria immitis,6287,,species,null
+11210,5,poa pratensis,Poa pratensis,4545,,species,null
+11213,3,meleagris gallopavo,Meleagris gallopavo,9103,,species,null
+11215,21,vesicular stomatitis virus,Vesicular stomatitis virus,11276,,species,null
+11218,20,rana palustris,Lithobates palustris,298395,,species,null
+11220,1,clostridium thermohydrosulfuricum,Thermoanaerobacter thermohydrosulfuricus,1516,,species,null
+11223,1,strongylocentrotus intermedius,Strongylocentrotus intermedius,7667,,species,null
+11229,11,oryza sativa,Oryza sativa,4530,,species,null
+11231,2,clerodendron trichotomum,Clerodendrum trichotomum,54229,,species,null
+11234,4,citrus sinensis,Citrus sinensis,2711,,species,null
+11238,2,toxocara canis,Toxocara canis,6265,,species,null
+11240,2,macaca fascicularis,Macaca fascicularis,9541,,species,null
+11242,7,aspergillus oryzae,Aspergillus oryzae,5062,,species,null
+11246,7,gadus morhua,Gadus morhua,8049,,species,null
+11248,1,phaseolus,Phaseolus,3883,,genus,null
+11251,7,trematomus lepidorhinus,Trematomus lepidorhinus,40691,,species,null
+11253,5,aspergillus awamori,Aspergillus awamori,105351,,species,null
+11256,48,influenza virus,unidentified influenza virus,11309,,species,null
+11257,4,providencia stuartii,Providencia stuartii,588,,species,null
+11260,2,oryzias melastigma,Oryzias melastigma,30732,,species,null
+11263,1,sprague-dawley rat,Rattus norvegicus,10116,,species,null
+11265,3,brassica oleracea var. botrytis,Brassica oleracea var. botrytis,3715,,varietas,null
+11268,24,ricinus communis,Ricinus communis,3988,,species,null
+11271,8,shigella dysenteriae,Shigella dysenteriae,622,,species,null
+11276,2,acomys russatus,Acomys russatus,60746,,species,null
+11278,6,erythrina variegata,Erythrina variegata,3845,,species,null
+11281,2,meriones unguiculatus,Meriones unguiculatus,10047,,species,null
+11284,6,tribolodon hakonensis,Pseudaspius hakonensis,3004147,,species,null
+11287,28,trypanosoma cruzi,Trypanosoma cruzi,5693,,species,null
+11290,1,malus x domestica,Malus domestica,3750,,species,null
+11292,1,manduca sexta,Manduca sexta,7130,,species,null
+11296,23,salvelinus leucomaenis pluvius,Salvelinus leucomaenis pluvius,8035,,subspecies,null
+11299,5,musa acuminata,Musa acuminata,4641,,species,null
+11301,3,anthocidaris crassispina,Heliocidaris crassispina,1043166,,species,null
+11304,8,cynodon dactylon,Cynodon dactylon,28909,,species,null
+11306,1,vigna radiata var. radiata,Vigna radiata var. radiata,3916,,varietas,null
+11309,1,leishmania amazonensis,Leishmania amazonensis,5659,,species,null
+11312,11,coturnix japonica,Coturnix japonica,93934,,species,null
+11314,2,brassica rapa,Brassica rapa,3711,,species,null
+11316,18,rana utricularia,Lithobates sphenocephalus utricularius,1208417,,subspecies,null
+11319,2,hepatitis b virus,Hepatitis B virus,10407,,species,null
+11323,10,locusta migratoria,Locusta migratoria,7004,,species,null
+11326,4,insecta,Insecta,50557,,class,null
+11328,1,nude mice,Mus musculus,10090,,species,null
+11330,4,allium cepa,Allium cepa,4679,,species,null
+11388,5,acremonium sp. hi-25,Acremonium sp. HI-25,159120,,species,null
+11390,4,fagopyrum esculentum,Fagopyrum esculentum,3617,,species,null
+11391,2,erythrina crista-galli,Erythrina crista-galli,49817,,species,null
+11393,15,capra hircus,Capra hircus,9925,,species,null
+11394,2,aedes albopictus,Aedes albopictus,7160,,species,null
+11397,1,conus geographus,Conus geographus,6491,,species,null
+11398,3,cocos nucifera,Cocos nucifera,13894,,species,null
+11400,4,plecoglossus altivelis,Plecoglossus altivelis,61084,,species,null
+11403,1,vipera russelli russelli,Daboia russelii russelii,31159,,subspecies,null
+11404,13,glycine max,Glycine max,3847,,species,null
+11332,3,crithidia fasciculata,Crithidia fasciculata,5656,,species,null
+11335,29,torpedo californica,Tetronarce californica,7787,,species,null
+11337,6,clostridium thermocellum,Acetivibrio thermocellus,1515,,species,null
+11340,1,baculovirus,unidentified baculovirus,10469,,species,null
+11342,2,canis familiaris dingo,Canis lupus dingo,286419,,subspecies,null
+11345,4,apium graveolens var. dulce,Apium graveolens Dulce Group,117781,,no rank,null
+11348,5,oncorhynchus nerka,Oncorhynchus nerka,8023,,species,null
+11351,3,panulirus interruptus,Panulirus interruptus,6735,,species,null
+11354,6,shigella boydii,Shigella boydii,621,,species,null
+11356,11,richadella dulcifica,Synsepalum dulcificum,3743,,species,null
+11359,6,trypanosoma brucei,Trypanosoma brucei,5691,,species,null
+11363,10,drosophila melanogaster,Drosophila melanogaster,7227,,species,null
+11367,4,anas platyrhynchos,Anas platyrhynchos,8839,,species,null
+11369,8,newcastle disease virus,avian paramyxovirus 1,2560319,,no rank,null
+11372,175,cricetulus griseus,Cricetulus griseus,10029,,species,null
+11374,1,artocarpus heterophylla,Artocarpus heterophyllus,3489,,species,null
+11378,5,saccharomyces cerevisiae,Saccharomyces cerevisiae,4932,,species,null
+11381,4,asparagus officinalis,Asparagus officinalis,4686,,species,null
+11384,18,anas sp.,Anas sp.,42806,,species,null
+11386,1,scomber japonicus,Scomber japonicus,13676,,species,null
+11387,8,aesculus hippocastanum,Aesculus hippocastanum,43364,,species,null
+11389,8,cryptomeria japonica,Cryptomeria japonica,3369,,species,null
+11392,15,coturnix coturnix,Coturnix coturnix,9091,,species,null
+11396,12,proteus mirabilis,Proteus mirabilis,584,,species,null
+11399,3,solanum tuberosum,Solanum tuberosum,4113,,species,null
+11402,4,trypanosoma dionisii,Trypanosoma dionisii,78083,,species,null
+11132,1,thermoanaerobacter thermohydrosulfuricus l111-69 ,Thermoanaerobacter thermohydrosulfuricus,1516,thermoanaerobacter thermohydrosulfuricus l111-69 ,species,null
+11134,3,crithidia harmosa,Crithidia,5655,crithidia harmosa,genus,null
+11140,3,herpes simplex virus,Herpes Simplexvirus,3344809,herpes simplex virus,species,null
+11152,44,pseudomonas aerguinosa,Pseudomonas aeruginosa,287,pseudomonas aerguinosa,species,null
+11153,1,armadillo,Dasypodidae,9359,armadillo,family,null
+11164,2,wistar rat,Rattus norvegicus,10116,wistar rat,species,null
+11170,1,candida albicans type i,Candida albicans,5476,candida albicans type i,species,null
+11171,1,b10xb10.br mice,Mus musculus,10090,b10xb10.br mice,species,null
+11226,3,c3h/hen mice,Mus musculus,10090,c3h/hen mice,species,null
+11236,4,fragaria xananassa,Fragaria x ananassa,3747,fragaria xananassa,species,null
+11270,1,akr mice,Mus musculus,10090,akr mice,species,null
+11275,1,influenza a virus (a/fpv/dutch/27(h7n7)),Influenza A virus (A/FPV/Dutch/1927(H7N7)),260806,Influenza A virus (A/FPV/Dutch/1927(H7N7)),no rank,null
+11322,1,chinese hamster (strain dukxbi),Cricetulus griseus,10029,chinese hamster (strain dukxbi),species,null
+11353,1,leishmania amazonensis (mhom/br/73/m2269),Leishmania amazonensis,5659,leishmania amazonensis (mhom/br/73/m2269),species,null
+11362,4,malus domestica var. golden delicious,Malus domestica,3750,malus domestica var. golden delicious,species,null
+11364,3,balb/c mice,Mus musculus,10090,balb/c mice,species,null
+11375,1,escherichia coli k12 (strain 1475),Escherichia coli K-12,83333,escherichia coli k12 (strain 1475),strain,null
+11395,1,murine hepatitis virus (strain a59),Murine hepatitis virus strain A59,11142,Murine hepatitis virus strain A59,no rank,null
