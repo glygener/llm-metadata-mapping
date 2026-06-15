@@ -7,15 +7,17 @@ from openai import OpenAI
 BASE_DIR = Path(__file__).parent
 
 #file locations
-CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_mapping_BS_GS-mapped.csv")
-CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\updated_BS_GS-mapped_with_reasoning2.csv")
+CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\list_of_species.csv")
+CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\mapped_with_ollama.csv")
 PROMPT_FILE = BASE_DIR/"modified_prompt.txt"
 
 #API_FILE = Path("api_key.txt")
 #will use later when we get api key
 
 #input column name
-SPECIES_COL = "name"
+INPUT_NAME_COL = "name"
+#input column name
+NAMESPACENAME_COL = "namespacename"
 #input column name
 NAMESPACEID_COL = "namespaceid"
 #output column name
@@ -64,8 +66,8 @@ client = OpenAI(
 #processes each row
 for idx, row in df.iterrows():
     
- #gets the species name from "name" (SPECIES_COL)
-    species = str(row.get(SPECIES_COL, "")).strip()
+ #gets the species name from "name" (INPUT_NAME_COL)
+    species = str(row.get(INPUT_NAME_COL, "")).strip()
 
     #skips empty rows
     if not species or species.lower() == "nan":
@@ -138,13 +140,13 @@ for idx, row in df.iterrows():
                )
          
          #comparing values
-         input_name = str(row.get(SPECIES_COL, "")).strip()
+         input_species_name = str(row.get(NAMESPACENAME_COL, "")).strip()
          input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip()
          
          returned_name = str(chatgpt_species_name).strip()
          returned_taxon_id = str(chatgpt_taxon_id).strip()
          
-         name_match = input_name.lower() == returned_name.lower()
+         name_match = input_species_name.lower() == returned_name.lower()
          taxon_id_match = input_taxon_id == returned_taxon_id
          
          df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
