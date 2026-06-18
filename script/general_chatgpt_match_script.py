@@ -38,8 +38,17 @@ api_key = API_FILE.read_text(encoding="utf-8").strip()
 #loads csv into pandas
 df = pd.read_csv(CSV_IN)
 
-if CHATGPT_COL in df.columns:
-    df[CHATGPT_COL] = df[CHATGPT_COL].astype("object")
+#converts columns to object
+output_cols= [
+     CHATGPT_COL,
+     NAME_MATCH_COL,
+     TAXON_COL,
+     TAXON_MATCH_COL,
+     REASON_COL,
+]
+for col in output_cols:
+     if CHATGPT_COL in df.columns:
+          df[col] = df[col].astype("object")
 
 #skips row 0 and only keeps row 1 for testing api
 df = df.iloc[1:2]
