@@ -2,17 +2,13 @@ import pandas as pd
 from pathlib import Path
 import json
 from openai import OpenAI
-
-#tells the script where the prompt file is located
-BASE_DIR = Path(__file__).parent
+import time
 
 #file locations
-CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\list_of_species.csv")
-CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\mapped_with_ollama.csv")
-PROMPT_FILE = BASE_DIR/"modified_prompt.txt"
-
-#API_FILE = Path("api_key.txt")
-#will use later when we get api key
+CSV_IN = Path()
+CSV_OUT = Path()
+PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompt.txt")
+API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\api_key.txt")
 
 #input column name
 INPUT_NAME_COL = "name"
@@ -31,14 +27,13 @@ TAXON_MATCH_COL = "taxon_id_match_?"
 #output column name
 REASON_COL = "chatgpt_reasoning"
 
-#API model name, for now we're using ollama
-MODEL = "llama3.2"
+#API model name
+MODEL = "gpt-5.5"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
 
-#api_key = API_FILE.read_text(encoding="utf-8").strip()
-#will use later when we get api key
+api_key = API_FILE.read_text(encoding="utf-8").strip()
 
 #loads csv into pandas
 df = pd.read_csv(CSV_IN)
@@ -46,8 +41,8 @@ df = pd.read_csv(CSV_IN)
 if CHATGPT_COL in df.columns:
     df[CHATGPT_COL] = df[CHATGPT_COL].astype("object")
 
-#skips row 0 and only keeps 1-9 for testing ollama
-df = df.iloc[1:10]
+#skips row 0 and only keeps row 1 for testing api
+df = df.iloc[1:2]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
@@ -55,13 +50,7 @@ for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]
     if col not in df.columns:
         df[col] = pd.NA
 
-client = OpenAI(
-     api_key="ollama",
-     base_url="http://localhost:11434/v1"
-)
-
-#client = OpenAI(api_key=api_key)
-#will use later after we get the api key
+client = OpenAI(api_key=api_key)
 
 #processes each row
 for idx, row in df.iterrows():
@@ -100,9 +89,9 @@ for idx, row in df.iterrows():
                  "role": "user",
                  "content": prompt}
             ],
-            #gets the most likely answer (not a random one)
-            temperature=0
-            )
+              #forces the model into JSON mode
+              response_format={"type":"json_object"},
+          )
          
          #gets API response and prints it
          raw_output = response.choices[0].message.content.strip()
@@ -170,6 +159,9 @@ for idx, row in df.iterrows():
          print(f"Row {idx}: Error calling API or processing result: {e}")
          #moves to next row
          continue
+    #delays 1 second before moving to the next row
+    finally:
+         time.sleep(1)
 
-#prints "Done testing ollama." when everything is finished
-print("Done testing ollama.")
+#prints "Done." when everything is finished
+print("Done.")
