@@ -50,8 +50,8 @@ for col in output_cols:
      if CHATGPT_COL in df.columns:
           df[col] = df[col].astype("object")
 
-#skips row 0 and only keeps row 1 for testing api
-df = df.iloc[1:2]
+#skips row 0 and only keeps until row 20 for testing api
+df = df.iloc[1:20]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
