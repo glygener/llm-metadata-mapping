@@ -61,8 +61,8 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#skips row 0 and only keeps until row 19
-df = df.iloc[1:20]
+#tests rows 20-39
+df = df.iloc[20:40]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
@@ -98,7 +98,7 @@ def lookup_taxonomy_id(species):
           return ids [0] if ids else None
      
      except Exception as e:
-          print(f"NCBI lookup failed for {chatgpt_species_name}: {e}")
+          print(f"NCBI lookup failed for {species}: {e}")
           return None
 
 client = OpenAI(api_key=api_key)
@@ -168,11 +168,12 @@ for idx, row in df.iterrows():
          chatgpt_species_name = record.get("species_name", "")
          #gets chatgpt_reasoning
          chatgpt_reasoning = record.get("reasoning", "")
-         #gets ncbi_taxon_id from input name
-         ncbi_taxon_id = lookup_taxonomy_id(species)
-
-         #if chatgpt name is better, will use it
-         if not ncbi_taxon_id and chatgpt_species_name:
+         #gets ncbi_taxon_id from chatgpt_species_name
+         ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
+         
+         if chatgpt_species_name == "No Match Found":
+              ncbi_taxon_id = None
+         else:
               ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
 
          #stores results
