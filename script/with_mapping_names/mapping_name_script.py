@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 from openai import OpenAI
 import time
+from Bio import Entrez
 
 #file locations
 CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\data_with_mapping_names.csv")
@@ -25,6 +26,10 @@ TAXON_COL = "chatgpt_taxon_id"
 #output column name
 TAXON_MATCH_COL = "taxon_id_match_?"
 #output column name
+NCBI_TAXON_COL = "ncbi_taxon_id"
+#output column name
+NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
+#output column name
 REASON_COL = "chatgpt_reasoning"
 
 #API model name
@@ -33,7 +38,11 @@ MODEL = "gpt-5.5"
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
 
+#api key
 api_key = API_FILE.read_text(encoding="utf-8").strip()
+
+#email for biopython's entrez module
+Entrez.email = "taylor.dimenna@gwmail.gwu.edu"
 
 #loads csv into pandas
 df = pd.read_csv(CSV_IN)
@@ -44,20 +53,53 @@ output_cols= [
      NAME_MATCH_COL,
      TAXON_COL,
      TAXON_MATCH_COL,
+     NCBI_TAXON_COL,
+     NCBI_TAXON_MATCH_COL,
      REASON_COL,
 ]
 for col in output_cols:
-     if CHATGPT_COL in df.columns:
+     if col in df.columns:
           df[col] = df[col].astype("object")
 
-#skips row 0 and only keeps until row 20 for testing api
+#skips row 0 and only keeps until row 19
 df = df.iloc[1:20]
 
 #makes sure the output columns exist
-for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, REASON_COL]:
+for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
  #if the column doesn't exist yet, it creates it
     if col not in df.columns:
         df[col] = pd.NA
+
+#biopython's entrez module to get ncbi taxonomy IDs
+def lookup_taxonomy_id(species):
+     try:
+          #strict search first
+          handle = Entrez.esearch(
+               db="taxonomy",
+               term=f'"{species}"[Scientific Name]'
+          )
+
+          record = Entrez.read(handle)
+          handle.close()
+
+          ids = record.get("IdList", [])
+          if ids:
+               return ids [0]
+          
+          #fallback search
+          handle = Entrez.esearch(
+               db="taxonomy",
+               term=species
+          )
+          record = Entrez.read(handle)
+          handle.close()
+
+          ids = record.get("IdList", [])
+          return ids [0] if ids else None
+     
+     except Exception as e:
+          print(f"NCBI lookup failed for {chatgpt_species_name}: {e}")
+          return None
 
 client = OpenAI(api_key=api_key)
 
@@ -126,30 +168,46 @@ for idx, row in df.iterrows():
          chatgpt_species_name = record.get("species_name", "")
          #gets chatgpt_reasoning
          chatgpt_reasoning = record.get("reasoning", "")
+         #gets ncbi_taxon_id from input name
+         ncbi_taxon_id = lookup_taxonomy_id(species)
+
+         #if chatgpt name is better, will use it
+         if not ncbi_taxon_id and chatgpt_species_name:
+              ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
 
          #stores results
          df.at[idx, CHATGPT_COL] = chatgpt_species_name
          df.at[idx, TAXON_COL] = chatgpt_taxon_id
+         df.at[idx, NCBI_TAXON_COL] = ncbi_taxon_id
          df.at[idx, REASON_COL] = chatgpt_reasoning
          
-         print(f"Parsed -> chatgpt_taxon_id: {chatgpt_taxon_id}," 
+         print(f"chatgpt_taxon_id: {chatgpt_taxon_id}," 
+               f"NCBI_taxon_id: {ncbi_taxon_id},"
                f"species_name: {chatgpt_species_name},"
                f"chatgpt_reasoning: {chatgpt_reasoning}"
                )
          
          #comparing values
          input_species_name = str(row.get(NAMESPACENAME_COL, "")).strip()
-         input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip()
+         input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip().replace(".0", "")
          
          returned_name = str(chatgpt_species_name).strip()
-         returned_taxon_id = str(chatgpt_taxon_id).strip()
-         
+         returned_chatgpt_taxon_id = str(chatgpt_taxon_id).strip().replace(".0", "")
+         returned_ncbi_taxon_id = (
+              str(ncbi_taxon_id).strip().replace(".0", "")
+              if ncbi_taxon_id not in [None, "None", ""]
+              else ""
+         )
+
          name_match = input_species_name.lower() == returned_name.lower()
-         taxon_id_match = input_taxon_id == returned_taxon_id
+         
+         taxon_id_match = input_taxon_id == returned_chatgpt_taxon_id
+         ncbi_taxon_id_match = input_taxon_id == returned_ncbi_taxon_id
          
          df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
          df.at[idx, TAXON_MATCH_COL] = "Yes" if taxon_id_match else "No"
-         
+         df.at[idx, NCBI_TAXON_MATCH_COL] ="Yes" if ncbi_taxon_id_match else "No"
+
          #saves progress after every row
          df.to_csv(CSV_OUT, index=False)
          print(f"Row {idx}: saved to {CSV_OUT}")
