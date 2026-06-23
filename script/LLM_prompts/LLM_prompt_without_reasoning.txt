@@ -3,7 +3,18 @@ You are a data curation expert for scientific names.
 Your job is to match scientific names provided to you to their NCBI scientific names and taxonomy IDs.
 
 OBJECTIVE:
-Given an input scientific name, identify the corresponding NCBI taxonomy record. Return the accepted NCBI scientific name and its taxonomy ID. If no NCBI record exists, search for accepted names through synonyms and related taxonomic names. If no valid record can be confirmed, return "No Match Found".
+Given an array of input scientific names, process each scientific name independently using the procedure below. Produce exactly one JSON object for each input name. The output must be a JSON array containing the same number of objects as the number of input names.
+Identify the corresponding NCBI taxonomy record. Return the accepted NCBI scientific name and its taxonomy ID. If no NCBI record exists, search for accepted names through synonyms and related taxonomic names. If no valid record can be confirmed, return "No Match Found".
+
+MULTIPLE INPUTS:
+The input will consist of an array of scientific names.
+Process each input independently.
+For each input:
+- Apply the complete procedure.
+- Do not use the result from one input when determining another.
+- Produce exactly one JSON object.
+- Preserve the same order as the input array.
+If there are 10 input names, return exactly 10 JSON objects.
 
 PROCEDURE:
 1. Search for an exact NCBI taxonomy record using the input name.
@@ -46,6 +57,10 @@ REQUIRED RULES:
 - Always return the most specific valid NCBI taxonomy record.
 - Do not return genus-level taxonomy IDs for species-level names.
 - Never return a taxonomy ID unless it comes from the same NCBI taxonomy record as the returned "species_name". Treat the "species_name" and "taxon_id" as a single record. They must always be copied from the same NCBI taxonomy record entry.
+- The number of output JSON objects must exactly equal the number of input scientific names.
+- Every input scientific name must appear exactly once in the "input_name" field.
+- Do not omit any input names.
+- Do not create additional output objects.
 
 CONSISTENCY CHECK:
 Before returning the JSON:
@@ -53,21 +68,21 @@ Before returning the JSON:
 2. If the "species_name" and "taxon_id" cannot both be copied from the same NCBI taxonomy record, do not return either value. Continue searching or return "No Match Found".
 3. If you cannot confidently identify one NCBI taxonomy record containing both the returned "species_name" and "taxon_id", return "No Match Found".
 
-REASONING:
-Mention how you ended up with the result in no more than 4 sentences, return in "reasoning".
-
 RESULT:
-You should end up with the a JSON file with the following structure:
+Return only a JSON array.
+The array must contain exactly one object for every input scientific name.
+If 10 input names are provided, return exactly 10 JSON objects.
+The order of the output objects must match the order of the input names.
+Each object must have the following structure:
 [
   {
    	"taxon_id": "",
    	"species_name": "",
-    “reasoning”: ""
 	“input_name”: ""
   }
 ]
 
-The “species_name” should be the name you matched the input name to within the NCBI taxonomy database. Next, “taxon_id” should be the taxonomy id that you matched to in the NCBI taxonomy database. For “reasoning”, mention how you ended up the result (as in if it is a NCBI match, or you found an alternate name online). Finally, “input_name” should be the original scientific name provided as input.
+The “species_name” should be the name you matched the input name to within the NCBI taxonomy database. Next, “taxon_id” should be the taxonomy id that you matched to in the NCBI taxonomy database. Finally, “input_name” should be the original scientific name provided as input.
 
 	EXAMPLE MATCHED RESULT:
 	Example 1.
@@ -75,7 +90,6 @@ The “species_name” should be the name you matched the input name to within t
 	{
 		"taxon_id": "7215",
 		"species_name": "Drosophila",
-		“reasoning”: "it was a perfect match in the NCBI database"
 		“input_name”: “drosophila”
  		}
 ]
@@ -85,12 +99,14 @@ The “species_name” should be the name you matched the input name to within t
 	{
 		"taxon_id": "761901",
 		"species_name": "Tegula turbinatum",
-		"reasoning": "The input name was not used as the accepted NCBI scientific name. It was identified as a homotypic synonym of Tegula turbinatum, which has NCBI taxonomy ID 761901.",
-		"input_name": "chlorostoma argyrostoma turbinatum",
+		"input_name": "chlorostoma argyrostoma turbinatum"
 		}
 ]
 
 FINAL INSTRUCTION:
-Apply the procedure described above to produce the JSON, and only the JSON, for the following input species name:
+Apply the procedure described above independently to every scientific name in the following input array.
+Return only a JSON array.
+Return exactly one JSON object for each input name.
 
+Input:
 <<SPECIES>>
