@@ -31,7 +31,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-5.5"
+MODEL = "gpt-4o"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
