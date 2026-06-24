@@ -2,5 +2,5 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
 25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,Streptococcus ratti,Yes,1312,No,Streptococcus dysgalactiae subsp. equisimilis (1312 was merged into 119602),1341,Yes
 25447,1,microsporum gypseum,Nannizzia gypsea,63402,microsporum gypseum,species,1,Nannizzia gypsea,Yes,5550,No,Trichophyton,63402,Yes
 25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,Styphnolobium japonicum,Yes,3897,Yes,,3897,Yes
-25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa,No,3711,No,Brassica rapa,3711,No,
+25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa,No,3711,No,Brassica rapa,3711,No
 25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,Brevundimonas diminuta,Yes,293,Yes,,293,Yes
