@@ -8,7 +8,7 @@ from Bio import Entrez
 #file locations
 CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\data_with_mapping_names.csv")
 CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\chatgpt_matched_with_mapping_names.csv")
-PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\LLM_prompt_without_reasoning.txt")
+PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\with_JSON_array\LLM_prompt_without_reasoning_with_array.txt")
 API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\api_key.txt")
 
 #input column name
@@ -31,7 +31,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-5"
+MODEL = "gpt-5.5"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -58,8 +58,8 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to rows 20 to 30
-df = df.iloc[20:31]
+#tests to rows 20 to 29
+df = df.iloc[20:30]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL]:
@@ -139,6 +139,13 @@ for start in range(0, len(df), BATCH_SIZE):
             ]
           )
          
+         #will answer with api usage
+         if response.usage:
+              print("\nToken usage:")
+              print(f"Prompt tokens: {response.usage.prompt_tokens}")
+              print(f"Completion tokens: {response.usage.completion_tokens}")
+              print(f"Total tokens: {response.usage.total_tokens}")
+
          #gets API response and prints it
          raw_output = response.choices[0].message.content.strip()
 
@@ -230,7 +237,7 @@ for start in range(0, len(df), BATCH_SIZE):
                
          #saves progress after every row
          df.to_csv(CSV_OUT, index=False)
-         print(f"Row {idx}: saved to {CSV_OUT}")
+         print(f"Batch starting at row {start} saved to {CSV_OUT}")
 
     #catches JSON errors
     except json.JSONDecodeError as e:
