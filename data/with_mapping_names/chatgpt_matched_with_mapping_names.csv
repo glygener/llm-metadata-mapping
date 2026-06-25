@@ -1,11 +1,11 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match_?,chatgpt_taxon_id,taxon_id_match_?,chatgpt_taxon_id_species_name,ncbi_taxon_id,ncbi_taxon_id_match_?
-25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,Streptococcus rattus,No,12372,No,,1341,Yes
-25447,1,microsporum gypseum,Nannizzia gypsea,63402,microsporum gypseum,species,1,Microsporum gypseum,No,28419,No,,63402,Yes
-25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,Sophora japonica,No,8227,No,,3897,Yes
-25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa,No,3710,No,,3711,No
-25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,Pseudomonas diminuta,No,195,No,,293,Yes
-25526,1,nocardia corynebacteroides,Rhodococcoides corynebacterioides,53972,nocardia corynebacteroides,species,1,Nocardia corynebacteroides,No,1660,No,,53972,Yes
-26526,1,laminaria japonica,Saccharina japonica,88149,laminaria japonica,species,1,Laminaria japonica,No,201199,No,,88149,Yes
-26534,1,mycobacterium peregrinum,Mycolicibacterium peregrinum,43304,mycobacterium peregrinum,species,1,Mycobacterium peregrinum,No,140787,No,,43304,Yes
-26554,1,lophopetalum toxicum,Toxicum,1272110,lophopetalum toxicum,genus,1,Lophopetalum toxicum,No,222872,No,,1272110,Yes
-26558,1,ganoderma tsugae,Polyporus tsugae,2075311,ganoderma tsugae,species,1,Ganoderma tsugae,No,5234,No,,2075311,Yes
+25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,Streptococcus sanguinis,No,354,No,Azotomonas,1305,No
+25447,1,microsporum gypseum,Nannizzia gypsea,63402,microsporum gypseum,species,1,nannizzia gypsea,Yes,5541,No,Thermomyces lanuginosus,63402,Yes
+25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,Styphnolobium japonicum,Yes,3986,No,Mercurialis annua,3897,Yes
+25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa,No,3716,No,Brassica oleracea var. capitata,3711,No
+25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,Brevundimonas diminuta,Yes,75915,No,Fusarium miscanthi,293,Yes
+25526,1,nocardia corynebacteroides,Rhodococcoides corynebacterioides,53972,nocardia corynebacteroides,species,1,No Match Found,No,,No,,,No
+26526,1,laminaria japonica,Saccharina japonica,88149,laminaria japonica,species,1,Saccharina japonica,Yes,296526,No,Brachista,88149,Yes
+26534,1,mycobacterium peregrinum,Mycolicibacterium peregrinum,43304,mycobacterium peregrinum,species,1,Mycobacteroides peregrinum,No,1776,No,Mycolicibacterium flavescens,,No
+26554,1,lophopetalum toxicum,Toxicum,1272110,lophopetalum toxicum,genus,1,No Match Found,No,,No,,,No
+26558,1,ganoderma tsugae,Polyporus tsugae,2075311,ganoderma tsugae,species,1,Ganoderma tsugae,No,35663,No,Heterogeomys cherriei,2075311,Yes
