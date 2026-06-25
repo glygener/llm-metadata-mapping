@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 import json
+import re
 from openai import OpenAI
 import time
 from Bio import Entrez
@@ -31,7 +32,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-5.5"
+MODEL = "gpt-4o"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -58,8 +59,8 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to row 10
-df = df.iloc[1:11]
+#tests to rows 20 to 29
+df = df.iloc[20:30]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL]:
@@ -100,7 +101,7 @@ def lookup_taxonomy_id(species):
 
 client = OpenAI(api_key=api_key)
 
-#processes rows
+#processes rows with JSON
 BATCH_SIZE = 10
 for start in range(0, len(df), BATCH_SIZE):
     batch = df.iloc[start:start+BATCH_SIZE]
@@ -139,6 +140,13 @@ for start in range(0, len(df), BATCH_SIZE):
             ]
           )
          
+         #will answer with api usage
+         if response.usage:
+              print("\nToken usage:")
+              print(f"Prompt tokens: {response.usage.prompt_tokens}")
+              print(f"Completion tokens: {response.usage.completion_tokens}")
+              print(f"Total tokens: {response.usage.total_tokens}")
+
          #gets API response and prints it
          raw_output = response.choices[0].message.content.strip()
 
@@ -146,8 +154,14 @@ for start in range(0, len(df), BATCH_SIZE):
          print("Raw model output:")
          print(raw_output)
 
-         #converts JSON text into python
-         records = json.loads(raw_output)
+         #converts JSON text into a clean python
+         match = re.search(r"\[.*|]", raw_output, re.S)
+
+         if not match:
+              raise ValueError("No JSON array found in model output")
+         
+         json_text = match.group(0)
+         records = json.loads(json_text)
 
          if not isinstance(records, list):
               raise ValueError("Expected a JSON array.")
@@ -176,7 +190,7 @@ for start in range(0, len(df), BATCH_SIZE):
               zip(batch.iterrows(), records)
               ):
                
-               expected_input = species_list[i].strip()
+               expected_input = str(species_list[i]).strip()
                returned_input = str(
                     record.get("input_name", "")
                     ).strip()
@@ -230,7 +244,7 @@ for start in range(0, len(df), BATCH_SIZE):
                
          #saves progress after every row
          df.to_csv(CSV_OUT, index=False)
-         print(f"Row {idx}: saved to {CSV_OUT}")
+         print(f"Batch starting at row {start} saved to {CSV_OUT}")
 
     #catches JSON errors
     except json.JSONDecodeError as e:

@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 import json
+import re
 from openai import OpenAI
 import time
 from Bio import Entrez
@@ -33,7 +34,7 @@ NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 REASON_COL = "chatgpt_reasoning"
 
 #API model name
-MODEL = "gpt-5.5"
+MODEL = "gpt-4o"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -61,8 +62,8 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to row 5
-df = df.iloc[1:6]
+#tests to rows 20 to 29
+df = df.iloc[20:30]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
@@ -103,23 +104,23 @@ def lookup_taxonomy_id(species):
 
 client = OpenAI(api_key=api_key)
 
-#processes each row
-for idx, row in df.iterrows():
-    
- #gets the species name from "name" (INPUT_NAME_COL)
-    species = str(row.get(INPUT_NAME_COL, "")).strip()
+#processes rows with JSON
+BATCH_SIZE = 10
+for start in range(0, len(df), BATCH_SIZE):
+    batch = df.iloc[start:start+BATCH_SIZE]
 
-    #skips empty rows
-    if not species or species.lower() == "nan":
-        continue
-    
-    #skips already processed rows
-    if pd.notna(row.get(CHATGPT_COL)) and str(row.get(CHATGPT_COL)).strip():
-        print(f"Row {idx}: already processed, skipping.")
-        continue
-    
+    species_list = (
+         batch[INPUT_NAME_COL]
+         .fillna("")
+         .astype(str)
+         .str.strip()
+         .tolist()
+    )
     #inserts "name" into the prompt
-    prompt = prompt_template.replace("<<SPECIES>>", species)
+    prompt = prompt_template.replace(
+         "<<SPECIES>>",
+         json.dumps(species_list, indent=2)
+         )
 
 #calls the API with the prompt and gets a response
     try:
@@ -139,83 +140,123 @@ for idx, row in df.iterrows():
                  #gives the prompt with the species name
                  "role": "user",
                  "content": prompt}
-            ],
-              #forces the model into JSON mode
-              response_format={"type":"json_object"},
+            ]
           )
          
+         #will answer with api usage
+         if response.usage:
+              print("\nToken usage:")
+              print(f"Prompt tokens: {response.usage.prompt_tokens}")
+              print(f"Completion tokens: {response.usage.completion_tokens}")
+              print(f"Total tokens: {response.usage.total_tokens}")
+
          #gets API response and prints it
          raw_output = response.choices[0].message.content.strip()
 
-         print(f"\nRow {idx} | Input species: {species}")
+         print(f"\nProcessing batch starting at row {start}")
          print("Raw model output:")
          print(raw_output)
 
-         #converts JSON text into python
-         data = json.loads(raw_output)
+         #converts JSON text into a clean python
+         match = re.search(r"\[.*|]", raw_output, re.S)
 
-         if isinstance(data, list) and len(data) > 0:
-                record = data[0]
-         elif isinstance(data, dict):
-                record = data
-         else:
-                print(f"Row {idx}: Unexpected JSON structure, skipping.")
-                continue
+         if not match:
+              raise ValueError("No JSON array found in model output")
          
-         #gets chatgpt_taxon_id
-         chatgpt_taxon_id = record.get("taxon_id", "")
-         #gets chatgpt_name
-         chatgpt_species_name = record.get("species_name", "")
-         #gets chatgpt_reasoning
-         chatgpt_reasoning = record.get("reasoning", "")
-         #gets ncbi_taxon_id from chatgpt_species_name
-         ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
-         
-         if chatgpt_species_name == "No Match Found":
-              ncbi_taxon_id = None
-         else:
-              ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
+         json_text = match.group(0)
+         records = json.loads(json_text)
 
-         #stores results
-         df.at[idx, CHATGPT_COL] = chatgpt_species_name
-         df.at[idx, TAXON_COL] = chatgpt_taxon_id
-         df.at[idx, NCBI_TAXON_COL] = ncbi_taxon_id
-         df.at[idx, REASON_COL] = chatgpt_reasoning
-         
-         print(f"chatgpt_taxon_id: {chatgpt_taxon_id}," 
-               f"NCBI_taxon_id: {ncbi_taxon_id},"
-               f"species_name: {chatgpt_species_name},"
-               f"chatgpt_reasoning: {chatgpt_reasoning}"
-               )
-         
-         #comparing values
-         input_species_name = str(row.get(NAMESPACENAME_COL, "")).strip()
-         input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip().replace(".0", "")
-         
-         returned_name = str(chatgpt_species_name).strip()
-         returned_chatgpt_taxon_id = str(chatgpt_taxon_id).strip().replace(".0", "")
-         returned_ncbi_taxon_id = (
-              str(ncbi_taxon_id).strip().replace(".0", "")
-              if ncbi_taxon_id not in [None, "None", ""]
-              else ""
-         )
+         if not isinstance(records, list):
+              raise ValueError("Expected a JSON array.")
 
-         name_match = input_species_name.lower() == returned_name.lower()
+         if len(records) != len(batch):
+              raise ValueError(
+                   f"Expected {len(batch)} results, got {len(records)}"
+              )
          
-         taxon_id_match = input_taxon_id == returned_chatgpt_taxon_id
-         ncbi_taxon_id_match = input_taxon_id == returned_ncbi_taxon_id
-         
-         df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
-         df.at[idx, TAXON_MATCH_COL] = "Yes" if taxon_id_match else "No"
-         df.at[idx, NCBI_TAXON_MATCH_COL] ="Yes" if ncbi_taxon_id_match else "No"
+         #makes sure the outputs are in the correct format
+         required = {
+              "taxon_id",
+              "species_name",
+              "input_name"
+         }
 
+         for i, record in enumerate(records):
+              missing = required - record.keys()
+              
+              if missing:
+                   raise ValueError(
+                        f"Record {i} is missing keys: {missing}"
+                   )
+         
+         for i, ((idx, row), record) in enumerate(
+              zip(batch.iterrows(), records)
+              ):
+               
+               expected_input = str(species_list[i]).strip()
+               returned_input = str(
+                    record.get("input_name", "")
+                    ).strip()
+
+               if expected_input != returned_input:
+                    raise ValueError(
+                         f"Input order mismatch."
+                         f"Expected '{expected_input}'."
+                         f"but got '{returned_input}'."
+                    )
+               
+               #gets chatgpt_taxon_id
+               chatgpt_taxon_id = record.get("taxon_id", "")
+               #gets chatgpt_name
+               chatgpt_species_name = record.get("species_name", "")
+               #gets chatgpt_reasoning
+               chatgpt_reasoning = record.get("reasoning", "")
+               #gets ncbi_taxon_id from chatgpt_species_name
+               if chatgpt_species_name == "No Match Found":
+                    ncbi_taxon_id = None
+               else:
+                    ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
+               
+               #stores results
+               df.at[idx, CHATGPT_COL] = chatgpt_species_name
+               df.at[idx, TAXON_COL] = chatgpt_taxon_id
+               df.at[idx, NCBI_TAXON_COL] = ncbi_taxon_id
+               df.at[idx, REASON_COL] = chatgpt_reasoning
+
+               
+               print(f"chatgpt_taxon_id: {chatgpt_taxon_id}," 
+                     f"NCBI_taxon_id: {ncbi_taxon_id},"
+                     f"species_name: {chatgpt_species_name}"
+                     f"chatgpt_reasoning: {chatgpt_reasoning}"
+                     )
+               
+               #comparing values
+               input_species_name = str(row.get(NAMESPACENAME_COL, "")).strip()
+               input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip().replace(".0", "")
+               
+               returned_name = str(chatgpt_species_name).strip()
+               returned_chatgpt_taxon_id = str(chatgpt_taxon_id).strip().replace(".0", "")
+               returned_ncbi_taxon_id = (
+                    str(ncbi_taxon_id).strip().replace(".0", "")
+                    if ncbi_taxon_id not in [None, "None", ""]
+                    else ""
+                    )
+               
+               name_match = input_species_name.lower() == returned_name.lower()
+               taxon_id_match = input_taxon_id == returned_chatgpt_taxon_id
+               ncbi_taxon_id_match = input_taxon_id == returned_ncbi_taxon_id
+               
+               df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
+               df.at[idx, TAXON_MATCH_COL] = "Yes" if taxon_id_match else "No"
+               df.at[idx, NCBI_TAXON_MATCH_COL] ="Yes" if ncbi_taxon_id_match else "No"
+               
          #saves progress after every row
          df.to_csv(CSV_OUT, index=False)
-         print(f"Row {idx}: saved to {CSV_OUT}")
+         print(f"Batch starting at row {start} saved to {CSV_OUT}")
 
     #catches JSON errors
     except json.JSONDecodeError as e:
-         print(f"Row {idx}: JSON decode error: {e}")
+         print(f"Batch starting at row {start}: JSON decode error")
          print("Raw output that failed to parse:")
          #shows what went wrong
          print(raw_output)
@@ -224,7 +265,7 @@ for idx, row in df.iterrows():
     #catches every other error
     except Exception as e:
          #shows what went wrong
-         print(f"Row {idx}: Error calling API or processing result: {e}")
+         print(f"Batch starting at row {start}: {e}")
          #moves to next row
          continue
     #delays 1 second before moving to the next row
