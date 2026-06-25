@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 import json
+import re
 from openai import OpenAI
 import time
 from Bio import Entrez
@@ -31,7 +32,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-4o-mini"
+MODEL = "gpt-4o"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -100,7 +101,7 @@ def lookup_taxonomy_id(species):
 
 client = OpenAI(api_key=api_key)
 
-#processes rows
+#processes rows with JSON
 BATCH_SIZE = 10
 for start in range(0, len(df), BATCH_SIZE):
     batch = df.iloc[start:start+BATCH_SIZE]
@@ -153,8 +154,14 @@ for start in range(0, len(df), BATCH_SIZE):
          print("Raw model output:")
          print(raw_output)
 
-         #converts JSON text into python
-         records = json.loads(raw_output)
+         #converts JSON text into a clean python
+         match = re.search(r"\[.*|]", raw_output, re.S)
+
+         if not match:
+              raise ValueError("No JSON array found in model output")
+         
+         json_text = match.group(0)
+         records = json.loads(json_text)
 
          if not isinstance(records, list):
               raise ValueError("Expected a JSON array.")
@@ -183,7 +190,7 @@ for start in range(0, len(df), BATCH_SIZE):
               zip(batch.iterrows(), records)
               ):
                
-               expected_input = species_list[i].strip()
+               expected_input = str(species_list[i]).strip()
                returned_input = str(
                     record.get("input_name", "")
                     ).strip()
