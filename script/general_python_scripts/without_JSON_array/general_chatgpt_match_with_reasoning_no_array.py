@@ -6,8 +6,8 @@ import time
 from Bio import Entrez
 
 #file locations
-CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\data_with_mapping_names.csv")
-CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\chatgpt_matched_with_mapping_names.csv")
+CSV_IN = Path()
+CSV_OUT = Path()
 PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\without_JSON_array\LLM_prompt_with_reasoning_no_array.txt")
 API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\api_key.txt")
 

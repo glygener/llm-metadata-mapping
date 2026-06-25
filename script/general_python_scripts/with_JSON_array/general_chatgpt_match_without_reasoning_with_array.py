@@ -9,7 +9,7 @@ from Bio import Entrez
 #file locations
 CSV_IN = Path()
 CSV_OUT = Path()
-PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\LLM_prompt_without_reasoning.txt")
+PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\with_JSON_array\LLM_prompt_without_reasoning_with_array.txt")
 API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\api_key.txt")
 
 #input column name
