@@ -32,7 +32,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-4o"
+MODEL = "gpt-4o-mini"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -59,8 +59,8 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to rows 20 to 29
-df = df.iloc[20:30]
+#tests to row 20
+df = df.iloc[1:21]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL]:
@@ -155,7 +155,7 @@ for start in range(0, len(df), BATCH_SIZE):
          print(raw_output)
 
          #converts JSON text into a clean python
-         match = re.search(r"\[.*|]", raw_output, re.S)
+         match = re.search(r"\[.*\]", raw_output, re.S)
 
          if not match:
               raise ValueError("No JSON array found in model output")
@@ -249,6 +249,7 @@ for start in range(0, len(df), BATCH_SIZE):
     #catches JSON errors
     except json.JSONDecodeError as e:
          print(f"Batch starting at row {start}: JSON decode error")
+         print(f"Error: {e}")
          print("Raw output that failed to parse:")
          #shows what went wrong
          print(raw_output)
