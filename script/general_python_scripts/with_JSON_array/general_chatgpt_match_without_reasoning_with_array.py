@@ -155,7 +155,7 @@ for start in range(0, len(df), BATCH_SIZE):
          print(raw_output)
 
          #converts JSON text into a clean python
-         match = re.search(r"\[.*|]", raw_output, re.S)
+         match = re.search(r"\[.*\]", raw_output, re.S)
 
          if not match:
               raise ValueError("No JSON array found in model output")
@@ -249,6 +249,7 @@ for start in range(0, len(df), BATCH_SIZE):
     #catches JSON errors
     except json.JSONDecodeError as e:
          print(f"Batch starting at row {start}: JSON decode error")
+         print(f"Error: {e}")
          print("Raw output that failed to parse:")
          #shows what went wrong
          print(raw_output)
