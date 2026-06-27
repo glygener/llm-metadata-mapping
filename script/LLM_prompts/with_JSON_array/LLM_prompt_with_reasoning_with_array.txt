@@ -19,7 +19,7 @@ If there are 10 input names, return exactly 10 JSON objects.
 PROCEDURE:
 1. Search for an exact NCBI taxonomy record using the input name.
 2. If an exact record exists:
-- Return that record's species name in "species_name".
+- Return that record's scientific species name in "species_name".
 - Return that record's taxonomy ID in "taxon_id". If you cannot explicitly confirm that record's taxonomy ID, leave "taxon_id" blank.
 - Do not search for "alternate names".
 3. If no exact record exists:
