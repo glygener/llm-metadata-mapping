@@ -230,11 +230,7 @@ for start in range(0, len(df), BATCH_SIZE):
                #gets chatgpt_name
                chatgpt_species_name = record.get("species_name", "")
                #gets ncbi_taxon_id from chatgpt_species_name
-               if chatgpt_species_name == "No Match Found":
-                    ncbi_species_name = None
-                    ncbi_taxon_id = None
-               else:
-                    ncbi_taxon_id, ncbi_species_name = lookup_taxonomy(chatgpt_species_name)
+               ncbi_taxon_id, ncbi_species_name = lookup_taxonomy(expected_input)
                
                #stores results
                df.at[idx, CHATGPT_COL] = chatgpt_species_name
