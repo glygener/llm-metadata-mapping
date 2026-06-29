@@ -68,6 +68,7 @@ REQUIRED RULES:
 - Do not return genus-level taxonomy IDs for species-level names. 
 - Preserve subspecies, variety, forma, or any other infraspecific rank whenever it is part of the accepted scientific name.
 - A correct species_name with a blank taxon_id is preferred over an incorrect taxonomy ID.
+- Never return the input scientific name simply because no better name was found. If the accepted NCBI scientific name cannot be determined with high confidence, return "No Match Found" instead of repeating the input name.
 
 TAXONOMY IDS MUST:
 - "species_name" and "taxon_id" must refer to the same taxonomy record.
