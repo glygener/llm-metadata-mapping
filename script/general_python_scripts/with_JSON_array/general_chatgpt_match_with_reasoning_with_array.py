@@ -27,6 +27,10 @@ TAXON_COL = "chatgpt_taxon_id"
 #output column name
 TAXON_MATCH_COL = "taxon_id_match_?"
 #output column name
+NCBI_SPECIES_COL = "ncbi_species_name"
+#output column name
+NCBI_SPECIES_MATCH_COL = "ncbi_species_name_match_?"
+#output column name
 NCBI_TAXON_COL = "ncbi_taxon_id"
 #output column name
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
@@ -54,6 +58,8 @@ output_cols= [
      NAME_MATCH_COL,
      TAXON_COL,
      TAXON_MATCH_COL,
+     NCBI_SPECIES_COL,
+     NCBI_SPECIES_MATCH_COL,
      NCBI_TAXON_COL,
      NCBI_TAXON_MATCH_COL,
      REASON_COL,
@@ -62,17 +68,17 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to rows 20 to 29
-df = df.iloc[20:30]
+#tests to row 20
+df = df.iloc[1:21]
 
 #makes sure the output columns exist
-for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
+for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_SPECIES_COL, NCBI_SPECIES_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
  #if the column doesn't exist yet, it creates it
     if col not in df.columns:
         df[col] = pd.NA
 
 #biopython's entrez module to get ncbi taxonomy IDs
-def lookup_taxonomy_id(species):
+def lookup_taxonomy(species):
      try:
           #strict search first
           handle = Entrez.esearch(
@@ -84,23 +90,40 @@ def lookup_taxonomy_id(species):
           handle.close()
 
           ids = record.get("IdList", [])
-          if ids:
-               return ids [0]
           
           #fallback search
-          handle = Entrez.esearch(
+          if not ids:
+               handle = Entrez.esearch(
+                    db="taxonomy",
+                    term=species
+                    )
+               record = Entrez.read(handle)
+               handle.close()
+               
+               ids = record.get("IdList", [])
+          
+          if not ids:
+               return None, None
+          
+          taxid = ids[0]
+
+          #get the taxonomy record
+          handle = Entrez.efetch(
                db="taxonomy",
-               term=species
+               id=taxid,
+               retmode="xml"
           )
-          record = Entrez.read(handle)
+
+          records = Entrez.read(handle)
           handle.close()
 
-          ids = record.get("IdList", [])
-          return ids [0] if ids else None
+          scientific_name = records[0]["ScientificName"]
+
+          return taxid, scientific_name
      
      except Exception as e:
           print(f"NCBI lookup failed for {species}: {e}")
-          return None
+          return None, None
 
 client = OpenAI(api_key=api_key)
 
@@ -178,7 +201,8 @@ for start in range(0, len(df), BATCH_SIZE):
          required = {
               "taxon_id",
               "species_name",
-              "input_name"
+              "input_name",
+              "chatgpt_reasoning"
          }
 
          for i, record in enumerate(records):
@@ -212,19 +236,18 @@ for start in range(0, len(df), BATCH_SIZE):
                #gets chatgpt_reasoning
                chatgpt_reasoning = record.get("reasoning", "")
                #gets ncbi_taxon_id from chatgpt_species_name
-               if chatgpt_species_name == "No Match Found":
-                    ncbi_taxon_id = None
-               else:
-                    ncbi_taxon_id = lookup_taxonomy_id(chatgpt_species_name)
+               ncbi_taxon_id, ncbi_species_name = lookup_taxonomy(chatgpt_species_name)
                
                #stores results
                df.at[idx, CHATGPT_COL] = chatgpt_species_name
                df.at[idx, TAXON_COL] = chatgpt_taxon_id
+               df.at[idx, NCBI_SPECIES_COL] = ncbi_species_name
                df.at[idx, NCBI_TAXON_COL] = ncbi_taxon_id
                df.at[idx, REASON_COL] = chatgpt_reasoning
 
                
                print(f"chatgpt_taxon_id: {chatgpt_taxon_id}," 
+                     f"NCBI_species_name: {ncbi_species_name},"
                      f"NCBI_taxon_id: {ncbi_taxon_id},"
                      f"species_name: {chatgpt_species_name}"
                      f"chatgpt_reasoning: {chatgpt_reasoning}"
@@ -236,6 +259,11 @@ for start in range(0, len(df), BATCH_SIZE):
                
                returned_name = str(chatgpt_species_name).strip()
                returned_chatgpt_taxon_id = str(chatgpt_taxon_id).strip().replace(".0", "")
+               returned_ncbi_species_name = (
+                    str(ncbi_species_name).strip()
+                    if ncbi_species_name not in [None, "None", ""]
+                    else ""
+               )
                returned_ncbi_taxon_id = (
                     str(ncbi_taxon_id).strip().replace(".0", "")
                     if ncbi_taxon_id not in [None, "None", ""]
@@ -244,10 +272,12 @@ for start in range(0, len(df), BATCH_SIZE):
                
                name_match = input_species_name.lower() == returned_name.lower()
                taxon_id_match = input_taxon_id == returned_chatgpt_taxon_id
+               ncbi_species_name_match = input_species_name.lower() == returned_ncbi_species_name.lower()
                ncbi_taxon_id_match = input_taxon_id == returned_ncbi_taxon_id
                
                df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
                df.at[idx, TAXON_MATCH_COL] = "Yes" if taxon_id_match else "No"
+               df.at[idx, NCBI_SPECIES_MATCH_COL] = "Yes" if ncbi_species_name_match else "No"
                df.at[idx, NCBI_TAXON_MATCH_COL] ="Yes" if ncbi_taxon_id_match else "No"
                
          #saves progress after every row
