@@ -1,21 +1,21 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match_?,chatgpt_taxon_id,taxon_id_match_?,chatgpt_taxon_id_species_name,ncbi_species_name,ncbi_species_name_match_?,ncbi_taxon_id,ncbi_taxon_id_match_?
-25349,1,streptosporangium viridogriseum,Kutzneria viridogrisea,47990,streptosporangium viridogriseum,species,1,Kutzneria viridogrisea,Yes,258084,No,,Kutzneria viridogrisea,Yes,47990,Yes
-25361,1,streptococcus faecium,Enterococcus faecium,1352,streptococcus faecium,species,1,Enterococcus faecium,Yes,,No,,Enterococcus faecium,Yes,1352,Yes
-25364,1,pseudomonas atlantica,Pseudoalteromonas atlantica,288,pseudomonas atlantica,species,1,Alteromonas atlantica,No,228,No,,Pseudoalteromonas atlantica,Yes,288,Yes
-25371,1,acacia senegal,Senegalia senegal,138043,acacia senegal,species,1,Senegalia senegal,Yes,37621,No,,Senegalia senegal,Yes,138043,Yes
-25375,1,asclepias fruticosa,Gomphocarpus fruticosus,219240,asclepias fruticosa,species,1,Gomphocarpus fruticosus,Yes,41172,No,,Gomphocarpus fruticosus,Yes,219240,Yes
-25377,1,blastocrithidia culicis,Strigomonas culicis,28005,blastocrithidia culicis,species,1,Blastocrithidia culicis,No,5655,No,,Strigomonas culicis,Yes,28005,Yes
-25398,1,clostridium thermocellum,Acetivibrio thermocellus,1515,clostridium thermocellum,species,1,Ruminiclostridium thermocellum,No,203119,No,,Acetivibrio thermocellus,Yes,1515,Yes
-25401,1,phlomis medicinalis,Phlomoides medicinalis,1138144,phlomis medicinalis,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25410,1,rana catesbeiana,Aquarana catesbeiana,8400,rana catesbeiana,species,1,Lithobates catesbeianus,No,8400,Yes,,Aquarana catesbeiana,Yes,8400,Yes
-25425,1,erwinia carotovora,Pectobacterium carotovorum,554,erwinia carotovora,species,1,Pectobacterium carotovorum,Yes,553,No,,Pectobacterium carotovorum,Yes,554,Yes
-25429,1,rhodobacter sphaeroides,Cereibacter sphaeroides,1063,rhodobacter sphaeroides,species,1,Rhodobacter sphaeroides,No,1063,Yes,,Cereibacter sphaeroides,Yes,1063,Yes
-25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,Streptococcus ratti,Yes,,No,,Streptococcus ratti,Yes,1341,Yes
-25447,1,microsporum gypseum,Nannizzia gypsea,63402,microsporum gypseum,species,1,Nannizzia gypsea,Yes,5541,No,,Nannizzia gypsea,Yes,63402,Yes
-25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,Styphnolobium japonicum,Yes,398384,No,,Styphnolobium japonicum,Yes,3897,Yes
-25468,1,brassica campestris,Brassica rapa subsp. oleifera,145471,brassica campestris,subspecies,1,Brassica rapa,No,3711,No,Brassica rapa,Brassica rapa,No,3711,No
-25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,Brevundimonas diminuta,Yes,113708,No,,Brevundimonas diminuta,Yes,293,Yes
-25526,1,nocardia corynebacteroides,Rhodococcoides corynebacterioides,53972,nocardia corynebacteroides,species,1,No Match Found,No,,No,No Match Found,,No,,No
-26526,1,laminaria japonica,Saccharina japonica,88149,laminaria japonica,species,1,Saccharina japonica,Yes,,No,,Saccharina japonica,Yes,88149,Yes
-26534,1,mycobacterium peregrinum,Mycolicibacterium peregrinum,43304,mycobacterium peregrinum,species,1,Mycobacterium peregrinum,No,36766,No,,Mycolicibacterium peregrinum,Yes,43304,Yes
-26554,1,lophopetalum toxicum,Toxicum,1272110,lophopetalum toxicum,genus,1,No Match Found,No,,No,No Match Found,,No,,No
+26558,1,ganoderma tsugae,Polyporus tsugae,2075311,ganoderma tsugae,species,1,Ganoderma tsugae,No,5427,No,,Polyporus tsugae,Yes,2075311,Yes
+26562,1,nolina recurvata,Beaucarnea recurvata,39519,nolina recurvata,species,1,Beaucarnea recurvata,Yes,1455975,No,,Beaucarnea recurvata,Yes,39519,Yes
+26585,1,spirometra erinacei,Spirometra erinaceieuropaei,99802,spirometra erinacei,species,1,Spirometra erinaceieuropaei,Yes,666469,No,,Spirometra erinaceieuropaei,Yes,99802,Yes
+26593,1,osmaronia cerasiformis,Oemleria cerasiformis,32237,osmaronia cerasiformis,species,1,Oemleria cerasiformis,Yes,174870,No,,Oemleria cerasiformis,Yes,32237,Yes
+26604,1,cimicifuga simplex,Actaea simplex,64042,cimicifuga simplex,species,1,Actaea simplex,Yes,73118,No,,Actaea simplex,Yes,64042,Yes
+26620,1,salmonella bareilly,Salmonella enterica subsp. enterica serovar Bareilly,58096,salmonella bareilly,no rank,1,Salmonella enterica,No,590,No,Salmonella,Salmonella enterica,No,28901,No
+26623,1,bacteroides cellulosolvens,Pseudobacteroides cellulosolvens,35825,bacteroides cellulosolvens,species,1,Bacteroides cellulosolvens,No,51191,No,,Pseudobacteroides cellulosolvens,Yes,35825,Yes
+26627,1,streptococcus hemolyticus,Streptococcus pyogenes,1314,streptococcus hemolyticus,species,1,Streptococcus pyogenes,Yes,,No,,Streptococcus pyogenes,Yes,1314,Yes
+26631,1,eupenicillium,Penicillium,5073,eupenicillium,genus,1,Penicillium,Yes,1048991,No,,Penicillium,Yes,5073,Yes
+26649,1,swartzia madagascariensis,Bobgunnia madagascariensis,149635,swartzia madagascariensis,species,1,Swartzia madagascariensis,No,1554381,No,,Bobgunnia madagascariensis,Yes,149635,Yes
+26654,1,salmonella paratyphi,Salmonella enterica subsp. enterica serovar Paratyphi A,54388,salmonella paratyphi,no rank,1,Salmonella enterica,No,913,No,Nitrobacter winogradskyi,Salmonella enterica,No,28901,No
+26666,1,acetobacter xylinum,Komagataeibacter xylinus,28448,acetobacter xylinum,species,1,Komagataeibacter xylinus,Yes,440,No,,Komagataeibacter xylinus,Yes,28448,Yes
+25531,1,macaca irus,Macaca fascicularis,9541,macaca irus,species,1,Macaca fascicularis,Yes,276547,No,,Macaca fascicularis,Yes,9541,Yes
+25536,1,pseudomonas vesicularis,Brevundimonas vesicularis,41276,pseudomonas vesicularis,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25551,1,streptosporangium albidum,Kutzneria albida,43357,streptosporangium albidum,species,1,Streptomyces albidus,No,33808,No,uncultured Alphaproteobacteria bacterium,,No,,No
+25564,1,enterobacter agglomerans,Pantoea agglomerans,549,enterobacter agglomerans,species,1,Pantoea agglomerans,Yes,615,No,,Pantoea agglomerans,Yes,549,Yes
+25569,1,salmonella enteritidis,Salmonella enterica subsp. enterica serovar Enteritidis,149539,salmonella enteritidis,no rank,1,Salmonella enterica subsp. enterica serovar Enteritidis,Yes,1499,No,,Salmonella enterica subsp. enterica serovar Enteritidis,Yes,149539,Yes
+25574,1,salmonella minnesota,Salmonella enterica subsp. enterica serovar Minnesota,70803,salmonella minnesota,no rank,1,No Match Found,No,,No,No Match Found,,No,,No
+25609,1,liriope platyphylla,Liriope muscari,39529,liriope platyphylla,species,1,Liriope platyphylla,No,277220,No,,Liriope muscari,Yes,39529,Yes
+25612,1,erwinia chrysanthemi,Dickeya chrysanthemi,556,erwinia chrysanthemi,species,1,Dickeya chrysanthemi,Yes,556,Yes,,Dickeya chrysanthemi,Yes,556,Yes
