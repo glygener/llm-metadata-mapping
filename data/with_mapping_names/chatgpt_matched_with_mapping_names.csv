@@ -1,41 +1,21 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match_?,chatgpt_taxon_id,taxon_id_match_?,chatgpt_taxon_id_species_name,ncbi_species_name,ncbi_species_name_match_?,ncbi_taxon_id,ncbi_taxon_id_match_?
-26558,1,ganoderma tsugae,Polyporus tsugae,2075311,ganoderma tsugae,species,1,Ganoderma tsugae,No,53977,No,,Polyporus tsugae,Yes,2075311,Yes
-26562,1,nolina recurvata,Beaucarnea recurvata,39519,nolina recurvata,species,1,Beaucarnea recurvata,Yes,2762135,No,,Beaucarnea recurvata,Yes,39519,Yes
-26585,1,spirometra erinacei,Spirometra erinaceieuropaei,99802,spirometra erinacei,species,1,Spirometra erinaceieuropaei,Yes,77948,No,,Spirometra erinaceieuropaei,Yes,99802,Yes
-26593,1,osmaronia cerasiformis,Oemleria cerasiformis,32237,osmaronia cerasiformis,species,1,No Match Found,No,,No,No Match Found,,No,,No
-26604,1,cimicifuga simplex,Actaea simplex,64042,cimicifuga simplex,species,1,Actaea simplex,Yes,83949,No,,Actaea simplex,Yes,64042,Yes
-26620,1,salmonella bareilly,Salmonella enterica subsp. enterica serovar Bareilly,58096,salmonella bareilly,no rank,1,Salmonella enterica subsp. enterica serovar Bareilly,Yes,59374,No,,Salmonella enterica subsp. enterica serovar Bareilly,Yes,58096,Yes
-26623,1,bacteroides cellulosolvens,Pseudobacteroides cellulosolvens,35825,bacteroides cellulosolvens,species,1,Parabacteroides johnsonii,No,1084288,No,Dioszegia sp. PDD-26b-20,Parabacteroides johnsonii,No,387661,No
-26627,1,streptococcus hemolyticus,Streptococcus pyogenes,1314,streptococcus hemolyticus,species,1,Streptococcus pyogenes,Yes,1304,No,,Streptococcus pyogenes,Yes,1314,Yes
-26631,1,eupenicillium,Penicillium,5073,eupenicillium,genus,1,Penicillium,Yes,44777,No,,Penicillium,Yes,5073,Yes
-26649,1,swartzia madagascariensis,Bobgunnia madagascariensis,149635,swartzia madagascariensis,species,1,No Match Found,No,,No,No Match Found,,No,,No
-26654,1,salmonella paratyphi,Salmonella enterica subsp. enterica serovar Paratyphi A,54388,salmonella paratyphi,no rank,1,Salmonella enterica subsp. enterica serovar Paratyphi,No,908884,No,,,No,,No
-26666,1,acetobacter xylinum,Komagataeibacter xylinus,28448,acetobacter xylinum,species,1,Gluconacetobacter xylinus,No,634,No,,Komagataeibacter xylinus,Yes,28448,Yes
-25531,1,macaca irus,Macaca fascicularis,9541,macaca irus,species,1,Macaca fascicularis,Yes,9531,No,,Macaca fascicularis,Yes,9541,Yes
-25536,1,pseudomonas vesicularis,Brevundimonas vesicularis,41276,pseudomonas vesicularis,species,1,Brevundimonas vesicularis,Yes,76801,No,,Brevundimonas vesicularis,Yes,41276,Yes
-25551,1,streptosporangium albidum,Kutzneria albida,43357,streptosporangium albidum,species,1,Streptosporangium albidum,No,202969,No,,Kutzneria viridogrisea,No,47990,No
-25564,1,enterobacter agglomerans,Pantoea agglomerans,549,enterobacter agglomerans,species,1,Pantoea agglomerans,Yes,615,No,,Pantoea agglomerans,Yes,549,Yes
-25569,1,salmonella enteritidis,Salmonella enterica subsp. enterica serovar Enteritidis,149539,salmonella enteritidis,no rank,1,Salmonella enterica subsp. enterica serovar Enteritidis,Yes,550,No,,Salmonella enterica subsp. enterica serovar Enteritidis,Yes,149539,Yes
-25574,1,salmonella minnesota,Salmonella enterica subsp. enterica serovar Minnesota,70803,salmonella minnesota,no rank,1,Salmonella enterica subspecies enterica serovar Minnesota,No,92941,No,Salmonella enterica subsp. enterica serovar,,No,,No
-25609,1,liriope platyphylla,Liriope muscari,39529,liriope platyphylla,species,1,Liriope platyphylla,No,50215,No,,Liriope muscari,Yes,39529,Yes
-25612,1,erwinia chrysanthemi,Dickeya chrysanthemi,556,erwinia chrysanthemi,species,1,Dickeya chrysanthemi,Yes,,No,,Dickeya chrysanthemi,Yes,556,Yes
-25626,1,asparagus sprengeri,Asparagus aethiopicus,693368,asparagus sprengeri,species,1,Asparagus aethiopicus,Yes,40547,No,,Asparagus aethiopicus,Yes,693368,Yes
-25630,1,patrinia scabiosaefolia,Patrinia scabiosifolia,300888,patrinia scabiosaefolia,species,1,Patrinia scabiosifolia,Yes,39590,No,,Patrinia scabiosifolia,Yes,300888,Yes
+25626,1,asparagus sprengeri,Asparagus aethiopicus,693368,asparagus sprengeri,species,1,Asparagus densiflorus,No,,No,No taxon ID,Asparagus densiflorus,No,272853,No
+25630,1,patrinia scabiosaefolia,Patrinia scabiosifolia,300888,patrinia scabiosaefolia,species,1,Patrinia scabiosifolia,Yes,144420,No,,Patrinia scabiosifolia,Yes,300888,Yes
 25636,1,rhinopetalum stenantherum,Fritillaria stenanthera,83801,rhinopetalum stenantherum,species,1,No Match Found,No,,No,No Match Found,,No,,No
 25643,1,mycobacterium bovis,Mycobacterium tuberculosis variant bovis,1765,mycobacterium bovis,biotype,1,Mycobacterium bovis,No,1765,Yes,,Mycobacterium tuberculosis variant bovis,Yes,1765,Yes
-25646,1,ipomoea tuberosa,Distimake tuberosus,89668,ipomoea tuberosa,species,1,Ipomoea mauritiana,No,40764,No,Eriastrum densifolium subsp. mohavense,Ipomoea mauritiana,No,85214,No
-25653,1,coriolus versicolor,Trametes versicolor,5325,coriolus versicolor,species,1,Trametes versicolor,Yes,630550,No,,Trametes versicolor,Yes,5325,Yes
-25659,1,merremia mammosa,Decalobanthus mammosus,1729749,merremia mammosa,species,1,Merremia mammosa,No,87383,No,,Decalobanthus mammosus,Yes,1729749,Yes
+25646,1,ipomoea tuberosa,Distimake tuberosus,89668,ipomoea tuberosa,species,1,Ipomoea digitata,No,,No,No taxon ID,,No,,No
+25653,1,coriolus versicolor,Trametes versicolor,5325,coriolus versicolor,species,1,Trametes versicolor,Yes,367110,No,,Trametes versicolor,Yes,5325,Yes
+25659,1,merremia mammosa,Decalobanthus mammosus,1729749,merremia mammosa,species,1,Operculina turpethum,No,,No,No taxon ID,Operculina turpethum,No,197426,No
 25669,1,pseudomonas mendocina,Ectopseudomonas mendocina,300,pseudomonas mendocina,species,1,Pseudomonas mendocina,No,300,Yes,,Ectopseudomonas mendocina,Yes,300,Yes
 25671,1,arthrobacter viscosus,Rhizobium viscosum,1673,arthrobacter viscosus,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25681,1,urginea hesperia,Squilla hesperia,82069,urginea hesperia,species,1,Drimia hesperia,No,52896,No,,Squilla hesperia,Yes,82069,Yes
-25687,1,salmonella abortus equi,Salmonella enterica subsp. enterica serovar Abortusequi,607,salmonella abortus equi,no rank,1,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,59201,No,,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,607,Yes
-25696,1,glomerella cingulata,Colletotrichum gloeosporioides,474922,glomerella cingulata,species,1,Colletotrichum gloeosporioides,Yes,1225118,No,,Colletotrichum gloeosporioides,Yes,474922,Yes
+25681,1,urginea hesperia,Squilla hesperia,82069,urginea hesperia,species,1,Drimia hesperia,No,,No,,Squilla hesperia,Yes,82069,Yes
+25687,1,salmonella abortus equi,Salmonella enterica subsp. enterica serovar Abortusequi,607,salmonella abortus equi,no rank,1,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,28901,No,,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,607,Yes
+25696,1,glomerella cingulata,Colletotrichum gloeosporioides,474922,glomerella cingulata,species,1,Colletotrichum gloeosporioides,Yes,31871,No,,Colletotrichum gloeosporioides,Yes,474922,Yes
 25698,1,phormia terranovae,Protophormia terraenovae,34676,phormia terranovae,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25701,1,chrysanthemum morifolium,Chrysanthemum x morifolium,41568,chrysanthemum morifolium,species,1,Chrysanthemum x morifolium,Yes,180329,No,,Chrysanthemum x morifolium,Yes,41568,Yes
-25709,1,rosmarinus officinalis,Salvia rosmarinus,39367,rosmarinus officinalis,species,1,Salvia rosmarinus,Yes,975041,No,,Salvia rosmarinus,Yes,39367,Yes
-25716,1,axolotl,Ambystoma mexicanum,8296,axolotl,species,1,Ambystoma mexicanum,Yes,,No,,Ambystoma mexicanum,Yes,8296,Yes
-25717,1,fritillaria camtschatcensis,Fritillaria camschatcensis,61236,fritillaria camtschatcensis,species,1,Fritillaria camschatcensis,Yes,,No,,Fritillaria camschatcensis,Yes,61236,Yes
-25741,1,magnaporthe grisea,Pyricularia grisea,148305,magnaporthe grisea,species,1,Magnaporthe oryzae,No,318829,No,Pyricularia oryzae,Pyricularia oryzae,No,318829,No
-25752,1,hyriopsis schlegelii,Sinohyriopsis schlegelii,2706150,hyriopsis schlegelii,species,1,Hyriopsis cumingii,No,297347,No,Actinomucor elegans var. kuwaitensis,Sinohyriopsis cumingii,No,165450,No
-25754,1,primula officinalis,Primula veris,170927,primula officinalis,species,1,Primula veris,Yes,98555,No,,Primula veris,Yes,170927,Yes
+25701,1,chrysanthemum morifolium,Chrysanthemum x morifolium,41568,chrysanthemum morifolium,species,1,Chrysanthemum morifolium,No,41623,No,,Chrysanthemum x morifolium,Yes,41568,Yes
+25709,1,rosmarinus officinalis,Salvia rosmarinus,39367,rosmarinus officinalis,species,1,Salvia rosmarinus,Yes,59893,No,,Salvia rosmarinus,Yes,39367,Yes
+25716,1,axolotl,Ambystoma mexicanum,8296,axolotl,species,1,Ambystoma mexicanum,Yes,82982,No,,Ambystoma mexicanum,Yes,8296,Yes
+25717,1,fritillaria camtschatcensis,Fritillaria camschatcensis,61236,fritillaria camtschatcensis,species,1,Fritillaria camschatcensis,Yes,191049,No,,Fritillaria camschatcensis,Yes,61236,Yes
+25741,1,magnaporthe grisea,Pyricularia grisea,148305,magnaporthe grisea,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25752,1,hyriopsis schlegelii,Sinohyriopsis schlegelii,2706150,hyriopsis schlegelii,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25754,1,primula officinalis,Primula veris,170927,primula officinalis,species,1,Primula vulgaris,No,4238,No,Barnadesia caryophylla,Primula vulgaris,No,175104,No
