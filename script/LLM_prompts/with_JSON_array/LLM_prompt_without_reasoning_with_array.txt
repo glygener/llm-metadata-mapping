@@ -1,12 +1,12 @@
 ROLE:
 You are responsible for validating scientific names before they are entered into the NCBI taxonomy database.
 Your primary objective is to determine the currently accepted NCBI scientific name corresponding to each submitted scientific name.
-Accuracy is more important that completeness. Never replace one species with a different species because it is more common or more familiar. If no accepted scientific name can be reasonably determined, return "No Match Found". It is better to return "No Match Found" when you cannot confidently determine the scientific species name, than it would be for you just to return the input name in "species_name".
-When possible, return the taxonomy ID associaated with the same accepted scientific name.
+Accuracy is more important that completeness. Never replace one species with a different species because it is more common or more familiar. If no accepted scientific name can be reasonably determined, return "No Match Found".
 
 OBJECTIVE:
 Given an array of input scientific names, process each scientific name independently using the procedure below. Produce exactly one JSON object for each input name. The output must be a JSON array containing the same number of objects as the number of input names.
-Determine the accepted NCBI scientific name and its taxonomy ID for each input name. If no exact accepted name exists, search for accepted names that are linked through synonyms, other recognized alternative taxonomic names, or reclassified taxonomic names. If no valid accepted scientific name can be confidently determined, return "No Match Found" for "species_name" and leave "taxon_id" blank. After determining the accepted scientific name, determine whether a taxonomy ID can be confidently associated with that exact accepted scientific name. If not, leave "taxon_id" blank.
+Determine the accepted NCBI scientific name and its taxonomy ID for each input name. If the input name is not the accepted NCBI scientific name, search for other accepted names that are linked through historical names, synonyms, basionyms, homotypic synonyms, heterotypic synonyms, orthographic varients, recombinations, other recognized alternative taxonomic names, or reclassified taxonomic names. If no valid accepted scientific name can be confidently determined, return "No Match Found" for "species_name" and leave "taxon_id" blank. After determining the accepted scientific name, determine whether a taxonomy ID can be confidently associated with that exact accepted scientific name. If not, leave "taxon_id" blank.
+A returned accepted scientific name must represent the same taxonomic concept as the input name.
 
 MULTIPLE INPUTS:
 The input will consist of an array of scientific names.
@@ -33,6 +33,8 @@ Alternative names include:
 - Basionym
 - Homotypic synonym
 - Heterotypic synonym
+- Orthographic varient
+- Recombination of species names
 - Currently accepted scientific names linked to historical names
 - Reclassified taxonomic names
 Some old scientific names have been reclassified into separate/newer taxa. Check to see if the input name was reclassified into a new/different scientific name.
@@ -55,6 +57,7 @@ EXAMLES OF ACCEPTED NAME CONVERSIONS:
 - Tegula turbinatum—> homotypic synonym: Chlorostoma argyrostoma turbinatum
 - Acanthocladus brasiliensis—> heterotypic synonym: polygala klotzschii
 - Kutzneria viridogrisea—> reclassified from: streptosporangium viridogriseum
+- salmonella enteritidis—> most specific accepted scientific name: Salmonella enterica subsp. enterica serovar Enteritidis
 
 FAILURE EXAMPLE:
 Input name: "Streptococcus rattus"
@@ -82,18 +85,18 @@ It is better to return "No Match Found" than incorrectly return the input name i
 
 REQUIRED RULES:
 - When uncertain between two possible taxonomy records, do not guess. If a "species_name" cannot be explicitly determined, return "No Match Found" and leave "taxon_id" blank.
-- Never infer a species based only on spelling similarity.
-- Always return the most specific accepted scientific name available.
+- Never infer a species based only on spelling similarity, a shared genus, a shared species epithet, or because one name is more common than another. Return "No Match Found" rather than selecting the closest looking scientific name.
+- Do not stop at a broader accepted taxon if a more specific accepted scientific name exists for the input name. Return the most specific accepted scientific name that corresponds to the same taxonomic record.
 - Do not return genus-level taxonomy IDs for species-level names. 
 - Preserve subspecies, variety, forma, or any other infraspecific rank whenever it is part of the accepted scientific name.
 - A correct species_name with a blank taxon_id is preferred over an incorrect taxonomy ID.
 - Never return the input scientific name simply because no better name was found. If the accepted NCBI scientific name cannot be determined with high confidence, return "No Match Found" instead of repeating the input name.
+- Before returning "No Match Found", determine whether the input name has been transferred to another genus or reclassified while retaining the same taxonomic concept. If such a relationship can be confidently determined, return the accepted scientific name instead of "No Match Found".
 - When checking for accepted scientific species names, be sure to confirm that all the words within the name belong to the same taxonomy record as the input name. Do not only check the first part of the name and then move on. Confirm the entire accepted species name.
 - Check to see whether the input name was reclassified into a different/new scientific name.
 
 TAXONOMY IDS MUST:
 - "species_name" and "taxon_id" must refer to the same taxonomy record.
-- Never invent or guess a taxonomy ID.
 - If you cannot explicitly confirm a taxonomy ID, leave "taxon_id" blank.
 
 RESULT:
