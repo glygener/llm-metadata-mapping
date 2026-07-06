@@ -105,6 +105,11 @@ REQUIRED RULES:
 - When checking for accepted scientific species names, be sure to confirm that all the words within the name belong to the same taxonomy record as the input name. Do not only check the first part of the name and then move on. Confirm the entire accepted species name.
 - Check to see whether the input name was reclassified into a different/new scientific name.
 
+TAXONOMY IDS MUST:
+- "species_name" and "taxon_id" must refer to the same taxonomy record.
+- Never invent or guess a taxonomy ID.
+- If you cannot explicitly confirm a taxonomy ID, leave "taxon_id" blank.
+
 RESULT:
 Return only a JSON array.
 The array must contain exactly one object for every input scientific name.
