@@ -1,21 +1,21 @@
 ID,count,name,namespacename,namespaceid,rank,matchCount,chatgpt_name,name_match_?,chatgpt_taxon_id,taxon_id_match_?,chatgpt_taxon_id_species_name,ncbi_species_name,ncbi_species_name_match_?,ncbi_taxon_id,ncbi_taxon_id_match_?
+25255,1,digitalis lutea,Digitalis lutea,285825,species,1,Digitalis lutea,Yes,74755,No,,Digitalis lutea,Yes,285825,Yes
 25257,1,citrobacter freundii,Citrobacter freundii,546,species,1,Citrobacter freundii,Yes,546,Yes,,Citrobacter freundii,Yes,546,Yes
-25261,1,abelmoschus esculentus,Abelmoschus esculentus,455045,species,1,Abelmoschus esculentus,Yes,89683,No,,Abelmoschus esculentus,Yes,455045,Yes
-25264,1,codium latum,Codium latum,221047,species,1,No Match Found,No,,No,,,No,,No
-25275,1,tivela mactroides,Tivela mactroides,345374,species,1,Tivela mactroides,Yes,384586,No,,Tivela mactroides,Yes,345374,Yes
-25279,1,aesculus indica,Aesculus indica,531823,species,1,Aesculus indica,Yes,147578,No,,Aesculus indica,Yes,531823,Yes
-25283,1,lipomyces starkeyi,Lipomyces starkeyi,29829,species,1,Lipomyces starkeyi,Yes,5116,No,,Lipomyces starkeyi,Yes,29829,Yes
-25290,1,volvariella volvacea,Volvariella volvacea,36659,species,1,Volvariella volvacea,Yes,55463,No,,Volvariella volvacea,Yes,36659,Yes
-25292,1,mycobacterium haemophilum,Mycobacterium haemophilum,29311,species,1,Mycobacterium haemophilum,Yes,1775,No,,Mycobacterium haemophilum,Yes,29311,Yes
-25294,1,trifolium pratense,Trifolium pratense,57577,species,1,Trifolium pratense,Yes,3909,No,,Trifolium pratense,Yes,57577,Yes
-25298,1,verbascum songaricum,Verbascum songaricum,1685578,species,1,Verbascum songaricum,Yes,37555,No,,Verbascum songaricum,Yes,1685578,Yes
-25300,1,bupleurum fruticosum,Bupleurum fruticosum,48103,species,1,Bupleurum fruticosum,Yes,157947,No,,Bupleurum fruticosum,Yes,48103,Yes
-25304,1,lactococcus garvieae,Lactococcus garvieae,1363,species,1,Lactococcus garvieae,Yes,553,No,,Lactococcus garvieae,Yes,1363,Yes
-25307,1,chironomus tentans,Chironomus tentans,7153,species,1,Chironomus tentans,Yes,7173,No,,Chironomus tentans,Yes,7153,Yes
-25310,1,laminaria digitata,Laminaria digitata,80365,species,1,Laminaria digitata,Yes,2870,No,,Laminaria digitata,Yes,80365,Yes
+25261,1,abelmoschus esculentus,Abelmoschus esculentus,455045,species,1,Abelmoschus esculentus,Yes,2066678,No,,Abelmoschus esculentus,Yes,455045,Yes
+25264,1,codium latum,Codium latum,221047,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25275,1,tivela mactroides,Tivela mactroides,345374,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25279,1,aesculus indica,Aesculus indica,531823,species,1,Aesculus indica,Yes,,No,,Aesculus indica,Yes,531823,Yes
+25283,1,lipomyces starkeyi,Lipomyces starkeyi,29829,species,1,Lipomyces starkeyi,Yes,4900,No,,Lipomyces starkeyi,Yes,29829,Yes
+25290,1,volvariella volvacea,Volvariella volvacea,36659,species,1,Volvariella volvacea,Yes,5478,No,,Volvariella volvacea,Yes,36659,Yes
+25292,1,mycobacterium haemophilum,Mycobacterium haemophilum,29311,species,1,Mycobacterium haemophilum,Yes,29333,No,,Mycobacterium haemophilum,Yes,29311,Yes
+25294,1,trifolium pratense,Trifolium pratense,57577,species,1,Trifolium pratense,Yes,57577,Yes,,Trifolium pratense,Yes,57577,Yes
+25298,1,verbascum songaricum,Verbascum songaricum,1685578,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25300,1,bupleurum fruticosum,Bupleurum fruticosum,48103,species,1,Bupleurum fruticosum,Yes,3468,No,,Bupleurum fruticosum,Yes,48103,Yes
+25304,1,lactococcus garvieae,Lactococcus garvieae,1363,species,1,Lactococcus garvieae,Yes,813,No,,Lactococcus garvieae,Yes,1363,Yes
+25307,1,chironomus tentans,Chironomus tentans,7153,species,1,Chironomus tentans,Yes,31698,No,,Chironomus tentans,Yes,7153,Yes
+25310,1,laminaria digitata,Laminaria digitata,80365,species,1,Laminaria digitata,Yes,2873,No,,Laminaria digitata,Yes,80365,Yes
 25315,1,staphylococcus aureus,Staphylococcus aureus,1280,species,1,Staphylococcus aureus,Yes,1280,Yes,,Staphylococcus aureus,Yes,1280,Yes
-25322,1,verbascum nigrum,Verbascum nigrum,90364,species,1,No Match Found,No,,No,,,No,,No
+25322,1,verbascum nigrum,Verbascum nigrum,90364,species,1,Verbascum nigrum,Yes,,No,,Verbascum nigrum,Yes,90364,Yes
 25327,1,ricinus communis,Ricinus communis,3988,species,1,Ricinus communis,Yes,3988,Yes,,Ricinus communis,Yes,3988,Yes
-25329,1,plantago depressa,Plantago depressa,411227,species,1,Plantago depressa,Yes,35050,No,,Plantago depressa,Yes,411227,Yes
-25333,1,trypanosoma brucei brucei,Trypanosoma brucei brucei,5702,subspecies,1,Trypanosoma brucei brucei,Yes,5700,No,,Trypanosoma brucei brucei,Yes,5702,Yes
-25339,1,solanum anguivi,Solanum anguivi,329760,species,1,Solanum anguivi,Yes,4118,No,,Solanum anguivi,Yes,329760,Yes
+25329,1,plantago depressa,Plantago depressa,411227,species,1,Plantago depressa,Yes,29655,No,,Plantago depressa,Yes,411227,Yes
+25333,1,trypanosoma brucei brucei,Trypanosoma brucei brucei,5702,subspecies,1,Trypanosoma brucei brucei,Yes,185431,No,,Trypanosoma brucei brucei,Yes,5702,Yes

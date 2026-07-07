@@ -65,8 +65,9 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to row 20
-df = df.iloc[1:21]
+#what rows we're testing
+#examples: [1:21] tested rows 3-22; [9:29] tested rows 11-30
+df = df.iloc[0:20]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_SPECIES_COL, NCBI_SPECIES_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL]:
