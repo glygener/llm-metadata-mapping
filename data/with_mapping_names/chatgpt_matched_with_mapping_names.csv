@@ -1,21 +1,21 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match_?,chatgpt_taxon_id,taxon_id_match_?,chatgpt_taxon_id_species_name,ncbi_species_name,ncbi_species_name_match_?,ncbi_taxon_id,ncbi_taxon_id_match_?
-25626,1,asparagus sprengeri,Asparagus aethiopicus,693368,asparagus sprengeri,species,1,Asparagus densiflorus,No,,No,No taxon ID,Asparagus densiflorus,No,272853,No
-25630,1,patrinia scabiosaefolia,Patrinia scabiosifolia,300888,patrinia scabiosaefolia,species,1,Patrinia scabiosifolia,Yes,,No,,Patrinia scabiosifolia,Yes,300888,Yes
-25636,1,rhinopetalum stenantherum,Fritillaria stenanthera,83801,rhinopetalum stenantherum,species,1,Fritillaria stenanthera,Yes,,No,,Fritillaria stenanthera,Yes,83801,Yes
-25643,1,mycobacterium bovis,Mycobacterium tuberculosis variant bovis,1765,mycobacterium bovis,biotype,1,Mycobacterium bovis,No,1765,Yes,,Mycobacterium tuberculosis variant bovis,Yes,1765,Yes
-25646,1,ipomoea tuberosa,Distimake tuberosus,89668,ipomoea tuberosa,species,1,Ipomoea tuberosa,No,,No,,Distimake tuberosus,Yes,89668,Yes
-25653,1,coriolus versicolor,Trametes versicolor,5325,coriolus versicolor,species,1,Trametes versicolor,Yes,157719,No,,Trametes versicolor,Yes,5325,Yes
-25659,1,merremia mammosa,Decalobanthus mammosus,1729749,merremia mammosa,species,1,Merremia mammosa,No,,No,,Decalobanthus mammosus,Yes,1729749,Yes
-25669,1,pseudomonas mendocina,Ectopseudomonas mendocina,300,pseudomonas mendocina,species,1,Pseudomonas mendocina,No,300,Yes,,Ectopseudomonas mendocina,Yes,300,Yes
-25671,1,arthrobacter viscosus,Rhizobium viscosum,1673,arthrobacter viscosus,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25681,1,urginea hesperia,Squilla hesperia,82069,urginea hesperia,species,1,Urginea africana,No,,No,No taxon ID,,No,,No
-25687,1,salmonella abortus equi,Salmonella enterica subsp. enterica serovar Abortusequi,607,salmonella abortus equi,no rank,1,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,590409,No,,Salmonella enterica subsp. enterica serovar Abortusequi,Yes,607,Yes
-25696,1,glomerella cingulata,Colletotrichum gloeosporioides,474922,glomerella cingulata,species,1,Colletotrichum gloeosporioides,Yes,5468,No,,Colletotrichum gloeosporioides,Yes,474922,Yes
-25698,1,phormia terranovae,Protophormia terraenovae,34676,phormia terranovae,species,1,Calliphora terraenovae,No,6757,No,Portunidae,Calliphora terraenovae,No,1266475,No
-25701,1,chrysanthemum morifolium,Chrysanthemum x morifolium,41568,chrysanthemum morifolium,species,1,Chrysanthemum morifolium,No,180193,No,,Chrysanthemum x morifolium,Yes,41568,Yes
-25709,1,rosmarinus officinalis,Salvia rosmarinus,39367,rosmarinus officinalis,species,1,Salvia rosmarinus,Yes,92699,No,,Salvia rosmarinus,Yes,39367,Yes
-25716,1,axolotl,Ambystoma mexicanum,8296,axolotl,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25717,1,fritillaria camtschatcensis,Fritillaria camschatcensis,61236,fritillaria camtschatcensis,species,1,Fritillaria camschatcensis,Yes,226801,No,,Fritillaria camschatcensis,Yes,61236,Yes
-25741,1,magnaporthe grisea,Pyricularia grisea,148305,magnaporthe grisea,species,1,No Match Found,No,,No,No Match Found,,No,,No
-25752,1,hyriopsis schlegelii,Sinohyriopsis schlegelii,2706150,hyriopsis schlegelii,species,1,Hyriopsis schlegelii,No,85650,No,,Sinohyriopsis schlegelii,Yes,2706150,Yes
-25754,1,primula officinalis,Primula veris,170927,primula officinalis,species,1,Primula veris,Yes,49555,No,,Primula veris,Yes,170927,Yes
+25261,1,abelmoschus esculentus,Abelmoschus esculentus,455045,,species,1,Abelmoschus esculentus,Yes,37614,No,,Abelmoschus esculentus,Yes,455045,Yes
+25267,1,chlorostoma argyrostoma turbinatum,Tegula turbinatum,761901,chlorostoma argyrostoma turbinatum,species,1,Chlorostoma argyrostoma turbinatum,No,761901,Yes,,Tegula turbinatum,Yes,761901,Yes
+25272,1,polygala klotzschii,Acanthocladus brasiliensis,2698660,polygala klotzschii,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25318,1,albizzia julibrissin,Albizia julibrissin,3813,albizzia julibrissin,species,1,Albizia julibrissin,Yes,34139,No,,Albizia julibrissin,Yes,3813,Yes
+25323,1,crocosmia crocosmiiflora,Crocosmia x crocosmiiflora,1053288,crocosmia crocosmiiflora,species,1,Crocosmia x crocosmiiflora,Yes,1053288,Yes,,Crocosmia x crocosmiiflora,Yes,1053288,Yes
+25336,1,randia dumetorum,Catunaregam spinosa,136894,randia dumetorum,species,1,Randia dumetorum,No,57259,No,,Catunaregam spinosa,Yes,136894,Yes
+25347,1,phyllanthus emblica,Emblica officinalis,296036,phyllanthus emblica,species,1,Phyllanthus emblica,No,56948,No,,Emblica officinalis,Yes,296036,Yes
+25361,1,streptococcus faecium,Enterococcus faecium,1352,streptococcus faecium,species,1,Enterococcus faecium,Yes,1352,Yes,,Enterococcus faecium,Yes,1352,Yes
+25371,1,acacia senegal,Senegalia senegal,138043,acacia senegal,species,1,Senegalia senegal,Yes,1167776,No,,Senegalia senegal,Yes,138043,Yes
+25375,1,asclepias fruticosa,Gomphocarpus fruticosus,219240,asclepias fruticosa,species,1,Gomphocarpus fruticosus,Yes,4174,No,,Gomphocarpus fruticosus,Yes,219240,Yes
+25377,1,blastocrithidia culicis,Strigomonas culicis,28005,blastocrithidia culicis,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25401,1,phlomis medicinalis,Phlomoides medicinalis,1138144,phlomis medicinalis,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25410,1,rana catesbeiana,Aquarana catesbeiana,8400,rana catesbeiana,species,1,Lithobates catesbeianus,No,8400,Yes,,Aquarana catesbeiana,Yes,8400,Yes
+25425,1,erwinia carotovora,Pectobacterium carotovorum,554,erwinia carotovora,species,1,Pectobacterium carotovorum,Yes,561,No,,Pectobacterium carotovorum,Yes,554,Yes
+25429,1,rhodobacter sphaeroides,Cereibacter sphaeroides,1063,rhodobacter sphaeroides,species,1,Rhodobacter sphaeroides,No,1063,Yes,,Cereibacter sphaeroides,Yes,1063,Yes
+25443,1,streptococcus rattus,Streptococcus ratti,1341,streptococcus rattus,species,1,No Match Found,No,,No,No Match Found,,No,,No
+25463,1,sophora japonica,Styphnolobium japonicum,3897,sophora japonica,species,1,Styphnolobium japonicum,Yes,,No,,Styphnolobium japonicum,Yes,3897,Yes
+25497,1,pseudomonas diminuta,Brevundimonas diminuta,293,pseudomonas diminuta,species,1,Brevundimonas diminuta,Yes,112143,No,,Brevundimonas diminuta,Yes,293,Yes
+25526,1,nocardia corynebacteroides,Rhodococcoides corynebacterioides,53972,nocardia corynebacteroides,species,1,No Match Found,No,,No,No Match Found,,No,,No
+26526,1,laminaria japonica,Saccharina japonica,88149,laminaria japonica,species,1,Saccharina japonica,Yes,29629,No,,Saccharina japonica,Yes,88149,Yes
