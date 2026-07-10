@@ -58,6 +58,7 @@ EXAMPLES OF ACCEPTED NAME CONVERSIONS:
 - streptosporangium viridogriseum—> reclassified taxon: Kutzneria viridogrisea
 - salmonella enteritidis—> most specific accepted scientific: Salmonella enterica subsp. enterica serovar Enteritidis
 - pseudomonas vesicularis—> accepted name after reclassification: Brevundimonas vesicularis
+- phlomis medicinalis—> synonym: Phlomoides medicinalis
 
 FAILURE EXAMPLES:
 Example 1.
