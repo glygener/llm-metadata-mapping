@@ -6,7 +6,7 @@ A returned accepted scientific name must represent the same taxonomic concept as
 
 OBJECTIVE:
 Given an array of input scientific names, process each scientific name independently using the procedure below. Produce exactly one JSON object for each input name. The output must be a JSON array containing the same number of objects as the number of input names.
-Determine the accepted NCBI scientific name for each input name. If the input name is not the accepted NCBI scientific name, search for other accepted names that are linked through historical names, synonyms, basionyms, homotypic synonyms, heterotypic synonyms, orthographic variants, recombinations, other recognized alternative taxonomic names, or reclassified taxonomic names. If multiple plausible accepted scientific names exist and you cannot determine which one represents the same taxonomic concept as the input, return "No Match Found". Otherwise, return the accepted scientific name that best corresponds to the same taxonomic concept as the input.
+Determine the accepted NCBI scientific name for each input name. If the input name is not the accepted NCBI scientific name, search for other accepted names that are linked through historical names, synonyms, basionyms, homotypic synonyms, heterotypic synonyms, orthographic variants, recombinations, other recognized alternative taxonomic names, or reclassified taxonomic names. If multiple plausible accepted scientific names exist and you cannot determine which one represents the same taxonomic concept as the input, return "No Match Found". Otherwise, return the accepted scientific name only if it can be determined to represent the same taxonomic concept as the input.
 
 MULTIPLE INPUTS:
 The input will consist of an array of scientific names.
@@ -21,7 +21,7 @@ If there are 10 input names, return exactly 10 JSON objects.
 
 PROCEDURE:
 1. If the input name is already recognized as an accepted NCBI scientific name.
-- Return that accepted scientific name in "species_name".
+- Return that accepted scientific name unchanged in "species_name".
 - Do not search for or consider alternate names.
 2. If the input name is not recognized as an accepted scientific name:
 - Consider whether the input name is an alternate name for another accepted scientific name.
@@ -35,12 +35,12 @@ Alternative names include:
 - Recombination of species names
 - Currently accepted scientific names linked to historical names
 - Reclassified taxonomic names
-Some old scientific names have been reclassified into separate/newer taxa. Check to see if the input name was reclassified into a new/different scientific name.
+Some historical scientific names have been transferred to another genus or otherwise reclassified while retaining the same taxonomic conceot. Check to see if the input name was reclassified into a new/different scientific name.
 3. If an alternate name corresponds to an accepted NCBI scientific name:
 - Return the accepted name in "species_name".
 - If multiple scientific names belong to the same taxonomy record, return the accepted scientific name rather than a historical name.
 4. Before returning an accepted scientific name, ensure that it represents the same biological taxon as the input name. 
-Do not substitute a closely related species.
+Do not substitute a closely related species. The accepted scientific name must refer to the same biological entity as the input name, not a closely related taxa, sister species, or member of the same genus.
 If you determine that the proposed accepted scientific name represents a different taxonomic concept than the input:
 - Return "No Match Found" in "species_name".
 5. If no reasonable accepted name can be determined:
@@ -91,9 +91,10 @@ REQUIRED RULES:
 - Do not stop at a broader accepted taxon if a more specific accepted scientific name exists for the input name. Return the most specific accepted scientific name that corresponds to the same taxonomic record.
 - Return the entire accepted scientific species name. Even if it is very long, return the entire name that corresponds with the same taxonomic record as the input name.
 - Preserve subspecies, variety, forma, or any other infraspecific rank whenever it is part of the accepted scientific name.
-- Before returning "No Match Found", determine whether the input name has been transferred to another genus or reclassified while retaining the same taxonomic concept. If such a relationship can be confidently determined, return the accepted scientific name instead of "No Match Found".
 - Check to see whether the input name was reclassified into a different/new scientific name.
 - Accepted scientific name should be returned unchanged even if they are uncommon, recently established, or rarely encountered. Do not return "No Match Found" solely because a name is unfamiliar.
+- Do not prefer older or more commonly used scientific names over a less common accepted scientific name. If a newer accepted scientific name representing the same taxonomic concept can be determined, return that accepted scientific name.
+- If multiple modern taxonomic classifications exist for the same biological taxon, return the scientific name currently accepted by NCBI, even if another modern taxonomy uses a different accepted name.
 
 RESULT:
 Return only a JSON array.
@@ -131,8 +132,8 @@ Example 3.
 
 [
 	{
-		"species_name": "Epimedium pubescens",
-		"input_name": "epimedium pubescens"
+		"species_name": "Pseudobacteroides cellulosolvens",
+		"input_name": "bacteroides cellulosolvens"
 		}
 ]
 
