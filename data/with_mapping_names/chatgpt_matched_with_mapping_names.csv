@@ -98,3 +98,103 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
 26397,1,propionibacterium acnes,Cutibacterium acnes,1747,propionibacterium acnes,species,1,Cutibacterium acnes,Yes,Cutibacterium acnes,Yes,1747,Yes
 26422,1,heloniopsis orientalis,Helonias orientalis,2163620,heloniopsis orientalis,species,1,Heloniopsis orientalis,No,Helonias orientalis,Yes,2163620,Yes
 26425,1,streptococcus zooepidemicus,Streptococcus equi subsp. zooepidemicus,40041,streptococcus zooepidemicus,subspecies,1,Streptococcus equi subsp. zooepidemicus,Yes,Streptococcus equi subsp. zooepidemicus,Yes,40041,Yes
+26434,1,naja naja kaouthia,Naja kaouthia,8649,naja naja kaouthia,species,1,Naja kaouthia,Yes,Naja kaouthia,Yes,8649,Yes
+26447,1,clostridium innocuum,[Clostridium] innocuum,1522,clostridium innocuum,species,1,Erysipelatoclostridium innocuum,No,,No,,No
+26450,1,phytophthora parasitica,Phytophthora nicotianae,4792,phytophthora parasitica,species,1,Phytophthora nicotianae,Yes,Phytophthora nicotianae,Yes,4792,Yes
+26462,1,aeodes ulvoidea,Pachymenia ulvoidea,164048,aeodes ulvoidea,species,1,Aeodes ulvoidea,No,Pachymenia ulvoidea,Yes,164048,Yes
+26470,1,ipomoea pescaprae,Ipomoea pes-caprae,89656,ipomoea pescaprae,species,1,Ipomoea pes-caprae,Yes,Ipomoea pes-caprae,Yes,89656,Yes
+26477,1,pharbitis purpurea,Ipomoea purpurea,4121,pharbitis purpurea,species,1,Ipomoea purpurea,Yes,Ipomoea purpurea,Yes,4121,Yes
+26514,1,strongylocentrotus nudus,Mesocentrotus nudus,7666,strongylocentrotus nudus,species,1,Mesocentrotus nudus,Yes,Mesocentrotus nudus,Yes,7666,Yes
+26520,1,pichia pastoris,Komagataella pastoris,4922,pichia pastoris,species,1,Komagataella pastoris,Yes,Komagataella pastoris,Yes,4922,Yes
+26522,1,bryonia dioica,Bryonia cretica subsp. dioica,3652,bryonia dioica,subspecies,1,Bryonia dioica,No,Bryonia cretica subsp. dioica,Yes,3652,Yes
+26867,1,pseudomonas elodea,Sphingomonas elodea,179878,pseudomonas elodea,species,1,Sphingomonas elodea,Yes,Sphingomonas elodea,Yes,179878,Yes
+26871,1,micrococcus lysodeikticus,Micrococcus luteus,1270,micrococcus lysodeikticus,species,1,Micrococcus luteus,Yes,Micrococcus luteus,Yes,1270,Yes
+26882,1,loligo bleekeri,Heterololigo bleekeri,1423826,loligo bleekeri,species,1,Heterololigo bleekeri,Yes,Heterololigo bleekeri,Yes,1423826,Yes
+26912,1,caralluma umbellata,Boucerosia umbellata,197243,caralluma umbellata,species,1,Boucerosia umbellata,Yes,Boucerosia umbellata,Yes,197243,Yes
+26925,1,pichia holstii,Nakazawaea holstii,36025,pichia holstii,species,1,Ogataea holstii,No,,No,,No
+26938,1,clostridium symbiosum,[Clostridium] symbiosum,1512,clostridium symbiosum,species,1,Enterocloster symbiosus,No,,No,,No
+26941,1,bothrops atrox moojeni,Bothrops moojeni,98334,bothrops atrox moojeni,species,1,Bothrops moojeni,Yes,Bothrops moojeni,Yes,98334,Yes
+26957,1,foeniculum vulgare,Anethum foeniculum,2849586,foeniculum vulgare,species,1,Foeniculum vulgare,No,Anethum foeniculum,Yes,2849586,Yes
+26972,1,kalopanax pictus,Kalopanax septemlobus,228393,kalopanax pictus,species,1,Kalopanax septemlobus,Yes,Kalopanax septemlobus,Yes,228393,Yes
+26992,1,agave vera cruz,Agave vera-cruz,2695074,agave vera cruz,species,1,Agave vivipara,No,Agave vivipara,No,2992182,No
+27000,1,pterocladia capillacea,Pterocladiella capillacea,70838,pterocladia capillacea,species,1,Pterocladiella capillacea,Yes,Pterocladiella capillacea,Yes,70838,Yes
+27002,1,epilobium angustifolium,Chamaenerion angustifolium,13055,epilobium angustifolium,species,1,Chamaenerion angustifolium,Yes,Chamaenerion angustifolium,Yes,13055,Yes
+27023,1,astragalus complanatus,Phyllolobium chinense,47064,astragalus complanatus,species,1,Astragalus complanatus,No,Phyllolobium chinense,Yes,47064,Yes
+27031,1,salmonella adelaide,Salmonella enterica subsp. enterica serovar Adelaide,29473,salmonella adelaide,no rank,1,Salmonella enterica subsp. enterica serovar Adelaide,Yes,Salmonella enterica subsp. enterica serovar Adelaide,Yes,29473,Yes
+27045,1,halobacterium halobium,Halobacterium salinarum,2242,halobacterium halobium,species,1,Halobacterium salinarum,Yes,Halobacterium salinarum,Yes,2242,Yes
+27076,1,dendranthema shiwogiku,Ajania shiwogiku,344877,dendranthema shiwogiku,species,1,Chrysanthemum shiwogiku,No,Ajania shiwogiku,Yes,344877,Yes
+27079,1,zygophyllum propinquum,Tetraena propinqua,1732529,zygophyllum propinquum,species,1,Tetraena propinqua,Yes,Tetraena propinqua,Yes,1732529,Yes
+27081,1,allium porrum,Allium ampeloprasum,4681,allium porrum,species,1,Allium porrum,No,Allium ampeloprasum,Yes,4681,Yes
+27096,1,theragra chalcogramma,Gadus chalcogrammus,1042646,theragra chalcogramma,species,1,Gadus chalcogrammus,Yes,Gadus chalcogrammus,Yes,1042646,Yes
+27120,1,rhamnus purshiana,Frangula purshiana,55262,rhamnus purshiana,species,1,Frangula purshiana,Yes,Frangula purshiana,Yes,55262,Yes
+27122,1,salmonella cholerae suis,Salmonella enterica,28901,salmonella cholerae suis,species,1,Salmonella enterica subsp. enterica serovar Choleraesuis,No,Salmonella enterica subsp. enterica serovar Choleraesuis,No,119912,No
+27131,1,agkistrodon rhodostoma,Calloselasma rhodostoma,8717,agkistrodon rhodostoma,species,1,Calloselasma rhodostoma,Yes,Calloselasma rhodostoma,Yes,8717,Yes
+27141,1,nocardia rubra,Rhodococcus ruber,1830,nocardia rubra,species,1,Rhodococcus ruber,Yes,Rhodococcus ruber,Yes,1830,Yes
+27155,1,melia azadirachta,Azadirachta indica,124943,melia azadirachta,species,1,Azadirachta indica,Yes,Azadirachta indica,Yes,124943,Yes
+27160,1,bacillus polymyxa,Paenibacillus polymyxa,1406,bacillus polymyxa,species,1,Paenibacillus polymyxa,Yes,Paenibacillus polymyxa,Yes,1406,Yes
+27184,1,rhizobium meliloti,Sinorhizobium meliloti,382,rhizobium meliloti,species,1,Sinorhizobium meliloti,Yes,Sinorhizobium meliloti,Yes,382,Yes
+27191,1,acanthopanax sieboldianus,Eleutherococcus sieboldianus,257409,acanthopanax sieboldianus,species,1,Eleutherococcus sieboldianus,Yes,Eleutherococcus sieboldianus,Yes,257409,Yes
+27200,1,pueraria lobata,Pueraria montana var. lobata,3893,pueraria lobata,varietas,1,Pueraria montana var. lobata,Yes,Pueraria montana var. lobata,Yes,3893,Yes
+25211,1,achyrocline satureioides,Achyrocline saturejoides,3030045,achyrocline satureioides,species,1,Achyrocline satureioides,No,Achyrocline saturejoides,Yes,3030045,Yes
+25215,1,caulobacter bacteroides,Brevundimonas bacteroides,74311,caulobacter bacteroides,species,1,Brevundimonas bacteroides,Yes,Brevundimonas bacteroides,Yes,74311,Yes
+25227,1,salmonella newport,Salmonella enterica subsp. enterica serovar Newport,108619,salmonella newport,no rank,1,Salmonella enterica subsp. enterica serovar Newport,Yes,Salmonella enterica subsp. enterica serovar Newport,Yes,108619,Yes
+25293,1,lactobacillus casei,Lacticaseibacillus casei,1582,lactobacillus casei,species,1,Lacticaseibacillus casei,Yes,Lacticaseibacillus casei,Yes,1582,Yes
+25355,1,phytolacca esculenta,Phytolacca acinosa,3528,phytolacca esculenta,species,1,Phytolacca acinosa,Yes,Phytolacca acinosa,Yes,3528,Yes
+25356,1,ribes uva crispa,Ribes uva-crispa,135518,ribes uva crispa,species,1,Ribes uva-crispa,Yes,Ribes uva-crispa,Yes,135518,Yes
+25358,1,hyptis suaveolens,Mesosphaerum suaveolens,204129,hyptis suaveolens,species,1,Mesosphaerum suaveolens,Yes,Mesosphaerum suaveolens,Yes,204129,Yes
+25381,1,penicillium varians,Talaromyces varians,1131668,penicillium varians,species,1,Talaromyces varians,Yes,Talaromyces varians,Yes,1131668,Yes
+25397,1,schizolobium parahybum,Schizolobium parahyba,46664,schizolobium parahybum,species,1,Schizolobium parahyba,Yes,Schizolobium parahyba,Yes,46664,Yes
+25421,1,eubacterium saburreum,Lachnoanaerobaculum saburreum,467210,eubacterium saburreum,species,1,Lachnoanaerobaculum saburreum,Yes,Lachnoanaerobaculum saburreum,Yes,467210,Yes
+25446,1,deleya marina,Cobetia marina,28258,deleya marina,species,1,Halomonas marina,No,Cobetia marina,Yes,28258,Yes
+25452,1,rhamnus frangula,Frangula alnus,106677,rhamnus frangula,species,1,Frangula alnus,Yes,Frangula alnus,Yes,106677,Yes
+25469,1,silene alba,Silene latifolia subsp. alba,52853,silene alba,subspecies,1,Silene latifolia,No,Silene latifolia,No,37657,No
+25490,1,cucumaria echinata,Pseudocnus echinatus,2592315,cucumaria echinata,species,1,Cucumaria echinata,No,Pseudocnus echinatus,Yes,2592315,Yes
+25493,1,pseudomonas cepacia,Burkholderia cepacia,292,pseudomonas cepacia,species,1,Burkholderia cepacia,Yes,Burkholderia cepacia,Yes,292,Yes
+25509,1,agave cantala,Agave vivipara,2992182,agave cantala,species,1,Agave cantala,No,Agave vivipara,Yes,2992182,Yes
+25518,1,paecilomyces variotti,Paecilomyces variotii,264951,paecilomyces variotti,species,1,Paecilomyces variotii,Yes,Paecilomyces variotii,Yes,264951,Yes
+25520,1,cassia tora,Senna tora,362788,cassia tora,species,1,Senna tora,Yes,Senna tora,Yes,362788,Yes
+25584,1,rhapis exelsa,Rhapis excelsa,115514,rhapis exelsa,species,1,Rhapis excelsa,Yes,Rhapis excelsa,Yes,115514,Yes
+25627,1,hizikia fusiformis,Sargassum fusiforme,590727,hizikia fusiformis,species,1,Sargassum fusiforme,Yes,Sargassum fusiforme,Yes,590727,Yes
+25631,1,mycoplasma fermentans,Mycoplasmopsis fermentans,2115,mycoplasma fermentans,species,1,Mycoplasmoides fermentans,No,,No,,No
+25689,1,lentinus edodes,Lentinula edodes,5353,lentinus edodes,species,1,Lentinula edodes,Yes,Lentinula edodes,Yes,5353,Yes
+25691,1,sedum telephium,Hylotelephium telephium,91097,sedum telephium,species,1,Hylotelephium telephium,Yes,Hylotelephium telephium,Yes,91097,Yes
+25705,1,eucheuma spinosum,Eucheuma denticulatum,305493,eucheuma spinosum,species,1,Eucheuma denticulatum,Yes,Eucheuma denticulatum,Yes,305493,Yes
+25766,1,hibiscus esculentus,Abelmoschus esculentus,455045,hibiscus esculentus,species,1,Abelmoschus esculentus,Yes,Abelmoschus esculentus,Yes,455045,Yes
+25898,1,phaseolus mungo,Vigna mungo,3915,phaseolus mungo,species,1,Vigna mungo,Yes,Vigna mungo,Yes,3915,Yes
+25986,1,chorisia speciosa,Ceiba speciosa,82382,chorisia speciosa,species,1,Ceiba speciosa,Yes,Ceiba speciosa,Yes,82382,Yes
+26018,1,hericium erinaceum,Hericium erinaceus,91752,hericium erinaceum,species,1,Hericium erinaceus,Yes,Hericium erinaceus,Yes,91752,Yes
+26039,1,acanthopanax senticosus,Eleutherococcus senticosus,82096,acanthopanax senticosus,species,1,Eleutherococcus senticosus,Yes,Eleutherococcus senticosus,Yes,82096,Yes
+26043,1,klebsiella pneumonia,Klebsiella pneumoniae,573,klebsiella pneumonia,species,1,Klebsiella pneumoniae,Yes,Klebsiella pneumoniae,Yes,573,Yes
+26049,1,tricholoma giganteum,Macrocybe gigantea,1491104,tricholoma giganteum,species,1,Macrocybe gigantea,Yes,Macrocybe gigantea,Yes,1491104,Yes
+26101,1,schefflera octophylla,Heptapleurum heptaphyllum,327218,schefflera octophylla,species,1,Heptapleurum heptaphyllum,Yes,Heptapleurum heptaphyllum,Yes,327218,Yes
+26139,1,gigartina skottsbergii,Sarcopeltis skottsbergii,2765380,gigartina skottsbergii,species,1,Sarcopeltis skottsbergii,Yes,Sarcopeltis skottsbergii,Yes,2765380,Yes
+26146,1,cimicifuga dahurica,Actaea dahurica,64029,cimicifuga dahurica,species,1,Actaea dahurica,Yes,Actaea dahurica,Yes,64029,Yes
+26179,1,polygala senega,Senega officinalis,174549,polygala senega,species,1,Polygala senega,No,Senega officinalis,Yes,174549,Yes
+26186,1,eugenia jambos,Syzygium jambos,334483,eugenia jambos,species,1,Syzygium jambos,Yes,Syzygium jambos,Yes,334483,Yes
+26212,1,nerium odorum,Nerium oleander,63479,nerium odorum,species,1,Nerium oleander,Yes,Nerium oleander,Yes,63479,Yes
+26215,1,nocardia restricta,Prescottella equi,43767,nocardia restricta,species,1,No Match Found,No,,No,,No
+26251,1,astasia longa,Euglena longa,3037,astasia longa,species,1,Astasia longa,No,Euglena longa,Yes,3037,Yes
+26281,1,mollugo hirta,Glinus hirtus,2789782,mollugo hirta,species,1,Glinus hirtus,Yes,Glinus hirtus,Yes,2789782,Yes
+26290,1,dendranthema grandiflorum,Chrysanthemum x morifolium,41568,dendranthema grandiflorum,species,1,Chrysanthemum x morifolium,Yes,Chrysanthemum x morifolium,Yes,41568,Yes
+26324,1,hebe stricta,Veronica stricta,1483391,hebe stricta,species,1,Veronica stricta,Yes,Veronica stricta,Yes,1483391,Yes
+26328,1,gigartina radula,Sarcothalia radula,33671,gigartina radula,species,1,Sarcothalia radula,Yes,Sarcothalia radula,Yes,33671,Yes
+26352,1,stachys officinalis,Betonica officinalis,53173,stachys officinalis,species,1,Stachys officinalis,No,Betonica officinalis,Yes,53173,Yes
+26378,1,marsdenia condurango,Marsdenia cundurango,1925545,marsdenia condurango,species,1,Marsdenia cundurango,Yes,Marsdenia cundurango,Yes,1925545,Yes
+26388,1,thalictrum thunbergii,Thalictrum minus var. hypoleucum,581030,thalictrum thunbergii,varietas,1,Thalictrum thunbergii,No,Thalictrum minus var. hypoleucum,Yes,581030,Yes
+26537,1,stapelia variegata,Orbea variegata,141497,stapelia variegata,species,1,Orbea variegata,Yes,Orbea variegata,Yes,141497,Yes
+26539,1,omphalia lapidescens,Gerronema lapidescens,2962918,omphalia lapidescens,species,1,No Match Found,No,,No,,No
+26428,1,cassia siamea,Senna siamea,346999,cassia siamea,species,1,Senna siamea,Yes,Senna siamea,Yes,346999,Yes
+26440,1,bufo viridis,Bufotes viridis,30338,bufo viridis,species,1,Bufotes viridis,Yes,Bufotes viridis,Yes,30338,Yes
+26463,1,bacillus megaterium,Priestia megaterium,1404,bacillus megaterium,species,1,Priestia megaterium,Yes,Priestia megaterium,Yes,1404,Yes
+26471,1,candida kefyr,Kluyveromyces marxianus,4911,candida kefyr,species,1,Kluyveromyces marxianus,Yes,Kluyveromyces marxianus,Yes,4911,Yes
+26615,1,sporobolomyces singularis,Hamamotoa singularis,5445,sporobolomyces singularis,species,1,Sporobolomyces singularis,No,Hamamotoa singularis,Yes,5445,Yes
+26617,1,physeter catodon,Physeter macrocephalus,9755,physeter catodon,species,1,Physeter catodon,No,Physeter macrocephalus,Yes,9755,Yes
+26624,1,streptococcus faecalis,Enterococcus faecalis,1351,streptococcus faecalis,species,1,Enterococcus faecalis,Yes,Enterococcus faecalis,Yes,1351,Yes
+26639,1,melilotus indica,Melilotus indicus,200951,melilotus indica,species,1,Melilotus indicus,Yes,Melilotus indicus,Yes,200951,Yes
+26644,1,costus lacerus,Hellenia lacera,329239,costus lacerus,species,1,Hellenia lacera,Yes,Hellenia lacera,Yes,329239,Yes
+26648,1,mucor rouxii,Amylomyces rouxii,29923,mucor rouxii,species,1,Mucor lusitanicus,No,Mucor lusitanicus,No,29924,No
+26659,1,sorghum vulgare,Sorghum bicolor,4558,sorghum vulgare,species,1,Sorghum bicolor,Yes,Sorghum bicolor,Yes,4558,Yes
+26677,1,candida utilis,Williopsis jadinii,4903,candida utilis,species,1,Cyberlindnera jadinii,No,Williopsis jadinii,Yes,4903,Yes
+26693,1,streptococcus bovis,Streptococcus equinus,1335,streptococcus bovis,species,1,Streptococcus equinus,Yes,Streptococcus equinus,Yes,1335,Yes
+26705,1,cachrys ferulacea,Prangos ferulacea,489434,cachrys ferulacea,species,1,Prangos ferulacea,Yes,Prangos ferulacea,Yes,489434,Yes
+26756,1,stachys sieboldii,Stachys affinis,168825,stachys sieboldii,species,1,Stachys affinis,Yes,Stachys affinis,Yes,168825,Yes
