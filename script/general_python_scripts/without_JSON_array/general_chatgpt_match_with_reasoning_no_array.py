@@ -33,7 +33,7 @@ NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 REASON_COL = "chatgpt_reasoning"
 
 #API model name
-MODEL = "gpt-4o"
+MODEL = ""
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
