@@ -23,10 +23,6 @@ CHATGPT_COL = "chatgpt_name"
 #output column name
 NAME_MATCH_COL = "name_match_?"
 #output column name
-TAXON_COL = "chatgpt_taxon_id"
-#output column name
-TAXON_MATCH_COL = "taxon_id_match_?"
-#output column name
 NCBI_SPECIES_COL = "ncbi_species_name"
 #output column name
 NCBI_SPECIES_MATCH_COL = "ncbi_species_name_match_?"
@@ -56,8 +52,6 @@ df = pd.read_csv(CSV_IN)
 output_cols= [
      CHATGPT_COL,
      NAME_MATCH_COL,
-     TAXON_COL,
-     TAXON_MATCH_COL,
      NCBI_SPECIES_COL,
      NCBI_SPECIES_MATCH_COL,
      NCBI_TAXON_COL,
@@ -68,11 +62,12 @@ for col in output_cols:
      if col in df.columns:
           df[col] = df[col].astype("object")
 
-#tests to row 20
-df = df.iloc[1:21]
+#what rows we're testing
+#examples: [1:21] tested rows 3-22; [9:29] tested rows 11-30
+df = df.iloc[:]
 
 #makes sure the output columns exist
-for col in [CHATGPT_COL, NAME_MATCH_COL, TAXON_COL, TAXON_MATCH_COL, NCBI_SPECIES_COL, NCBI_SPECIES_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
+for col in [CHATGPT_COL, NAME_MATCH_COL, NCBI_SPECIES_COL, NCBI_SPECIES_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL, REASON_COL]:
  #if the column doesn't exist yet, it creates it
     if col not in df.columns:
         df[col] = pd.NA
@@ -199,7 +194,6 @@ for start in range(0, len(df), BATCH_SIZE):
          
          #makes sure the outputs are in the correct format
          required = {
-              "taxon_id",
               "species_name",
               "input_name",
               "chatgpt_reasoning"
@@ -229,36 +223,41 @@ for start in range(0, len(df), BATCH_SIZE):
                          f"but got '{returned_input}'."
                     )
                
-               #gets chatgpt_taxon_id
-               chatgpt_taxon_id = record.get("taxon_id", "")
                #gets chatgpt_name
                chatgpt_species_name = record.get("species_name", "")
                #gets chatgpt_reasoning
                chatgpt_reasoning = record.get("reasoning", "")
                #gets ncbi_taxon_id from chatgpt_species_name
-               ncbi_taxon_id, ncbi_species_name = lookup_taxonomy(chatgpt_species_name)
-               
+               if chatgpt_species_name == "No Match Found":
+                    ncbi_species_name = None
+                    ncbi_taxon_id = None
+               else:
+                    ncbi_taxon_id, ncbi_species_name = lookup_taxonomy(chatgpt_species_name)
+                              
                #stores results
                df.at[idx, CHATGPT_COL] = chatgpt_species_name
-               df.at[idx, TAXON_COL] = chatgpt_taxon_id
                df.at[idx, NCBI_SPECIES_COL] = ncbi_species_name
                df.at[idx, NCBI_TAXON_COL] = ncbi_taxon_id
                df.at[idx, REASON_COL] = chatgpt_reasoning
-
                
-               print(f"chatgpt_taxon_id: {chatgpt_taxon_id}," 
-                     f"NCBI_species_name: {ncbi_species_name},"
+               print(f"NCBI_species_name: {ncbi_species_name},"
                      f"NCBI_taxon_id: {ncbi_taxon_id},"
                      f"species_name: {chatgpt_species_name}"
                      f"chatgpt_reasoning: {chatgpt_reasoning}"
                      )
                
                #comparing values
-               input_species_name = str(row.get(NAMESPACENAME_COL, "")).strip()
-               input_taxon_id = str(row.get(NAMESPACEID_COL, "")).strip().replace(".0", "")
+               input_species_name = (
+                    str(row.get(NAMESPACENAME_COL, ""))
+                    .strip()
+               )
+               input_taxon_id = (
+                    str(row.get(NAMESPACEID_COL, ""))
+                    .strip()
+                    .replace(".0", "")
+               )
                
                returned_name = str(chatgpt_species_name).strip()
-               returned_chatgpt_taxon_id = str(chatgpt_taxon_id).strip().replace(".0", "")
                returned_ncbi_species_name = (
                     str(ncbi_species_name).strip()
                     if ncbi_species_name not in [None, "None", ""]
@@ -269,17 +268,15 @@ for start in range(0, len(df), BATCH_SIZE):
                     if ncbi_taxon_id not in [None, "None", ""]
                     else ""
                     )
-               
+                              
                name_match = input_species_name.lower() == returned_name.lower()
-               taxon_id_match = input_taxon_id == returned_chatgpt_taxon_id
                ncbi_species_name_match = input_species_name.lower() == returned_ncbi_species_name.lower()
                ncbi_taxon_id_match = input_taxon_id == returned_ncbi_taxon_id
-               
+                              
                df.at[idx, NAME_MATCH_COL] = "Yes" if name_match else "No"
-               df.at[idx, TAXON_MATCH_COL] = "Yes" if taxon_id_match else "No"
                df.at[idx, NCBI_SPECIES_MATCH_COL] = "Yes" if ncbi_species_name_match else "No"
                df.at[idx, NCBI_TAXON_MATCH_COL] ="Yes" if ncbi_taxon_id_match else "No"
-               
+                              
          #saves progress after every row
          df.to_csv(CSV_OUT, index=False)
          print(f"Batch starting at row {start} saved to {CSV_OUT}")
