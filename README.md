@@ -1,34 +1,24 @@
 # llm-metadata-mapping
 Mapping database metadata (publication, species, tissue, disease) to established ontologies and dictionaries using an LLM.
 
-The data folder contains all of the data/datasets. It is broken up into five separate folders. These are: 
-- "ollama_data" which contains the ollama CSV files
-- "test_data" which contains the test CSV files
-- "total_list_of_species" which contains the CSV file "updated_list_of_species.csv" that includes all of the species
-- "with_mapping_names" which contains the CSV files with species that have mapping name:
-    - "updated_data_with_mapping_names.csv" is the file with the total list of species with mapping names (CSV_IN)
-    - "chatgpt_matched_with_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT)
-- "without_mapping_names" which contains the CSV files with species that do not have mapping names:
-    - "updated_data_without_mapping_names.csv" is the file with the total list of species without mapping names (CSV_IN)
-    - "chatgpt_matched_without_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT)
+The data folder contains all of the data/datasets. Within this folder are two separate folders and one CSV file.
+- The "Species with mapping names" folder which contains the CSV files with species that have mapping name:
+    - "updated_data_with_mapping_names.csv" is the file with the total list of species with mapping names (CSV_IN).
+    - "chatgpt_matched_with_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
+- The "Species without mapping names" folder which contains the CSV files with species that do not have mapping names:
+    - "updated_data_without_mapping_names.csv" is the file with the total list of species without mapping names (CSV_IN).
+    - "chatgpt_matched_without_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
+- The "updated_list_of_species.csv" file which is the list of the total species.
 
-The old_files folder contains five separate folders containing several old files. These are:
-- "csv_rw" which contains scripts used to combine, read, and write CSV files
-- "old_csv" which contains old CSV files
-- "old_data" which contains old species lists and reference data
-- "old_prompt" which contains old LLM prompts
-- "old_script" which contains old scripts
+The doc folder contains any useful spreadsheet or powerpoint presentation completed in conjunction to this project.
 
-The script folder contains all of the python scripts and LLM prompts. It is broken up into five separate folders. These are:
-- "general_python_scripts" which contains all of the general python scripts. This means that the CSV_IN & CSV_OUT paths are blank, the API model name is left blank, and the rows being tested is left blank. This was done to keep each relevent script avaliable and able to be easily edited for each task. When edited, it was done to the scripts in the "with_mapping_names" and "without_mapping_names" folders. These general python scripts are used more references rather than to run tests. They are in separate folders depending on what specific code they contain. Other than these small changes, they are the same:
-    - The "with_JSON_array" folder has the scripts that contain code for reporting the results as a JSON array. The two scripts located here then differ in whether they get the LLM to return the "chatgpt_reasoning" column.
-    - The "without_JSON_array" folder has the scripts that do not contain code reporting the results as a regular JSON output. The two scripts located here then differ in whether they get the LLM to return the "chatgpt_reasoning" column.
-- "LLM_prompts" which contains all of the LLM prompts. They are in two separate folders depending on their contents:
-    - "with_JSON_array" has the prompts with details on reporting the data as a JSON array. The two prompts located here then differ in whether they return the "chatgpt_reasoning" column.
-    - "without_JSON_array" has the prompts with details on reporting the data as a regular JSON output. The two prompts located here then differ in whether they return the "chatgpt_reasoning" column.
-- "test_script_and_prompt" which contains the test LLM prompt and script
-- "with_mapping_names" which contains the most recent script used to generate the CSV files with species including mapping names. This was the script that was edited and used to run tests, not the general python scripts. 
-- "without_mapping_names" which contains the most recent script used to generate the CSV files with species that do not have mapping names. This was the script that was edited and used to run tests, not the general python scripts.
+The LLM prompts folder contains all of the LLM prompts. The two prompts located here then differ in whether they return the "chatgpt_reasoning" column. 
+- "LLM_prompt_with_reasoning_with_array.txt" includes the "chatgpt_reasoning" column.
+- "LLM_prompt_without_reasoning_with_array.txt" does not include the "chatgpt_reasoning" column.
+
+The script folder contains the python scripts.
+- "mapping_names_script.py" is the most recent script used to generate the CSV files with species including mapping names. 
+- "without_mapping_names_script" is the the most recent script used to generate the CSV files with species that do not have mapping names.
 
 # CSV Headers
 The following headers/columns already had existing data: ID, count, name, namespacename, namespaceid, mappingname, rank, matchCount.
