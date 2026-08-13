@@ -12,9 +12,8 @@ The data folder contains all of the data/datasets. Within this folder are two se
 
 The doc folder contains any useful spreadsheet or powerpoint presentation completed in conjunction to this project.
 
-The LLM prompts folder contains all of the LLM prompts. The two prompts located here then differ in whether they return the "chatgpt_reasoning" column. 
-- "LLM_prompt_with_reasoning_with_array.txt" includes the "chatgpt_reasoning" column.
-- "LLM_prompt_without_reasoning_with_array.txt" does not include the "chatgpt_reasoning" column.
+The LLM prompts folder contains all of the LLM prompts.
+- "LLM_prompt_without_reasoning_with_array.txt" is the most recent prompt used to generate the CSV files.
 
 The script folder contains the python scripts.
 - "mapping_names_script.py" is the most recent script used to generate the CSV files with species including mapping names. 
