@@ -210,5 +210,5 @@ script/api_key.txt
 
 #ignore these files
 .vscode/
-script/api_key.txt
+species/script/api_key.txt
 api_key

@@ -2,33 +2,61 @@
 Mapping database metadata (publication, species, tissue, disease) to established ontologies and dictionaries using an LLM.
 
 ## Repository Contents
-### LLM prompts
-The LLM prompts folder contains all of the LLM prompts.
-- "LLM_prompt_without_reasoning_with_array.txt" is the most recent prompt used to generate the CSV files.
+### diseases
+#### data
+The data folder contains all of the data/datasets.
+- "mapping_BS_Disease-mapped.xlsx" is the list of total diseases.
 
-### data
-The data folder contains all of the data/datasets. Within this folder are two separate folders and one CSV file.
-- The "Species with mapping names" folder which contains the CSV files with species that have mapping name:
-    - "updated_data_with_mapping_names.csv" is the file with the total list of species with mapping names (CSV_IN).
-    - "chatgpt_matched_with_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
-- The "Species without mapping names" folder which contains the CSV files with species that do not have mapping names:
-    - "updated_data_without_mapping_names.csv" is the file with the total list of species without mapping names (CSV_IN).
-    - "chatgpt_matched_without_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
-- The "updated_list_of_species.csv" file which is the list of the total species.
+#### LLM prompts
+The LLM prompts folder contains all of the LLM prompts.
+- "diseases_LLM_prompt.txt" is the most recent prompt used to generate the CSV files.
+
+#### script
+The script folder contains the python scripts.
+- Contains an empty .gitkeep file as a placeholder so that the folder could be committed.
 
 ### doc
 The doc folder contains any useful spreadsheet or powerpoint presentation completed in conjunction to this project.
 
-### script
+### species
+#### data
+The data folder contains all of the data/datasets. Within this folder are two separate folders and one CSV file.
+- The "with mapping names" folder which contains the CSV files with species that have mapping name:
+    - "chatgpt_matched_with_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
+    - "original_data_with_mapping_names.csv" is the file with the total list of species with mapping names (CSV_IN).
+- The "without mapping names" folder which contains the CSV files with species that do not have mapping names:
+    - "chatgpt_matched_without_mapping_names.csv" is the file including the rows that were ran through the script/LLM (CSV_OUT).
+    - "original_data_without_mapping_names.csv" is the file with the total list of species without mapping names (CSV_IN).
+- The "updated_list_of_species.csv" file which is the list of the total species.
+
+#### LLM prompts
+The LLM prompts folder contains all of the LLM prompts.
+- "species_LLM_prompt_without_reasoning_with_array.txt" is the most recent prompt used to generate the CSV files.
+
+#### script
 The script folder contains the python scripts.
 - "mapping_names_script.py" is the most recent script used to generate the CSV files with species including mapping names. 
 - "without_mapping_names_script" is the the most recent script used to generate the CSV files with species that do not have mapping names.
 
+### tissues
+#### data
+The data folder contains all of the data/datasets.
+- "mapping_BS_Tissue-mapped.xlsx" is the list of total tissues.
+
+#### LLM prompts
+The LLM prompts folder contains all of the LLM prompts.
+- "tissues_LLM_prompt.txt" is the most recent prompt used to generate the CSV files.
+
+#### script
+The script folder contains the python scripts.
+- Contains an empty .gitkeep file as a placeholder so that the folder could be committed.
+
 ## CSV Header Descriptions
 Here are descriptions detailing what data is located in each column within the CSV files.
 
-### Existing Data
-The following columns include existing data from updated_list_of_species.csv:
+### Species Data
+#### Existing Data
+The following columns include existing data from "updated_list_of_species.csv":
 
 ID, count, name, namespacename, namespaceid, mappingname, rank, matchCount
 - The "ID" column is the ID number provided to each species by the past volunteers who curated updated_list_of_species.csv. This ID is not relevant to this project and was solely for their own identification.
@@ -41,7 +69,7 @@ ID, count, name, namespacename, namespaceid, mappingname, rank, matchCount
 - The "rank" column is information provided to each species by the past volunteers who curated updated_list_of_species.csv. This ID is not relevant to this project and was solely for their own identification.
 - The "matchCount" column is information provided to each species by the past volunteers who curated updated_list_of_species.csv. This ID is not relevant to this project and was solely for their own identification.
  
-### New data
+#### New data
 The following columns are filled by the LLM:
 
 chatgpt_name and chatgpt_reasoning
