@@ -7,10 +7,11 @@ import time
 from Bio import Entrez
 
 #file locations
-CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\updated_data_with_mapping_names.csv")
-CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\data\with_mapping_names\chatgpt_matched_with_mapping_names.csv")
-PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\LLM_prompts\with_JSON_array\LLM_prompt_without_reasoning_with_array.txt")
-API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\script\api_key.txt")
+#remember to change Path depending on what you're testing!
+CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\data\with mapping names\original_data_with_mapping_names.csv")
+CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\data\with mapping names\chatgpt_matched_with_mapping_names.csv")
+PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\LLM prompts\species_LLM_prompt_without_reasoning_with_array.txt")
+API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\script\api_key.txt")
 
 #input column name
 INPUT_NAME_COL = "name"
@@ -32,7 +33,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-5.5"
+MODEL = "gpt-4o"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
@@ -61,7 +62,7 @@ for col in output_cols:
 
 #what rows we're testing
 #examples: [1:21] tested rows 3-22; [9:29] tested rows 11-30
-df = df.iloc[0:200]
+df = df.iloc[100:150]
 
 #makes sure the output columns exist
 for col in [CHATGPT_COL, NAME_MATCH_COL, NCBI_SPECIES_COL, NCBI_SPECIES_MATCH_COL, NCBI_TAXON_COL, NCBI_TAXON_MATCH_COL]:
