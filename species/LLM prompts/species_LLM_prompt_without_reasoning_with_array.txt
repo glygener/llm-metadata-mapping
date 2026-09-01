@@ -46,6 +46,11 @@ If you determine that the proposed accepted scientific name represents a differe
 5. If no reasonable accepted name can be determined:
 - Return "No Match Found" in "species_name".
 
+A returned "species_name" must exist in the NCBI taxonomy database as either:
+1. The scientific name of a taxon, or
+2. a synonym attached to an NCBI taxon.
+If you cannot determine that the returned name exists in NCBI taxonomy, return "No Match Found".
+
 EXAMPLES OF ACCEPTED NAME CONVERSIONS:
 - Triticum vulgaris—> synonym/currently used name: Triticum aestivum
 - acidomonas methanolica—> basionym: Acetobacter methanolicus
@@ -92,7 +97,7 @@ REQUIRED RULES:
 - Return the entire accepted scientific species name. Even if it is very long, return the entire name that corresponds with the same taxonomic record as the input name.
 - Preserve subspecies, variety, forma, or any other infraspecific rank whenever it is part of the accepted scientific name.
 - Check to see whether the input name was reclassified into a different/new scientific name.
-- Accepted scientific name should be returned unchanged even if they are uncommon, recently established, or rarely encountered. Do not return "No Match Found" solely because a name is unfamiliar.
+- Accepted scientific name should be returned unchanged even if they are uncommon, recently established, or rarely encountered. If the exact NCBI accepted name cannot be determined with high confidence, return "No Match Found".
 - Do not prefer older or more commonly used scientific names over a less common accepted scientific name. If a newer accepted scientific name representing the same taxonomic concept can be determined, return that accepted scientific name.
 - If multiple modern taxonomic classifications exist for the same biological taxon, return the scientific name currently accepted by NCBI, even if another modern taxonomy uses a different accepted name.
 
