@@ -100,6 +100,7 @@ REQUIRED RULES:
 - Accepted scientific name should be returned unchanged even if they are uncommon, recently established, or rarely encountered. If the exact NCBI accepted name cannot be determined with high confidence, return "No Match Found".
 - Do not prefer older or more commonly used scientific names over a less common accepted scientific name. If a newer accepted scientific name representing the same taxonomic concept can be determined, return that accepted scientific name.
 - If multiple modern taxonomic classifications exist for the same biological taxon, return the scientific name currently accepted by NCBI, even if another modern taxonomy uses a different accepted name.
+- Do not create a new genus/species combination. Do not infer a taxonomic transfer just because similar transfers exist in the literature.
 
 RESULT:
 Return only a JSON array.
