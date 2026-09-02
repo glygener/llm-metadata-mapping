@@ -46,6 +46,11 @@ If you determine that the proposed accepted scientific name represents a differe
 5. If no reasonable accepted name can be determined:
 - Return "No Match Found" in "species_name".
 
+A returned "species_name" must exist in the NCBI taxonomy database as either:
+1. The scientific name of a taxon, or
+2. a synonym attached to an NCBI taxon.
+If you cannot determine that the returned name exists in NCBI taxonomy, return "No Match Found".
+
 EXAMPLES OF ACCEPTED NAME CONVERSIONS:
 - Triticum vulgaris—> synonym/currently used name: Triticum aestivum
 - acidomonas methanolica—> basionym: Acetobacter methanolicus
