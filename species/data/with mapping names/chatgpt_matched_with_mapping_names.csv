@@ -12,12 +12,12 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
 26871,1,micrococcus lysodeikticus,Micrococcus luteus,1270,micrococcus lysodeikticus,species,1,Micrococcus luteus,Yes,Micrococcus luteus,Yes,1270,Yes
 26882,1,loligo bleekeri,Heterololigo bleekeri,1423826,loligo bleekeri,species,1,Heterololigo bleekeri,Yes,Heterololigo bleekeri,Yes,1423826,Yes
 26912,1,caralluma umbellata,Boucerosia umbellata,197243,caralluma umbellata,species,1,Boucerosia umbellata,Yes,Boucerosia umbellata,Yes,197243,Yes
-26925,1,pichia holstii,Nakazawaea holstii,36025,pichia holstii,species,1,Ogataea holstii,No,,No,,No
+26925,1,pichia holstii,Nakazawaea holstii,36025,pichia holstii,species,1,Cyberlindnera holstii,No,,No,,No
 26938,1,clostridium symbiosum,[Clostridium] symbiosum,1512,clostridium symbiosum,species,1,Enterocloster symbiosus,No,,No,,No
 26941,1,bothrops atrox moojeni,Bothrops moojeni,98334,bothrops atrox moojeni,species,1,Bothrops moojeni,Yes,Bothrops moojeni,Yes,98334,Yes
 26957,1,foeniculum vulgare,Anethum foeniculum,2849586,foeniculum vulgare,species,1,Foeniculum vulgare,No,Anethum foeniculum,Yes,2849586,Yes
 26972,1,kalopanax pictus,Kalopanax septemlobus,228393,kalopanax pictus,species,1,Kalopanax septemlobus,Yes,Kalopanax septemlobus,Yes,228393,Yes
-26992,1,agave vera cruz,Agave vera-cruz,2695074,agave vera cruz,species,1,Agave vivipara,No,Agave vivipara,No,2992182,No
+26992,1,agave vera cruz,Agave vera-cruz,2695074,agave vera cruz,species,1,No Match Found,No,,No,,No
 27000,1,pterocladia capillacea,Pterocladiella capillacea,70838,pterocladia capillacea,species,1,Pterocladiella capillacea,Yes,Pterocladiella capillacea,Yes,70838,Yes
 27002,1,epilobium angustifolium,Chamaenerion angustifolium,13055,epilobium angustifolium,species,1,Chamaenerion angustifolium,Yes,Chamaenerion angustifolium,Yes,13055,Yes
 27023,1,astragalus complanatus,Phyllolobium chinense,47064,astragalus complanatus,species,1,Astragalus complanatus,No,Phyllolobium chinense,Yes,47064,Yes
@@ -37,15 +37,15 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name
 27191,1,acanthopanax sieboldianus,Eleutherococcus sieboldianus,257409,acanthopanax sieboldianus,species,1,Eleutherococcus sieboldianus,Yes,Eleutherococcus sieboldianus,Yes,257409,Yes
 27200,1,pueraria lobata,Pueraria montana var. lobata,3893,pueraria lobata,varietas,1,Pueraria montana var. lobata,Yes,Pueraria montana var. lobata,Yes,3893,Yes
 25211,1,achyrocline satureioides,Achyrocline saturejoides,3030045,achyrocline satureioides,species,1,Achyrocline satureioides,No,Achyrocline saturejoides,Yes,3030045,Yes
-25215,1,caulobacter bacteroides,Brevundimonas bacteroides,74311,caulobacter bacteroides,species,1,Caulobacter henricii,No,Caulobacter henricii,No,69395,No
+25215,1,caulobacter bacteroides,Brevundimonas bacteroides,74311,caulobacter bacteroides,species,1,Brevundimonas bacteroides,Yes,Brevundimonas bacteroides,Yes,74311,Yes
 25227,1,salmonella newport,Salmonella enterica subsp. enterica serovar Newport,108619,salmonella newport,no rank,1,Salmonella enterica subsp. enterica serovar Newport,Yes,Salmonella enterica subsp. enterica serovar Newport,Yes,108619,Yes
 25293,1,lactobacillus casei,Lacticaseibacillus casei,1582,lactobacillus casei,species,1,Lacticaseibacillus casei,Yes,Lacticaseibacillus casei,Yes,1582,Yes
 25355,1,phytolacca esculenta,Phytolacca acinosa,3528,phytolacca esculenta,species,1,Phytolacca acinosa,Yes,Phytolacca acinosa,Yes,3528,Yes
 25356,1,ribes uva crispa,Ribes uva-crispa,135518,ribes uva crispa,species,1,Ribes uva-crispa,Yes,Ribes uva-crispa,Yes,135518,Yes
-25358,1,hyptis suaveolens,Mesosphaerum suaveolens,204129,hyptis suaveolens,species,1,Mesosphaerum suaveolens,Yes,Mesosphaerum suaveolens,Yes,204129,Yes
+25358,1,hyptis suaveolens,Mesosphaerum suaveolens,204129,hyptis suaveolens,species,1,Hyptis suaveolens,No,Mesosphaerum suaveolens,Yes,204129,Yes
 25381,1,penicillium varians,Talaromyces varians,1131668,penicillium varians,species,1,Talaromyces varians,Yes,Talaromyces varians,Yes,1131668,Yes
 25397,1,schizolobium parahybum,Schizolobium parahyba,46664,schizolobium parahybum,species,1,Schizolobium parahyba,Yes,Schizolobium parahyba,Yes,46664,Yes
-25421,1,eubacterium saburreum,Lachnoanaerobaculum saburreum,467210,eubacterium saburreum,species,1,Lachnoanaerobaculum saburreum,Yes,Lachnoanaerobaculum saburreum,Yes,467210,Yes
-25446,1,deleya marina,Cobetia marina,28258,deleya marina,species,1,Cobetia marina,Yes,Cobetia marina,Yes,28258,Yes
+25421,1,eubacterium saburreum,Lachnoanaerobaculum saburreum,467210,eubacterium saburreum,species,1,Eubacterium saburreum,No,Lachnoanaerobaculum saburreum,Yes,467210,Yes
+25446,1,deleya marina,Cobetia marina,28258,deleya marina,species,1,Halomonas marina,No,Cobetia marina,Yes,28258,Yes
 25452,1,rhamnus frangula,Frangula alnus,106677,rhamnus frangula,species,1,Frangula alnus,Yes,Frangula alnus,Yes,106677,Yes
 25469,1,silene alba,Silene latifolia subsp. alba,52853,silene alba,subspecies,1,Silene latifolia,No,Silene latifolia,No,37657,No
