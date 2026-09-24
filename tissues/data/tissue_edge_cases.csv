@@ -16,3 +16,4 @@ Bone marrow aspirate,,UBERON:0002371,bone marrow,Specimen description rather tha
 Hepatic tissue,,UBERON:0002107,liver,Synonym commonly found in publications and metadata.
 Pulmonary tissue,,UBERON:0002048,lung,Synonym and may need LLM.
 diabetes,,,,Disease not tissue.
+pulmonary anulus,pulmonary valve anulus,UBERON:0005993,pulmonary valve anulus,Term that needs an anatomical synonym rather than a direct string match.

@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -13,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 XLSX_IN = BASE_DIR / "tissues/data/mapping_BS_Tissue-mapped.xlsx"
 
-XLSX_OUT = BASE_DIR / "tissues/data/tissue_processing_llm_output.csv"
+XLSX_OUT = BASE_DIR / "tissues/data/mapping_BS_Tissue-mapped_processed.xlsx"
 
 # Input columns
 
@@ -41,10 +42,10 @@ if not api_key:
 
 llm_client = OpenAI(api_key=api_key)
 
-def translate_tissue(tissue_name):
+def translate_tissues(tissue_names):
     prompt = prompt_template.replace(
         "<<TISSUES>>",
-        json.dumps([tissue_name], indent=2)
+        json.dumps(tissue_names, indent=2)
     )
 
     response = llm_client.chat.completions.create(
@@ -68,25 +69,43 @@ def translate_tissue(tissue_name):
 
     records = json.loads(raw_output)
 
-    if not isinstance(records, list) or len(records) != 1:
+    if not isinstance(records, list):
+        raise ValueError("Expected the LLM response to be a JSON array.")
+
+    if len(records) != len(tissue_names):
         raise ValueError(
-            f"Expected one JSON result for {tissue_name}."
+            f"Expected {len(tissue_names)} results, got {len(records)}"
         )
 
-    record = records[0]
+    required_keys = {"input", "scientific_name"}
 
-    if set(record.keys()) != {"input", "scientific_name"}:
-        raise ValueError(
-            "LLM response must contain only 'input' and 'scientific_name'."
-        )
+    results = {}
 
-    if str(record["input"]).strip() != tissue_name.strip():
-        raise ValueError(
-            f"Input mismatch. Expected '{tissue_name}', "
-            f"got '{record['input']}'."
-        )
+    for i, record in enumerate(records):
 
-    return record["scientific_name"]
+        if not isinstance(record, dict):
+            raise ValueError(
+                f"Result {i} is not a JSON object."
+            )
+
+        if set(record.keys()) != required_keys:
+            raise ValueError(
+                "Each LLM result must contain exactly "
+                "'input' and 'scientific_name'."
+            )
+
+        expected_input = tissue_names[i]
+        returned_input = str(record["input"]).strip()
+
+        if expected_input != returned_input:
+            raise ValueError(
+                f"Input mismatch. Expected '{expected_input}', "
+                f"got '{returned_input}'."
+            )
+
+        results[returned_input] = record["scientific_name"]
+
+    return results
 
 df = pd.read_excel(XLSX_IN)
 
@@ -159,33 +178,57 @@ unique_tissues = (
 print(f"Unique tissue terms: {len(unique_tissues)}")
 print()
 
-for tissue_name in unique_tissues:
-    print(f"Processing: {tissue_name}", flush=True)
+BATCH_SIZE = 10
 
-    scientific_name = translate_tissue(tissue_name)
+for start in range(0, len(unique_tissues), BATCH_SIZE):
+
+    batch_names = unique_tissues[start:start + BATCH_SIZE]
 
     print(
-        f"LLM scientific name: {scientific_name}",
+        f"Processing LLM batch {start + 1}-"
+        f"{start + len(batch_names)} of {len(unique_tissues)}",
         flush=True
     )
 
-    if scientific_name == "No Match Found":
-        ols_name, ontology_id = None, None
-
-    else:
-        ols_name, ontology_id = lookup_tissue(scientific_name)
-
-    lookup_cache[tissue_name] = (
-        scientific_name,
-        ols_name,
-        ontology_id
+    llm_results = translate_tissues(
+        batch_names.tolist()
+        if hasattr(batch_names, "tolist")
+        else list(batch_names)
     )
 
-    print(
-        f"OLS result: {ols_name} | {ontology_id}",
-        flush=True
-    )
-    print()
+    for tissue_name in batch_names:
+
+        scientific_name = llm_results[tissue_name]
+
+        print(
+            f"Processing: {tissue_name}",
+            flush=True
+        )
+
+        print(
+            f"LLM scientific name: {scientific_name}",
+            flush=True
+        )
+
+        if scientific_name == "No Match Found":
+            ols_name, ontology_id = None, None
+
+        else:
+            ols_name, ontology_id = lookup_tissue(scientific_name)
+
+        lookup_cache[tissue_name] = (
+            scientific_name,
+            ols_name,
+            ontology_id
+        )
+
+        print(
+            f"OLS result: {ols_name} | {ontology_id}",
+            flush=True
+        )
+        print()
+
+    time.sleep(1)
 
 results = []
 
@@ -244,7 +287,7 @@ print(
     ].to_string(index=False)
 )
 
-output_df.to_csv(
+output_df.to_excel(
     XLSX_OUT,
     index=False
 )

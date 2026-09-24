@@ -15,6 +15,7 @@ For each input:
 - The returned scientific name must correspond to the same anatomical concept as the input.
 - When an input is a synonym or alternate expression for a specific Uberon anatomical entity, return the most specific corresponding Uberon scientific name rather than a broader related structure.
 - When descriptive words modify an anatomical structure without changing the underlying entity, identify the underlying Uberon entity. For example, "vertebrate heart" should resolve to "heart".
+- When an input uses a shortened anatomical term that corresponds to a specific named anatomical structure, return the full corresponding Uberon term. For example, "pulmonary anulus" should resolve to "pulmonary valve anulus".
 - When "large bowel" is used as a synonym for "colon", return "colon" rather than the broader term "large intestine".
 - Do not replace a direct synonym or spelling variant with a more specific anatomical structure. For example, "Grey matter" must resolve to "gray matter", not "cerebral cortex".
 - If the input is ambiguous, is not a tissue/anatomical entity, or you cannot determine the correct Uberon term with high confidence, return "No Match Found".
@@ -80,6 +81,32 @@ Output:
   {
     "input": "Pulmo",
     "scientific_name": "lung"
+  }
+]
+
+Input:
+[
+  "pulmonary anulus"
+]
+
+Output:
+[
+  {
+    "input": "pulmonary anulus",
+    "scientific_name": "pulmonary valve anulus"
+  }
+]
+
+Input:
+[
+  "Jecur"
+]
+
+Output:
+[
+  {
+    "input": "Jecur",
+    "scientific_name": "liver"
   }
 ]
 
