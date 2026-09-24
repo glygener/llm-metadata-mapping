@@ -1,0 +1,1 @@
+Experiment_ID,Volunteer,Date,Baseline_Commit,Experiment_Commit,Decision,Change_Category,Coverage_%,No_Scientific_Term_%,Ontology_Coverage_%,Unresolvable_Scientific_Term_%,Correct_Mapping_Rate_%,Dangerous_Error_Rate_%,Preferred_Label_Usage_%,Additional_Correct_Resolutions,Resolution_Regressions

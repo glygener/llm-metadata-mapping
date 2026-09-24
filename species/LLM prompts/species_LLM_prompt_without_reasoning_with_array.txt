@@ -1,12 +1,17 @@
 ROLE:
 You are responsible for validating scientific names before they are entered into the NCBI taxonomy database.
-Your primary objective is to determine the currently accepted NCBI scientific name corresponding to each submitted scientific name.
-Accuracy is more important that completeness. Never replace one species with a different species because it is more common or more familiar. If multiple plausible accepted scientific names exist and you cannot determine which one corresponds to the input name, return "No Match Found".
-A returned accepted scientific name must represent the same taxonomic concept as the input name.
+Your primary objective is to determine whether each submitted scientific name can be mapped to the exact NCBI taxon it represents.
+Accuracy is more important than completeness.
+A false positive is worse than a false negative.
+When choosing between returning a potentially incorrect taxonomic mapping, and returning "No Match Found", always choose "No Match Found" unless the exact taxonomic correspondence can be established with high confidence.
+"No Match Found" is a correct results when the evidence is insufficient. Do not choose a candidate merely because it is plausible, likely, familiar, or the best candidate available.
 
 OBJECTIVE:
-Given an array of input scientific names, process each scientific name independently using the procedure below. Produce exactly one JSON object for each input name. The output must be a JSON array containing the same number of objects as the number of input names.
-Determine the accepted NCBI scientific name for each input name. If the input name is not the accepted NCBI scientific name, search for other accepted names that are linked through historical names, synonyms, basionyms, homotypic synonyms, heterotypic synonyms, orthographic variants, recombinations, other recognized alternative taxonomic names, or reclassified taxonomic names. If multiple plausible accepted scientific names exist and you cannot determine which one represents the same taxonomic concept as the input, return "No Match Found". Otherwise, return the accepted scientific name only if it can be determined to represent the same taxonomic concept as the input.
+Given an array of scientific names, process each name independently. Produce exactly one JSON object for each input name. The output must be a JSON array containing the same number of objects as the number of input names.
+For each input, return either:
+- The currently accepted NCBI scientific name corresponding to the exact taxonomic concept represented by the input, order
+- "No Match Found"
+The goal is not to maximize the number of mappings, the goal is to avoid incorrect taxonomic mappings.
 
 MULTIPLE INPUTS:
 The input will consist of an array of scientific names.
@@ -19,87 +24,133 @@ For each input:
 - Do not use information from previously processed names when determining the current result.
 If there are 10 input names, return exactly 10 JSON objects.
 
-PROCEDURE:
-1. If the input name is already recognized as an accepted NCBI scientific name.
-- Return that accepted scientific name unchanged in "species_name".
-- Do not search for or consider alternate names.
-2. If the input name is not recognized as an accepted scientific name:
-- Consider whether the input name is an alternate name for another accepted scientific name.
-Alternative names include:
-- Synonym
-- Equivalent name
-- Basionym
-- Homotypic synonym
-- Heterotypic synonym
-- Orthographic variant
-- Recombination of species names
-- Currently accepted scientific names linked to historical names
-- Reclassified taxonomic names
-Some historical scientific names have been transferred to another genus or otherwise reclassified while retaining the same taxonomic conceot. Check to see if the input name was reclassified into a new/different scientific name.
-3. If an alternate name corresponds to an accepted NCBI scientific name:
-- Return the accepted name in "species_name".
-- If multiple scientific names belong to the same taxonomy record, return the accepted scientific name rather than a historical name.
-4. Before returning an accepted scientific name, ensure that it represents the same biological taxon as the input name. 
-Do not substitute a closely related species. The accepted scientific name must refer to the same biological entity as the input name, not a closely related taxa, sister species, or member of the same genus.
-If you determine that the proposed accepted scientific name represents a different taxonomic concept than the input:
-- Return "No Match Found" in "species_name".
-5. If no reasonable accepted name can be determined:
-- Return "No Match Found" in "species_name".
+CORE RULE:
+The submitted name and the returned accepted name must represent the same taxonomic concept.
+A candidate nate must not be returned merely because it is:
+- plausible,
+- biologically related,
+- a member of the same family,
+- commonly associated with the input,
+- similar in spelling,
+- identical in specific epithet,
+- a likely spelling correction,
+- a likely genus transfer
+- commonly used in the literature.
+If the exact correspondence cannot be established, return "No Match Found"
 
-A returned "species_name" must exist in the NCBI taxonomy database as either:
-1. The scientific name of a taxon, or
-2. a synonym attached to an NCBI taxon.
-If you cannot determine that the returned name exists in NCBI taxonomy, return "No Match Found".
+CANDIDATE GENERATION:
+When the input is not itself the accepted NCBI scientific name, consider established relationships such as:
+- synonyms,
+- equivalent names,
+- basionyms,
+- homotypic synonyms,
+- heterotypic synonyms,
+- orthographic variants,
+- recombination of species names,
+- currently accepted scientific names linked to historical names,
+- reclassified taxonomic names,
+- other established alternative names referring to the same taxonomic concept.
+However, finding a candidate does not mean that the candidate is correct.
+Candidate generation and candidate validation are separate steps.
 
-EXAMPLES OF ACCEPTED NAME CONVERSIONS:
-- Triticum vulgaris—> synonym/currently used name: Triticum aestivum
-- acidomonas methanolica—> basionym: Acetobacter methanolicus
-- Tegula turbinatum—> homotypic synonym: Chlorostoma argyrostoma turbinatum
-- streptosporangium viridogriseum—> reclassified taxon: Kutzneria viridogrisea
-- salmonella enteritidis—> most specific accepted scientific: Salmonella enterica subsp. enterica serovar Enteritidis
-- pseudomonas vesicularis—> accepted name after reclassification: Brevundimonas vesicularis
-- phlomis medicinalis—> synonym: Phlomoides medicinalis
+CANDIDATE VALIDATION:
+Before returning any candidate, determine whether the input name and candidate refer to the same taxonomic concept.
+Return the candidate only when this correspondence can be established with high confidence.
+If the candidate is only a plausible possibility, return "No Match Found".
+If multiple candidates remain plausible and you cannot distinguish between them, return "No Match Found"
 
-FAILURE EXAMPLES:
+REQUIRED RULES:
+Do not infer a taxonomic mapping solely from:
+- a matching genus,
+- matching specific epithet,
+- similar spelling,
+- similar word structure,
+- biological similarity,
+- evolutionary relatedness,
+- being sister taxa,
+- membership in the same genus,
+- membership in the same family,
+- common usage,
+- frequency of use,
+- a candidate being more familiar,
+- a candidate being the only species you recognize,
+- a candidate being the most likely intended species.
+A matching specific epithet in a different genus is not evidence that two names represent the same taxon.
+Do not create a new genus/species combination.
+Do not infer a genus transfer merely because similar genus transfers occur in taxonomy.
+Do not substitute a related species for the submitted species.
+Do not choose the "best" or "most likely" candidate when the exact correspondence has not been established.
+
+ORTHOGRAPHIC AND SPELLING VARIENTS:
+Do not assume that a spelling difference represents the same taxon.
+An apparent spelling correction may be returned only when the corrected name is eastablished as referring to the same taxonomic concept.
+If the relationship cannot be established, return "No Match Found".
+
+ACCEPTED NCBI NAMES:
+If the input is an established accepted NCBI scientific name, return that name unchanged.
+However, do not rely solely on whether the name appears familiar or looks like a valid scientific name.
+The name must correspond to the exact NCBI taxon being requested.
+If the exact NCBI taxon cannot be established with high confidence, return "No Match Found".
+
+TAXONOMIC RANK:
+Return the complete accepted scientific name corresponding to the exact taxonomic concept represented by the input.
+Preserve subspecies, variety, forma, serovar, or other infraspecific ranks when they are part of the established accepted name for that exact taxon.
+Do not infer a more specific rank simply because one exists.
+Do not replace a species with a subspecies, variety, forma, or other infraspecific taxon unless the input is established as referring to that exact taxon.
+Do not search for the "most specific" possible name.
+Return the accepted name of the exact corresponding taxon.
+
+NCBI REQUIREMENT:
+The returned name must correspond to the NCBI taxon representd by the input.
+Do not return a name merely because another taxonomy or source considers it accepted.
+Do not invent an NCBI relationship.
+Do not assume that a taxonomic relationship exists without sufficient evidence.
+If the exact NCBI correspondence cannot be established, return "No Match Found".
+
+ABSTENTION RULE:
+Return "No Match Found" whenever:
+- the exact taxonomic correspondence is uncertain,
+- two or more taxonomic interpretations remain plausible,
+- the proposed mapping depends on inference,
+- the candidate is only related to the input,
+- the candidate is based primarily on name similarity,
+- the candidate is based primarily on a matching epithet,
+- the candidate is based primarily on a presumed spelling correction,
+- the candidate is based primarily on a presumed genus transfer,
+- you cannot establish the exact NCBI taxon with high confidence.
+It is better to return "No Match Found" for a potentially valid mapping than to return an incorrect taxon.
+
+EXAMPLES OF ESTABLISHED MAPPINGS:
+- Triticum vulgaris—> Triticum aestivum
+- acidomonas methanolica—> Acetobacter methanolicus
+- salmonella enteritidis—> Salmonella enterica subsp. enterica serovar Enteritidis
+- pseudomonas vesicularis—> Brevundimonas vesicularis
+These mappings should only be returned because the input and output represent the same established taxonomic concept.
+
+ABSTENTION EXAMPLES:
 Example 1.
-Input name: "Streptococcus rattus"
-Incorrect species name: "Streptococcus sanguinis"
-Correct species name: "Streptococcus ratti"
-If you cannot determine that the accepted scientific name for Streptococcus rattus is Streptococcus ratti, return:
+Input: "Streptococcus rattus"
+Do not return: "Streptococcus sanguinis"
+Do not return: "Streptococcus rattus"
+If the exact corresponding NCBI taxon cannot be established, return:
 [
 	{
 		"species_name": "No Match Found",
 		“input_name”: "Streptococcus rattus"
 		}
 ]
-
-Do not return:
-[
-	{
-		"species_name": "Streptococcus rattus",
-		“input_name”: "Streptococcus rattus"
-		}
-]
-
-It is better to return "No Match Found" than substitute a different taxonomic concept. However, if the input name is already an accepted scientific name, return it unchanged.
+It is better to return "No Match Found" than substitute a different taxonomic concept.
 
 Example 2.
 Input name: "magnaporthe grisea"
-Incorrect species name: "Magnaporthe oryzae"
-Correct species name: "Pyricularia grisea"
-Although they are closely related, they are different taxonomic records.
-You should have returned "No Match Found" unless you could have explicitly determined "Pyricularia grisea" as being the correct accepted scientific name.
+Do not return: "Magnaporthe oryzae"
+These are not interchangeable merely because they are closely related.
+Return "Pyricularia grisea" only if the exact correspondence between the input and that taxon can be established.
+Otherwise return: "No Match Found"
 
-REQUIRED RULES:
-- When uncertain between two possible taxonomy records, do not guess. If a "species_name" cannot be explicitly determined, return "No Match Found".
-- Never substitute a different species because it belongs to the same genus, is a well known representative of the genus, has a similar species epithet, or is more commonly known. The accepted scientific name must correspond directly to the same taxonomic record as the input name.
-- Do not stop at a broader accepted taxon if a more specific accepted scientific name exists for the input name. Return the most specific accepted scientific name that corresponds to the same taxonomic record.
-- Return the entire accepted scientific species name. Even if it is very long, return the entire name that corresponds with the same taxonomic record as the input name.
-- Preserve subspecies, variety, forma, or any other infraspecific rank whenever it is part of the accepted scientific name.
-- Check to see whether the input name was reclassified into a different/new scientific name.
-- Accepted scientific name should be returned unchanged even if they are uncommon, recently established, or rarely encountered. Do not return "No Match Found" solely because a name is unfamiliar.
-- Do not prefer older or more commonly used scientific names over a less common accepted scientific name. If a newer accepted scientific name representing the same taxonomic concept can be determined, return that accepted scientific name.
-- If multiple modern taxonomic classifications exist for the same biological taxon, return the scientific name currently accepted by NCBI, even if another modern taxonomy uses a different accepted name.
+Example 3.
+If an input and candidate have the same specific epithet but different genera, do not map them solely on that basis.
+Return: "No Match Found" unless the taxonomic relationship between the two names is established.
 
 RESULT:
 Return only a JSON array.
@@ -145,6 +196,7 @@ Example 3.
 FINAL INSTRUCTION:
 Apply the procedure described above independently to every scientific name in the following input array.
 Return only a JSON array.
+When uncertain, return "No Match Found". Do not guess. Do not choose the most plausible candidate. Only return an accepted NCBI name when the exact taxonomic correspondence has been established with high confidence.
 
 Input:
 <<SPECIES>>

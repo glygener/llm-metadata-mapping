@@ -8,10 +8,10 @@ from Bio import Entrez
 
 #file locations
 #remember to change Path depending on what you're testing!
-CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\data\with mapping names\original_data_with_mapping_names.csv")
-CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\data\with mapping names\chatgpt_matched_with_mapping_names.csv")
-PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\LLM prompts\species_LLM_prompt_without_reasoning_with_array.txt")
-API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Test\llm-metadata-mapping\species\script\api_key.txt")
+CSV_IN = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Repositories Created on Github\llm-metadata-mapping\species\data\with mapping names\original_data_with_mapping_names.csv")
+CSV_OUT = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Repositories Created on Github\llm-metadata-mapping\species\data\with mapping names\chatgpt_matched_with_mapping_names.csv")
+PROMPT_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Repositories Created on Github\llm-metadata-mapping\species\LLM prompts\species_LLM_prompt_without_reasoning_with_array.txt")
+API_FILE = Path(r"C:\Users\taylo\OneDrive\Desktop\Github\Repositories Created on Github\llm-metadata-mapping\species\script\api_key.txt")
 
 #input column name
 INPUT_NAME_COL = "name"
@@ -33,7 +33,7 @@ NCBI_TAXON_COL = "ncbi_taxon_id"
 NCBI_TAXON_MATCH_COL = "ncbi_taxon_id_match_?"
 
 #API model name
-MODEL = "gpt-4o"
+MODEL = "gpt-5.5"
 
 #reading files
 prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
