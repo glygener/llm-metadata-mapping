@@ -1,5 +1,10 @@
-import pandas as pd
+import json
+import os
 from pathlib import Path
+
+import pandas as pd
+from dotenv import load_dotenv
+from openai import OpenAI
 from ols_client import Client
 
 # File locations
@@ -8,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 XLSX_IN = BASE_DIR / "tissues/data/mapping_BS_Tissue-mapped.xlsx"
 
-XLSX_OUT = BASE_DIR / "tissues/data/tissue_processing_output.xlsx"
+XLSX_OUT = BASE_DIR / "tissues/data/tissue_processing_llm_output.csv"
 
 # Input columns
 
@@ -19,6 +24,69 @@ NAMESPACEID_COL = "namespaceid"
 # OLS client
 
 client = Client("https://www.ebi.ac.uk/ols4/api")
+
+# LLM prompt
+
+PROMPT_FILE = BASE_DIR / "tissues/llm prompts/tissues_llm_prompt.txt"
+prompt_template = PROMPT_FILE.read_text(encoding="utf-8")
+
+# OpenAI client
+
+load_dotenv(BASE_DIR / ".env")
+
+api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    raise ValueError("OPENAI_API_KEY was not found in .env")
+
+llm_client = OpenAI(api_key=api_key)
+
+def translate_tissue(tissue_name):
+    prompt = prompt_template.replace(
+        "<<TISSUES>>",
+        json.dumps([tissue_name], indent=2)
+    )
+
+    response = llm_client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
+
+    raw_output = response.choices[0].message.content.strip()
+
+    if raw_output.startswith("```"):
+        raw_output = raw_output.strip()
+        raw_output = raw_output.removeprefix("```json")
+        raw_output = raw_output.removeprefix("```")
+        raw_output = raw_output.removesuffix("```")
+        raw_output = raw_output.strip()
+
+    records = json.loads(raw_output)
+
+    if not isinstance(records, list) or len(records) != 1:
+        raise ValueError(
+            f"Expected one JSON result for {tissue_name}."
+        )
+
+    record = records[0]
+
+    if set(record.keys()) != {"input", "scientific_name"}:
+        raise ValueError(
+            "LLM response must contain only 'input' and 'scientific_name'."
+        )
+
+    if str(record["input"]).strip() != tissue_name.strip():
+        raise ValueError(
+            f"Input mismatch. Expected '{tissue_name}', "
+            f"got '{record['input']}'."
+        )
+
+    return record["scientific_name"]
 
 df = pd.read_excel(XLSX_IN)
 
@@ -92,18 +160,32 @@ print(f"Unique tissue terms: {len(unique_tissues)}")
 print()
 
 for tissue_name in unique_tissues:
-    print(f"Looking up: {tissue_name}", flush=True)
+    print(f"Processing: {tissue_name}", flush=True)
 
-    lookup_cache[tissue_name] = lookup_tissue(tissue_name)
-
-    ols_name, ontology_id = lookup_cache[tissue_name]
+    scientific_name = translate_tissue(tissue_name)
 
     print(
-        f"Result: {ols_name} | {ontology_id}",
+        f"LLM scientific name: {scientific_name}",
+        flush=True
+    )
+
+    if scientific_name == "No Match Found":
+        ols_name, ontology_id = None, None
+
+    else:
+        ols_name, ontology_id = lookup_tissue(scientific_name)
+
+    lookup_cache[tissue_name] = (
+        scientific_name,
+        ols_name,
+        ontology_id
+    )
+
+    print(
+        f"OLS result: {ols_name} | {ontology_id}",
         flush=True
     )
     print()
-
 
 results = []
 
@@ -111,9 +193,9 @@ for _, row in df.iterrows():
 
     tissue_name = str(row[INPUT_NAME_COL]).strip()
 
-    ols_name, ontology_id = lookup_cache.get(
+    scientific_name, ols_name, ontology_id = lookup_cache.get(
         tissue_name,
-        (None, None)
+        (None, None, None)
     )
 
     original_namespace_id = row[NAMESPACEID_COL]
@@ -138,6 +220,7 @@ for _, row in df.iterrows():
         "name": tissue_name,
         "namespacename": row[NAMESPACENAME_COL],
         "namespaceid": row[NAMESPACEID_COL],
+        "scientific_name": scientific_name,
         "ols_name": ols_name,
         "ols_ontology_id": ontology_id,
         "namespaceid_match": match
@@ -161,7 +244,7 @@ print(
     ].to_string(index=False)
 )
 
-output_df.to_excel(
+output_df.to_csv(
     XLSX_OUT,
     index=False
 )

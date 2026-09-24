@@ -1,0 +1,18 @@
+name,namespacename,namespaceid,scientific_name,reason
+Pulmo,,UBERON:0002048,lung,Exact Latin synonym rather than the primary label.
+Jecur,,UBERON:0002107,liver,Latin synonym that is rarely used in modern datasets.
+large bowel,,UBERON:0001155,colon,Exact synonym but also substring of other terms like large bowel epithelium.
+cardiac tissue,,UBERON:0000948,heart,Experimental or clinical terminology rather than an anatomical structure name.
+vertebrate heart,,UBERON:0000948,heart,Synonym but contains the word itself.
+Intestine,,UBERON:0000160,intestine,Generic term that could be confused with small intestine or large intestine.
+Marrow,,,,No unique match possible.
+GI tract,,UBERON:0001555,digestive tract,Common abbreviation requiring acronym expansion.
+Grey matter,,UBERON:0002020,gray matter,Alternate spelling.
+Adipose,,UBERON:0001013,adipose tissue,Incomplete label that omits the word tissue.
+Fat,,UBERON:0001013,adipose tissue,Common language term rather than a scientific anatomical label.
+Peripheral blood,,UBERON:0000178,blood,Sample-type terminology rather than an anatomical label.
+CNS,,UBERON:0001017,central nervous system,Acronym but also a substring of many other terms and synonyms.
+Bone marrow aspirate,,UBERON:0002371,bone marrow,Specimen description rather than the anatomical entity itself.
+Hepatic tissue,,UBERON:0002107,liver,Synonym commonly found in publications and metadata.
+Pulmonary tissue,,UBERON:0002048,lung,Synonym and may need LLM.
+diabetes,,,,Disease not tissue.
