@@ -13,6 +13,7 @@ For each input:
 - When an input uses a descriptive phrase such as "cardiac tissue", identify the corresponding anatomical structure when the correspondence is clear.
 - Remove descriptive words such as "tissue", "aspirate", or "sample" when they clearly describe the form of the specimen rather than the underlying anatomical entity.
 - The returned scientific name must correspond to the same anatomical concept as the input.
+- Do not infer equivalence from anatomical association alone. A related structure or subtype is not interchangeable with the input; if the same anatomical concept cannot be identified confidently, return "No Match Found".
 - When an input is a synonym or alternate expression for a specific Uberon anatomical entity, return the most specific corresponding Uberon scientific name rather than a broader related structure.
 - When descriptive words modify an anatomical structure without changing the underlying entity, identify the underlying Uberon entity. For example, "vertebrate heart" should resolve to "heart".
 - When an input uses a shortened anatomical term that corresponds to a specific named anatomical structure, return the full corresponding Uberon term. For example, "pulmonary anulus" should resolve to "pulmonary valve anulus".
