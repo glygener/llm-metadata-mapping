@@ -1,1 +1,2 @@
 Experiment_ID,Volunteer,Date,Baseline_Commit,Experiment_Commit,Decision,Change_Category,Coverage_%,No_Scientific_Term_%,Ontology_Coverage_%,Unresolvable_Scientific_Term_%,Correct_Mapping_Rate_%,Dangerous_Error_Rate_%,Preferred_Label_Usage_%,Additional_Correct_Resolutions,Resolution_Regressions
+EXP-001,Shashank Kesineni,2026-10-29,382f78c,b8e34b8,REJECT,Constraint Addition,80.36,19.64,77.68,2.68,70.98,8.62,76.44,18,15
