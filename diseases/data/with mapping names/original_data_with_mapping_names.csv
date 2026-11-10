@@ -1,0 +1,34 @@
+ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount
+2500,1,mannosidosis,obsolete mannosidase deficiency disease,DOID:3414,mannosidosis,,1
+2517,1,waldenstrom macroglobulinemia,lymphoplasmacytic lymphoma,DOID:0060901,waldenstrom macroglobulinemia,,1
+2572,1,krabbe's disease,Krabbe disease,DOID:10587,krabbe's disease,,1
+2589,1,mucolipidosis ii,mucolipidosis II alpha/beta,DOID:0080070,mucolipidosis ii,,1
+2598,1,glycogen storage disease type ii,glycogen storage disease II,DOID:2752,glycogen storage disease type ii,,1
+2402,1,insulin-dependent diabetes mellitus,type 1 diabetes mellitus,DOID:9744,insulin-dependent diabetes mellitus,,1
+2418,1,hiv infection,human immunodeficiency virus infectious disease,DOID:526,hiv infection,,1
+2420,1,diabetes,diabetes mellitus,DOID:9351,diabetes,,1
+2430,1,cirrhosis,liver cirrhosis,DOID:5082,cirrhosis,,1
+2432,1,balkan endemic nephropathy,Balkan nephropathy,DOID:3052,balkan endemic nephropathy,,1
+2437,1,maroteaux-lamy syndrome,mucopolysaccharidosis VI,DOID:12800,maroteaux-lamy syndrome,,1
+2442,1,refsum's disease,Refsum disease,DOID:10582,refsum's disease,,1
+2446,2,burkitt's lymphoma,Burkitt lymphoma,DOID:8584,burkitt's lymphoma,,1
+2449,1,aids,acquired immunodeficiency syndrome,DOID:635,aids,,1
+2457,1,chronic myelogenous leukemia,chronic myeloid leukemia,DOID:8552,chronic myelogenous leukemia,,1
+2458,1,chronic bronchitis,bronchitis,DOID:6132,chronic bronchitis,,1
+2462,1,ependymoblastoma,embryonal tumor with multilayered rosettes, C19MC-altered,DOID:0080903,ependymoblastoma,,1
+2466,1,farber disease,Farber lipogranulomatosis,DOID:0050464,farber disease,,1
+2481,1,aspartylglycosaminuria,aspartylglucosaminuria,DOID:0050461,aspartylglycosaminuria,,1
+2488,1,hepatoma,hepatocellular carcinoma,DOID:684,hepatoma,,1
+2520,1,myeloma,multiple myeloma,DOID:9538,myeloma,,1
+2575,1,virus infection,viral infectious disease,DOID:934,virus infection,,1
+2577,2,familial dysautonomia,Riley-Day syndrome,DOID:11589,familial dysautonomia,,1
+2582,1,spongiform encephalopathy,prion disease,DOID:649,spongiform encephalopathy,,1
+2590,2,sialidosis,glycoproteinosis,DOID:3343,sialidosis,,1
+12879,2,mucolipidosis ii,mucolipidosis II alpha/beta,DOID:0080070,mucolipidosis ii,,1
+12838,17,sialidosis,glycoproteinosis,DOID:3343,sialidosis,,1
+12841,1,hepatoma,hepatocellular carcinoma,DOID:684,hepatoma,,1
+12846,3,aspartylglycosaminuria,aspartylglucosaminuria,DOID:0050461,aspartylglycosaminuria,,1
+12849,4,mannosidosis,obsolete mannosidase deficiency disease,DOID:3414,mannosidosis,,1
+12854,3,myeloma,multiple myeloma,DOID:9538,myeloma,,1
+12856,9,waldenstrom macroglobulinemia,lymphoplasmacytic lymphoma,DOID:0060901,waldenstrom macroglobulinemia,,1
+12867,2,cirrhosis,liver cirrhosis,DOID:5082,cirrhosis,,1
