@@ -3,6 +3,7 @@ from pathlib import Path
 from time import sleep
 import json
 import os
+import unicodedata
 
 import pandas as pd
 import requests
@@ -62,11 +63,20 @@ OUTPUT_COLUMNS = [
 
 #rows to be tested
 START_ROW = 0
-END_ROW = 21
+END_ROW = 20
 
 def normalize_text(text):
-    """Prepare text for comparisons."""
-    return str(text).strip().casefold()
+    """Prepare text for comparisons, ignoring accents and capitalization."""
+    text = unicodedata.normalize(
+        "NFKD",
+        str(text).strip().casefold()
+    )
+
+    return "".join(
+        character
+        for character in text
+        if not unicodedata.combining(character)
+    )
 
 
 def get_synonyms(document):
@@ -297,18 +307,73 @@ def select_best_document(term, documents):
 
 
 def search_disease_ontology(term):
-    """Search for one standard term in Disease Ontology."""
-    exact_documents = request_ols_documents(term, exact=True)
+    """Search Disease Ontology using original and accent-free spellings."""
 
+    #create the original and accent-free search terms
+    original_term = str(term).strip()
+    accent_free_term = normalize_text(original_term)
+
+    search_terms = [original_term]
+
+    if accent_free_term != original_term:
+        search_terms.append(accent_free_term)
+
+    #search both spellings; exact matching first
+    exact_documents = []
+
+    for search_term in search_terms:
+        documents = request_ols_documents(
+            search_term,
+            exact=True,
+        )
+
+        exact_documents.extend(documents)
+
+    #remove duplicate entries
+    unique_documents = {
+        document.get("obo_id"): document
+        for document in exact_documents
+        if document.get("obo_id")
+    }
+
+    exact_documents = list(unique_documents.values())
+
+    #pick the best result
     if exact_documents:
-        selected_document = select_best_document(term, exact_documents)
-        return (
+        selected_document = select_best_document(
+            original_term,
+            exact_documents,
+        )
+
+        return(
             selected_document.get("label"),
             selected_document.get("obo_id"),
         )
 
-    documents = request_ols_documents(term, exact=False)
-    selected_document = select_best_document(term, documents)
+    #if exact search fails, try non-exact searches
+    documents = []
+
+    for search_term in search_terms:
+        results = request_ols_documents(
+            search_term,
+            exact=False,
+        )
+
+        documents.extend(results)
+    
+    #remove duplicate entries
+    unique_documents = {
+        document.get("obo_id"): document
+        for document in documents
+        if document.get("obo_id")
+    }
+
+    documents = list(unique_documents.values())
+    
+    selected_document = select_best_document(
+        original_term, 
+        documents,
+    )
 
     if selected_document is None:
         return None, None

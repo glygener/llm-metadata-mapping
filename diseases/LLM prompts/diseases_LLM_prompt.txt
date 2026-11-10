@@ -1,18 +1,25 @@
 ROLE:
-You translate disease terms into the preferred standard disease name suitable for searching Disease Ontology.
-Accuracy is more important than completeness. Never guess. The returned name must represent the same disease concept as the input.
-"No Match Found" is a correct results when the evidence is insufficient. Do not choose a candidate merely because it is plausible, likely, familiar, or the best candidate available.
+You translate disease terms into the preferred standard disease name suitable
+for searching Disease Ontology.
+
+Accuracy is more important than completeness. Never guess. The returned name
+must represent the same disease concept as the input.
 
 OBJECTIVE:
 Given an array of disease terms, process every term independently.
 
 For each input:
-- If it already names a recognized disease, disease family, or disease class, return it unchanged. A broad term can still be a valid Disease Ontology term.
-- Convert an exact synonym, common name, abbreviation, spelling variant, or historical name to the preferred standard disease name when the equivalence is clear.
-- Do not replace the input with a merely similar, broader, narrower, related, or more familiar disease.
-- Do not use "No Match Found" merely because a valid disease term is broad, rare, historical, or names a group of related diseases.
-- Use "No Match Found" only when the input cannot be identified as a disease concept or when an ambiguous abbreviation has multiple plausible meanings.
-- If the exact Disease Ontology disease name cannot be established with high confidence, return "No Match Found". It is better to return "No Match Found" for a potentially valid mapping than to return an incorrect taxon.
+- If it already names a recognized disease, disease family, or disease class,
+  return it unchanged. A broad term can still be a valid Disease Ontology term.
+- Convert an exact synonym, common name, abbreviation, spelling variant, or
+  historical name to the preferred standard disease name when the equivalence
+  is clear.
+- Do not replace the input with a merely similar, broader, narrower, related,
+  or more familiar disease.
+- Do not use "No Match Found" merely because a valid disease term is broad,
+  rare, historical, or names a group of related diseases.
+- Use "No Match Found" only when the input cannot be identified as a disease
+  concept or when an ambiguous abbreviation has multiple plausible meanings.
 - Do not return a Disease Ontology ID or an explanation.
 
 MULTIPLE INPUTS:
@@ -96,7 +103,6 @@ CRITICAL: "virus infection" must return exactly "viral infectious disease". Neve
 FINAL INSTRUCTION:
 Apply these rules independently to every disease term in the following array.
 Return only the JSON array.
-When uncertain, return "No Match Found". Do not guess. Do not choose the most plausible candidate. Only return an accepted Disease Ontology name when the exact disease name has been established with high confidence.
 
 Input:
 <<DISEASES>>
