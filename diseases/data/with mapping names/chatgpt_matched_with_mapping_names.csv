@@ -1,1 +1,34 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match,ols_name,ols_name_match,ols_id,ols_id_match
+2500,1,mannosidosis,obsolete mannosidase deficiency disease,DOID:3414,mannosidosis,,1,mannosidosis,No,beta-mannosidosis,No,DOID:3633,No
+2517,1,waldenstrom macroglobulinemia,lymphoplasmacytic lymphoma,DOID:0060901,waldenstrom macroglobulinemia,,1,waldenstrom macroglobulinemia,No,lymphoplasmacytic lymphoma,Yes,DOID:0060901,Yes
+2572,1,krabbe's disease,Krabbe disease,DOID:10587,krabbe's disease,,1,krabbe disease,Yes,Krabbe disease,Yes,DOID:10587,Yes
+2589,1,mucolipidosis ii,mucolipidosis II alpha/beta,DOID:0080070,mucolipidosis ii,,1,mucolipidosis II,No,mucolipidosis II alpha/beta,Yes,DOID:0080070,Yes
+2598,1,glycogen storage disease type ii,glycogen storage disease II,DOID:2752,glycogen storage disease type ii,,1,glycogen storage disease type II,No,glycogen storage disease II,Yes,DOID:2752,Yes
+2402,1,insulin-dependent diabetes mellitus,type 1 diabetes mellitus,DOID:9744,insulin-dependent diabetes mellitus,,1,type 1 diabetes mellitus,Yes,type 1 diabetes mellitus,Yes,DOID:9744,Yes
+2418,1,hiv infection,human immunodeficiency virus infectious disease,DOID:526,hiv infection,,1,human immunodeficiency virus infectious disease,Yes,human immunodeficiency virus infectious disease,Yes,DOID:526,Yes
+2420,1,diabetes,diabetes mellitus,DOID:9351,diabetes,,1,diabetes mellitus,Yes,diabetes mellitus,Yes,DOID:9351,Yes
+2430,1,cirrhosis,liver cirrhosis,DOID:5082,cirrhosis,,1,cirrhosis,No,liver cirrhosis,Yes,DOID:5082,Yes
+2432,1,balkan endemic nephropathy,Balkan nephropathy,DOID:3052,balkan endemic nephropathy,,1,balkan endemic nephropathy,No,Balkan nephropathy,Yes,DOID:3052,Yes
+2437,1,maroteaux-lamy syndrome,mucopolysaccharidosis VI,DOID:12800,maroteaux-lamy syndrome,,1,mucopolysaccharidosis VI,Yes,mucopolysaccharidosis VI,Yes,DOID:12800,Yes
+2442,1,refsum's disease,Refsum disease,DOID:10582,refsum's disease,,1,refsum disease,Yes,Refsum disease,Yes,DOID:10582,Yes
+2446,2,burkitt's lymphoma,Burkitt lymphoma,DOID:8584,burkitt's lymphoma,,1,burkitt lymphoma,Yes,Burkitt lymphoma,Yes,DOID:8584,Yes
+2449,1,aids,acquired immunodeficiency syndrome,DOID:635,aids,,1,acquired immunodeficiency syndrome,Yes,acquired immunodeficiency syndrome,Yes,DOID:635,Yes
+2457,1,chronic myelogenous leukemia,chronic myeloid leukemia,DOID:8552,chronic myelogenous leukemia,,1,chronic myeloid leukemia,Yes,chronic myeloid leukemia,Yes,DOID:8552,Yes
+2458,1,chronic bronchitis,bronchitis,DOID:6132,chronic bronchitis,,1,chronic bronchitis,No,bronchitis,Yes,DOID:6132,Yes
+2462,1,ependymoblastoma,"embryonal tumor with multilayered rosettes, C19MC-altered",DOID:0080903,ependymoblastoma,,1,ependymoblastoma,No,"embryonal tumor with multilayered rosettes, C19MC-altered",Yes,DOID:0080903,Yes
+2466,1,farber disease,Farber lipogranulomatosis,DOID:0050464,farber disease,,1,farber lipogranulomatosis,Yes,Farber lipogranulomatosis,Yes,DOID:0050464,Yes
+2481,1,aspartylglycosaminuria,aspartylglucosaminuria,DOID:0050461,aspartylglycosaminuria,,1,aspartylglucosaminuria,Yes,aspartylglucosaminuria,Yes,DOID:0050461,Yes
+2488,1,hepatoma,hepatocellular carcinoma,DOID:684,hepatoma,,1,hepatocellular carcinoma,Yes,hepatocellular carcinoma,Yes,DOID:684,Yes
+2520,1,myeloma,multiple myeloma,DOID:9538,myeloma,,1,myeloma,No,multiple myeloma,Yes,DOID:9538,Yes
+2575,1,virus infection,viral infectious disease,DOID:934,virus infection,,1,viral infectious disease,Yes,viral infectious disease,Yes,DOID:934,Yes
+2577,2,familial dysautonomia,Riley-Day syndrome,DOID:11589,familial dysautonomia,,1,familial dysautonomia,No,familial dysautonomia,No,DOID:11589,Yes
+2582,1,spongiform encephalopathy,prion disease,DOID:649,spongiform encephalopathy,,1,spongiform encephalopathy,No,prion disease,Yes,DOID:649,Yes
+2590,2,sialidosis,glycoproteinosis,DOID:3343,sialidosis,,1,sialidosis,No,glycoproteinosis,Yes,DOID:3343,Yes
+12879,2,mucolipidosis ii,mucolipidosis II alpha/beta,DOID:0080070,mucolipidosis ii,,1,mucolipidosis II,No,mucolipidosis II alpha/beta,Yes,DOID:0080070,Yes
+12838,17,sialidosis,glycoproteinosis,DOID:3343,sialidosis,,1,sialidosis,No,glycoproteinosis,Yes,DOID:3343,Yes
+12841,1,hepatoma,hepatocellular carcinoma,DOID:684,hepatoma,,1,hepatocellular carcinoma,Yes,hepatocellular carcinoma,Yes,DOID:684,Yes
+12846,3,aspartylglycosaminuria,aspartylglucosaminuria,DOID:0050461,aspartylglycosaminuria,,1,aspartylglucosaminuria,Yes,aspartylglucosaminuria,Yes,DOID:0050461,Yes
+12849,4,mannosidosis,obsolete mannosidase deficiency disease,DOID:3414,mannosidosis,,1,mannosidosis,No,beta-mannosidosis,No,DOID:3633,No
+12854,3,myeloma,multiple myeloma,DOID:9538,myeloma,,1,myeloma,No,multiple myeloma,Yes,DOID:9538,Yes
+12856,9,waldenstrom macroglobulinemia,lymphoplasmacytic lymphoma,DOID:0060901,waldenstrom macroglobulinemia,,1,Waldenström macroglobulinemia,No,,,,
+12867,2,cirrhosis,liver cirrhosis,DOID:5082,cirrhosis,,1,cirrhosis,No,liver cirrhosis,Yes,DOID:5082,Yes
