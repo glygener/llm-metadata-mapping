@@ -3,35 +3,26 @@ from pathlib import Path
 from time import sleep
 import json
 import os
-import warnings
 
 import pandas as pd
 import requests
 from openai import OpenAI
 
-
-warnings.filterwarnings(
-    "ignore",
-    message="Workbook contains no default style.*",
-)
-
 SCRIPT_DIR = Path(__file__).resolve().parent
 DISEASE_DIR = SCRIPT_DIR.parent
-DATA_DIR = DISEASE_DIR / "data"
+DATA_DIR = DISEASE_DIR / "data" / "with mapping names"
+REPO_DIR = DISEASE_DIR.parent
+API_FILE = REPO_DIR / "species" / "script" / "api_key.txt"
 PROMPT_FILE = (
     DISEASE_DIR
     / "LLM prompts"
     / "diseases_LLM_prompt.txt"
 )
 
-DATASETS = [
+DATASET = [
     (
-        DATA_DIR / "mapping_Disease-mapped.xlsx",
-        DATA_DIR / "mapping_Disease_LLM_OLS_results.xlsx",
-    ),
-    (
-        DATA_DIR / "mapping_BS_Disease-mapped.xlsx",
-        DATA_DIR / "mapping_BS_Disease_LLM_OLS_results.xlsx",
+        DATA_DIR / "original_data_with_mapping_names.csv",
+        DATA_DIR / "chatgpt_matched_with_mapping_names.csv",
     ),
 ]
 
@@ -40,8 +31,38 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 BATCH_SIZE = 10
 MAX_RETRIES = 3
 REQUEST_TIMEOUT = 60
-REQUIRED_COLUMNS = ["name", "namespacename", "namespaceid"]
 
+REQUIRED_COLUMNS = [
+    "ID",
+    "count",
+    "name",
+    "namespacename",
+    "namespaceid",
+    "mappingname",
+    "rank",
+    "matchCount",
+]
+
+OUTPUT_COLUMNS = [
+    "ID",
+    "count",
+    "name",
+    "namespacename",
+    "namespaceid",
+    "mappingname",
+    "rank",
+    "matchCount",
+    "chatgpt_name",
+    "name_match",
+    "ols_name",
+    "ols_name_match",
+    "ols_id",
+    "ols_id_match",
+]
+
+#rows to be tested
+START_ROW = 20
+END_ROW = 33
 
 def normalize_text(text):
     """Prepare text for comparisons."""
@@ -59,15 +80,17 @@ def get_synonyms(document):
 
 
 def create_openai_client():
-    """Create the OpenAI client without storing a key in the repository."""
-    api_key = os.getenv("OPENAI_API_KEY")
-
-    if not api_key:
-        raise RuntimeError(
-            "OPENAI_API_KEY is not set. Add it to the current PowerShell "
-            "session before running this script."
+    if not API_FILE.exists():
+        raise FileNotFoundError(
+            f"API key file not found: {API_FILE}"
         )
 
+    api_key = API_FILE.read_text(encoding="utf-8").strip()
+    if not api_key:
+        raise RuntimeError(
+            "API key file is empty."
+        )
+    
     return OpenAI(api_key=api_key)
 
 
@@ -122,7 +145,7 @@ def translate_diseases(disease_names, client, prompt_template):
                 )
 
             translated_names = {}
-            required_keys = {"input", "scientific_name"}
+            required_keys = {"input_name", "scientific_name"}
 
             for position, record in enumerate(records):
                 if not isinstance(record, dict):
@@ -133,11 +156,11 @@ def translate_diseases(disease_names, client, prompt_template):
                 if set(record.keys()) != required_keys:
                     raise ValueError(
                         "Every LLM result must contain exactly "
-                        "'input' and 'scientific_name'."
+                        "'input_name' and 'scientific_name'."
                     )
 
                 expected_input = disease_names[position]
-                returned_input = str(record["input"]).strip()
+                returned_input = str(record["input_name"]).strip()
 
                 if returned_input != expected_input:
                     raise ValueError(
@@ -297,8 +320,12 @@ def search_disease_ontology(term):
 
 
 def load_dataset(input_file):
-    """Load and validate one mapped disease spreadsheet."""
-    data = pd.read_excel(input_file, sheet_name="Mappings")
+    """Load and validate one mapped disease CSV file."""
+    data = pd.read_csv(
+        input_file, 
+        dtype=str, 
+        keep_default_na=False,
+        )
     missing_columns = [
         column
         for column in REQUIRED_COLUMNS
@@ -310,12 +337,14 @@ def load_dataset(input_file):
             f"{input_file.name} is missing columns: {missing_columns}"
         )
 
+    data = data.iloc[START_ROW:END_ROW].copy()
+
     print(f"Loaded {input_file.name}: {len(data)} entries.")
     return data
 
 
 def collect_unique_terms(datasets):
-    """Collect unique non-empty names from all input spreadsheets."""
+    """Collect unique non-empty names from all input data."""
     unique_terms = []
     seen_terms = set()
 
@@ -352,26 +381,26 @@ def build_lookup_cache(unique_terms, client, prompt_template):
             prompt_template,
         )
 
-        for original_name in batch_names:
-            scientific_name = llm_results[original_name]
-            print(f"  Input: {original_name}")
-            print(f"  LLM term: {scientific_name}")
+        for input_name in batch_names:
+            chatgpt_name = llm_results[input_name]
+            print(f"  Input: {input_name}")
+            print(f"  LLM term: {chatgpt_name}")
 
-            if normalize_text(scientific_name) == "no match found":
+            if normalize_text(chatgpt_name) == "No Match Found":
                 ols_name = None
                 ols_id = None
             else:
                 try:
                     ols_name, ols_id = search_disease_ontology(
-                        scientific_name
+                        chatgpt_name
                     )
                 except requests.RequestException as error:
                     print(f"  OLS request failed: {error}")
                     ols_name = None
                     ols_id = None
 
-            lookup_cache[original_name] = (
-                scientific_name,
+            lookup_cache[input_name] = (
+                chatgpt_name,
                 ols_name,
                 ols_id,
             )
@@ -383,47 +412,57 @@ def build_lookup_cache(unique_terms, client, prompt_template):
 
 
 def create_output(data, lookup_cache):
-    """Create the output rows for one input spreadsheet."""
+    """Create the output rows."""
     results = []
 
     for _, row in data.iterrows():
         original_value = row["name"]
-        original_name = (
+        input_name = (
             ""
             if pd.isna(original_value)
             else str(original_value).strip()
         )
 
-        scientific_name, ols_name, ols_id = lookup_cache.get(
-            original_name,
-            (None, None, None),
+        chatgpt_name, ols_name, ols_id = lookup_cache.get(
+            input_name,
+            ("", "", ""),
         )
 
-        expected_id = (
-            ""
-            if pd.isna(row["namespaceid"])
-            else str(row["namespaceid"]).strip()
-        )
-
-        if not expected_id:
-            id_match = ""
-        elif (
-            ols_id
-            and normalize_text(ols_id) == normalize_text(expected_id)
-        ):
-            id_match = "yes"
+        #comparing namespacename to chatgpt name
+        original_namespacename = str(row["namespacename"]).strip()        
+        if not original_namespacename or not chatgpt_name:
+            name_match = ""
+        elif normalize_text(original_namespacename) == normalize_text(chatgpt_name):
+            name_match = "Yes"
         else:
-            id_match = "no"
+            name_match = "No"
+
+        #comparing namespacename to ols name
+        if not original_namespacename or not ols_name:
+            ols_name_match = ""
+        elif normalize_text(original_namespacename) == normalize_text(ols_name):
+            ols_name_match = "Yes"
+        else:
+            ols_name_match = "No"
+
+        #comparing namespaceid to ols id
+        original_namespaceid = str(row["namespaceid"]).strip()
+        if not original_namespaceid or not ols_id:
+            ols_id_match = ""
+        elif normalize_text(original_namespaceid) == normalize_text(ols_id):
+            ols_id_match = "Yes"
+        else:
+            ols_id_match = "No"
 
         results.append(
             {
-                "name": original_value,
-                "namespacename": row["namespacename"],
-                "namespaceid": expected_id,
-                "scientific_name": scientific_name or "",
+                **row.to_dict(),
+                "chatgpt_name": chatgpt_name or "",
+                "name_match": name_match,
                 "ols_name": ols_name or "",
+                "ols_name_match": ols_name_match,
                 "ols_id": ols_id or "",
-                "namespaceid_matches_ols_id": id_match,
+                "ols_id_match": ols_id_match,
             }
         )
 
@@ -436,7 +475,7 @@ def main():
     client = create_openai_client()
     datasets = []
 
-    for input_file, output_file in DATASETS:
+    for input_file, output_file in DATASET:
         data = load_dataset(input_file)
         datasets.append((input_file, output_file, data))
 
@@ -451,17 +490,16 @@ def main():
 
     for input_file, output_file, data in datasets:
         output_data = create_output(data, lookup_cache)
-        output_data.to_excel(
+        output_data.to_csv(
             output_file,
-            sheet_name="LLM OLS Results",
             index=False,
         )
 
         comparable_rows = (
-            output_data["namespaceid_matches_ols_id"] != ""
+            output_data["ols_id_match"] != ""
         ).sum()
         yes_count = (
-            output_data["namespaceid_matches_ols_id"] == "yes"
+            output_data["ols_id_match"] == "Yes"
         ).sum()
 
         print()

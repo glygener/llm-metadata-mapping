@@ -35,7 +35,7 @@ Each object must contain exactly these two properties:
 
 [
   {
-    "input": "",
+    "input_name": "",
     "scientific_name": ""
   }
 ]
@@ -55,7 +55,7 @@ Input:
 Output:
 [
   {
-    "input": "Shingles",
+    "input_name": "Shingles",
     "scientific_name": "herpes zoster"
   }
 ]
@@ -70,15 +70,15 @@ Input:
 Output:
 [
   {
-    "input": "cancer",
+    "input_name": "cancer",
     "scientific_name": "cancer"
   },
   {
-    "input": "gangliosidosis",
+    "input_name": "gangliosidosis",
     "scientific_name": "gangliosidosis"
   },
   {
-    "input": "fucosidosis",
+    "input_name": "fucosidosis",
     "scientific_name": "fucosidosis"
   }
 ]
@@ -91,7 +91,7 @@ Input:
 Output:
 [
   {
-    "input": "XYZ syndrome abbreviation",
+    "input_name": "XYZ syndrome abbreviation",
     "scientific_name": "No Match Found"
   }
 ]
