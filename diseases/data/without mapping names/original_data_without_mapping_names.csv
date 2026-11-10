@@ -80,4 +80,4 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount
 12855,10,leukemia,leukemia,DOID:1240,,,1
 12858,4,lysosomal storage disease,lysosomal storage disease,DOID:3211,,,1
 12862,6,hepatocellular carcinoma,hepatocellular carcinoma,DOID:684,,,1
-,,Shingles,herpes zoster,DOID_8536,,,
+,,Shingles,herpes zoster,DOID:8536,,,

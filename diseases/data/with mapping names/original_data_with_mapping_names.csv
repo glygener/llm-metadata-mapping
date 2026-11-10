@@ -15,7 +15,7 @@ ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount
 2449,1,aids,acquired immunodeficiency syndrome,DOID:635,aids,,1
 2457,1,chronic myelogenous leukemia,chronic myeloid leukemia,DOID:8552,chronic myelogenous leukemia,,1
 2458,1,chronic bronchitis,bronchitis,DOID:6132,chronic bronchitis,,1
-2462,1,ependymoblastoma,embryonal tumor with multilayered rosettes, C19MC-altered,DOID:0080903,ependymoblastoma,,1
+2462,1,ependymoblastoma,"embryonal tumor with multilayered rosettes, C19MC-altered",DOID:0080903,ependymoblastoma,,1
 2466,1,farber disease,Farber lipogranulomatosis,DOID:0050464,farber disease,,1
 2481,1,aspartylglycosaminuria,aspartylglucosaminuria,DOID:0050461,aspartylglycosaminuria,,1
 2488,1,hepatoma,hepatocellular carcinoma,DOID:684,hepatoma,,1
