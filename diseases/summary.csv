@@ -1,3 +1,4 @@
 Experiment_ID,Volunteer,Date,Baseline_Commit,Experiment_Commit,GPT_Model_Used,Decision,Change_Category,Coverage_%,No_Scientific_Term_%,Ontology_Coverage_%,Unresolvable_Scientific_Term_%,Correct_Mapping_Rate_%,Dangerous_Error_Rate_%,Preferred_Label_Usage_%,Additional_Correct_Resolutions,Resolution_Regressions
-EXP:001,Taylor DiMenna, 11/9/26,48bc94d,6427bc1,GPT-4o,ACCEPT,Baseline test,100,0,97,2.9,94.1,6.1,44.1,,
-EXP:002,Taylor DiMenna,11/10/26,6427bc1,4103a03,GPT-4o,REJECT,Add "No Match Found" directions,100,0,94.7,5.3,89.5,5.6,63.2,0,1
+EXP-001,Taylor DiMenna, 11/9/26,48bc94d,6427bc1,GPT-4o,ACCEPT,Baseline test,100,0,97,2.9,94.1,6.1,44.1,,
+EXP-002,Taylor DiMenna,11/10/26,6427bc1,4103a03,GPT-4o,REJECT,Add "No Match Found" directions,100,0,95,5,90,5.6,60,0,1
+EXP-003,Taylor DiMenna,11/10/26,6427bc1,,GPT-4o,
