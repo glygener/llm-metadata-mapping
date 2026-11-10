@@ -61,8 +61,8 @@ OUTPUT_COLUMNS = [
 ]
 
 #rows to be tested
-START_ROW = 20
-END_ROW = 33
+START_ROW = 0
+END_ROW = 21
 
 def normalize_text(text):
     """Prepare text for comparisons."""
