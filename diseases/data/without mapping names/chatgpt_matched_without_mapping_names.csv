@@ -1,41 +1,43 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match,ols_name,ols_name_match,ols_id,ols_id_match
-2484,1,aspartylglucosaminuria,aspartylglucosaminuria,DOID:0050461,,,1,aspartylglucosaminuria,Yes,aspartylglucosaminuria,Yes,DOID:0050461,Yes
-2491,1,mucopolysaccharidosis,mucopolysaccharidosis,DOID:12798,,,1,mucopolysaccharidosis,Yes,mucopolysaccharidosis,Yes,DOID:12798,Yes
-2495,2,pick's disease,Pick's disease,DOID:11870,,,1,pick's disease,Yes,Pick's disease,Yes,DOID:11870,Yes
-2499,1,schistosomiasis,schistosomiasis,DOID:1395,,,1,schistosomiasis,Yes,schistosomiasis,Yes,DOID:1395,Yes
-2511,1,multiple sclerosis,multiple sclerosis,DOID:2377,,,1,multiple sclerosis,Yes,multiple sclerosis,Yes,DOID:2377,Yes
-2524,1,glycogen storage disease,glycogen storage disease,DOID:2747,,,1,glycogen storage disease,Yes,glycogen storage disease,Yes,DOID:2747,Yes
-2528,1,ankylosing spondylitis,ankylosing spondylitis,DOID:7147,,,1,ankylosing spondylitis,Yes,ankylosing spondylitis,Yes,DOID:7147,Yes
-2532,2,diabetes mellitus,diabetes mellitus,DOID:9351,,,1,diabetes mellitus,Yes,diabetes mellitus,Yes,DOID:9351,Yes
-2537,1,keratoconus,keratoconus,DOID:10126,,,1,keratoconus,Yes,keratoconus,Yes,DOID:10126,Yes
-2546,1,cholecystolithiasis,cholecystolithiasis,DOID:11151,,,1,cholecystolithiasis,Yes,cholecystolithiasis,Yes,DOID:11151,Yes
-2553,2,carcinoma,carcinoma,DOID:305,,,1,carcinoma,Yes,carcinoma,Yes,DOID:305,Yes
-2556,1,bronchopulmonary dysplasia,bronchopulmonary dysplasia,DOID:11650,,,1,bronchopulmonary dysplasia,Yes,bronchopulmonary dysplasia,Yes,DOID:11650,Yes
-2565,1,pseudoxanthoma elasticum,pseudoxanthoma elasticum,DOID:2738,,,1,pseudoxanthoma elasticum,Yes,pseudoxanthoma elasticum,Yes,DOID:2738,Yes
-2576,1,periodontitis,periodontitis,DOID:824,,,1,periodontitis,Yes,periodontitis,Yes,DOID:824,Yes
-2578,1,riley-day syndrome,Riley-Day syndrome,DOID:11589,,,1,familial dysautonomia,No,familial dysautonomia,No,DOID:11589,Yes
-2580,1,thrombotic thrombocytopenic purpura,thrombotic thrombocytopenic purpura,DOID:10772,,,1,thrombotic thrombocytopenic purpura,Yes,thrombotic thrombocytopenic purpura,Yes,DOID:10772,Yes
-2585,1,glomerulonephritis,glomerulonephritis,DOID:2921,,,1,glomerulonephritis,Yes,glomerulonephritis,Yes,DOID:2921,Yes
-2404,16,cancer,cancer,DOID:162,,,1,cancer,Yes,cancer,Yes,DOID:162,Yes
-2405,1,lymphoma,lymphoma,DOID:0060058,,,1,lymphoma,Yes,lymphoma,Yes,DOID:0060058,Yes
-2406,1,lysosomal storage disease,lysosomal storage disease,DOID:3211,,,1,lysosomal storage disease,Yes,lysosomal storage disease,Yes,DOID:3211,Yes
-2407,1,central pontine myelinolysis,central pontine myelinolysis,DOID:636,,,1,central pontine myelinolysis,Yes,central pontine myelinolysis,Yes,DOID:636,Yes
-2409,2,gangliosidosis,gangliosidosis,DOID:2368,,,1,gangliosidosis,Yes,gangliosidosis,Yes,DOID:2368,Yes
-2412,2,choriocarcinoma,choriocarcinoma,DOID:3594,,,1,choriocarcinoma,Yes,choriocarcinoma,Yes,DOID:3594,Yes
-2414,1,idiopathic pulmonary fibrosis,idiopathic pulmonary fibrosis,DOID:0050156,,,1,idiopathic pulmonary fibrosis,Yes,idiopathic pulmonary fibrosis,Yes,DOID:0050156,Yes
-2417,1,ulcerative colitis,ulcerative colitis,DOID:8577,,,1,ulcerative colitis,Yes,ulcerative colitis,Yes,DOID:8577,Yes
-2424,1,nephrotic syndrome,nephrotic syndrome,DOID:1184,,,1,nephrotic syndrome,Yes,nephrotic syndrome,Yes,DOID:1184,Yes
-2426,1,chondrosarcoma,chondrosarcoma,DOID:3371,,,1,chondrosarcoma,Yes,chondrosarcoma,Yes,DOID:3371,Yes
-2431,1,bronchiectasis,bronchiectasis,DOID:9563,,,1,bronchiectasis,Yes,bronchiectasis,Yes,DOID:9563,Yes
-2433,2,rheumatoid arthritis,rheumatoid arthritis,DOID:7148,,,1,rheumatoid arthritis,Yes,rheumatoid arthritis,Yes,DOID:7148,Yes
-2434,1,neuropathy,neuropathy,DOID:870,,,1,neuropathy,Yes,neuropathy,Yes,DOID:870,Yes
-2435,2,leukemia,leukemia,DOID:1240,,,1,leukemia,Yes,leukemia,Yes,DOID:1240,Yes
-2436,1,seminoma,seminoma,DOID:4440,,,1,seminoma,Yes,seminoma,Yes,DOID:4440,Yes
-2440,1,ehlers-danlos syndrome,Ehlers-Danlos syndrome,DOID:13359,,,1,ehlers-danlos syndrome,Yes,Ehlers-Danlos syndrome,Yes,DOID:13359,Yes
-2441,1,paroxysmal nocturnal hemoglobinuria,paroxysmal nocturnal hemoglobinuria,DOID:0060284,,,1,paroxysmal nocturnal hemoglobinuria,Yes,paroxysmal nocturnal hemoglobinuria,Yes,DOID:0060284,Yes
-2447,1,nephritis,nephritis,DOID:10952,,,1,nephritis,Yes,nephritis,Yes,DOID:10952,Yes
-2454,3,melanoma,melanoma,DOID:1909,,,1,melanoma,Yes,melanoma,Yes,DOID:1909,Yes
-2460,1,chagas disease,Chagas disease,DOID:12140,,,1,chagas disease,Yes,Chagas disease,Yes,DOID:12140,Yes
-2465,1,motor neuron disease,motor neuron disease,DOID:231,,,1,motor neuron disease,Yes,motor neuron disease,Yes,DOID:231,Yes
-2468,1,fucosidosis,fucosidosis,DOID:14500,,,1,fucosidosis,Yes,fucosidosis,Yes,DOID:14500,Yes
-2469,1,krabbe disease,Krabbe disease,DOID:10587,,,1,krabbe disease,Yes,Krabbe disease,Yes,DOID:10587,Yes
+2470,1,tay-sachs disease,Tay-Sachs disease,DOID:3320,,,1,tay-sachs disease,Yes,Tay-Sachs disease,Yes,DOID:3320,Yes
+2476,1,guillain-barre syndrome,Guillain-Barre syndrome,DOID:12842,,,1,guillain-barre syndrome,Yes,Guillain-Barre syndrome,Yes,DOID:12842,Yes
+2477,1,cystic fibrosis,cystic fibrosis,DOID:1485,,,1,cystic fibrosis,Yes,cystic fibrosis,Yes,DOID:1485,Yes
+2478,2,muscular dystrophy,muscular dystrophy,DOID:9884,,,1,muscular dystrophy,Yes,muscular dystrophy,Yes,DOID:9884,Yes
+2486,1,graves' disease,Graves' disease,DOID:12361,,,1,graves' disease,Yes,Graves' disease,Yes,DOID:12361,Yes
+2490,1,atherosclerosis,atherosclerosis,DOID:1936,,,1,atherosclerosis,Yes,atherosclerosis,Yes,DOID:1936,Yes
+2492,3,alzheimer's disease,Alzheimer's disease,DOID:10652,,,1,alzheimer's disease,Yes,Alzheimer's disease,Yes,DOID:10652,Yes
+2493,2,down syndrome,Down syndrome,DOID:14250,,,1,down syndrome,Yes,Down syndrome,Yes,DOID:14250,Yes
+2496,1,aspergillosis,aspergillosis,DOID:13564,,,1,aspergillosis,Yes,aspergillosis,Yes,DOID:13564,Yes
+2498,1,kanzaki disease,Kanzaki disease,DOID:0112319,,,1,kanzaki disease,Yes,Kanzaki disease,Yes,DOID:0112319,Yes
+2504,2,osteoarthritis,osteoarthritis,DOID:8398,,,1,osteoarthritis,Yes,osteoarthritis,Yes,DOID:8398,Yes
+2516,1,familial hypercholesterolemia,familial hypercholesterolemia,DOID:13810,,,1,familial hypercholesterolemia,Yes,familial hypercholesterolemia,Yes,DOID:13810,Yes
+2525,1,galactosialidosis,galactosialidosis,DOID:0080540,,,1,galactosialidosis,Yes,galactosialidosis,Yes,DOID:0080540,Yes
+2530,1,hepatocellular carcinoma,hepatocellular carcinoma,DOID:684,,,1,hepatocellular carcinoma,Yes,hepatocellular carcinoma,Yes,DOID:684,Yes
+2531,1,hepatitis,hepatitis,DOID:2237,,,1,hepatitis,Yes,hepatitis,Yes,DOID:2237,Yes
+2533,1,anencephaly,anencephaly,DOID:0060668,,,1,anencephaly,Yes,anencephaly,Yes,DOID:0060668,Yes
+2536,1,mucolipidosis,mucolipidosis,DOID:0080488,,,1,mucolipidosis,Yes,mucolipidosis,Yes,DOID:0080488,Yes
+2541,1,neuroblastoma,neuroblastoma,DOID:769,,,1,neuroblastoma,Yes,neuroblastoma,Yes,DOID:769,Yes
+2545,1,pancreatitis,pancreatitis,DOID:4989,,,1,pancreatitis,Yes,pancreatitis,Yes,DOID:4989,Yes
+2551,1,cataract,cataract,DOID:83,,,1,cataract,Yes,cataract,Yes,DOID:83,Yes
+2552,1,gaucher's disease,Gaucher's disease,DOID:1926,,,1,Gaucher disease,No,Gaucher's disease,Yes,DOID:1926,Yes
+2561,1,metachromatic leukodystrophy,metachromatic leukodystrophy,DOID:10581,,,1,metachromatic leukodystrophy,Yes,metachromatic leukodystrophy,Yes,DOID:10581,Yes
+2570,1,renal cell carcinoma,renal cell carcinoma,DOID:4450,,,1,renal cell carcinoma,Yes,renal cell carcinoma,Yes,DOID:4450,Yes
+2579,1,erythroleukemia,erythroleukemia,DOID:0080916,,,1,erythroleukemia,Yes,erythroleukemia,Yes,DOID:0080916,Yes
+2587,1,lyme disease,Lyme disease,DOID:11729,,,1,Lyme disease,Yes,Lyme disease,Yes,DOID:11729,Yes
+2588,1,uremia,uremia,DOID:4676,,,1,uremia,Yes,uremia,Yes,DOID:4676,Yes
+2591,1,crohn's disease,Crohn's disease,DOID:8778,,,1,Crohn's disease,Yes,Crohn's disease,Yes,DOID:8778,Yes
+2594,1,asthma,asthma,DOID:2841,,,1,asthma,Yes,asthma,Yes,DOID:2841,Yes
+12864,1,familial hypercholesterolemia,familial hypercholesterolemia,DOID:13810,,,1,familial hypercholesterolemia,Yes,familial hypercholesterolemia,Yes,DOID:13810,Yes
+12866,13,galactosialidosis,galactosialidosis,DOID:0080540,,,1,galactosialidosis,Yes,galactosialidosis,Yes,DOID:0080540,Yes
+12868,2,aspartylglucosaminuria,aspartylglucosaminuria,DOID:0050461,,,1,aspartylglucosaminuria,Yes,aspartylglucosaminuria,Yes,DOID:0050461,Yes
+12871,2,cystic fibrosis,cystic fibrosis,DOID:1485,,,1,cystic fibrosis,Yes,cystic fibrosis,Yes,DOID:1485,Yes
+12872,1,rheumatoid arthritis,rheumatoid arthritis,DOID:7148,,,1,rheumatoid arthritis,Yes,rheumatoid arthritis,Yes,DOID:7148,Yes
+12881,1,keratoconus,keratoconus,DOID:10126,,,1,keratoconus,Yes,keratoconus,Yes,DOID:10126,Yes
+12840,32,cancer,cancer,DOID:162,,,1,cancer,Yes,cancer,Yes,DOID:162,Yes
+12844,26,gangliosidosis,gangliosidosis,DOID:2368,,,1,gangliosidosis,Yes,gangliosidosis,Yes,DOID:2368,Yes
+12845,5,fucosidosis,fucosidosis,DOID:14500,,,1,fucosidosis,Yes,fucosidosis,Yes,DOID:14500,Yes
+12848,10,nephrotic syndrome,nephrotic syndrome,DOID:1184,,,1,nephrotic syndrome,Yes,nephrotic syndrome,Yes,DOID:1184,Yes
+12855,10,leukemia,leukemia,DOID:1240,,,1,leukemia,Yes,leukemia,Yes,DOID:1240,Yes
+12858,4,lysosomal storage disease,lysosomal storage disease,DOID:3211,,,1,lysosomal storage disease,Yes,lysosomal storage disease,Yes,DOID:3211,Yes
+12862,6,hepatocellular carcinoma,hepatocellular carcinoma,DOID:684,,,1,hepatocellular carcinoma,Yes,hepatocellular carcinoma,Yes,DOID:684,Yes
+,,Shingles,herpes zoster,DOID:8536,,,,herpes zoster,Yes,herpes zoster,Yes,DOID:8536,Yes

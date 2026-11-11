@@ -62,8 +62,8 @@ OUTPUT_COLUMNS = [
 ]
 
 #rows to be tested
-START_ROW = 0
-END_ROW = 40
+START_ROW = 40
+END_ROW = 82
 
 def normalize_text(text):
     """Prepare text for comparisons, ignoring accents and capitalization."""
