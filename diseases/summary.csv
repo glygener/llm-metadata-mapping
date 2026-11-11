@@ -3,3 +3,4 @@ EXP-001,Taylor DiMenna, 11/9/26,48bc94d,6427bc1,GPT-4o,ACCEPT,Baseline test,100,
 EXP-002,Taylor DiMenna,11/10/26,6427bc1,4103a03,GPT-4o,REJECT,Add "No Match Found" directions,100,0,95,5,90,5.6,60,0,1
 EXP-003,Taylor DiMenna,11/10/26,6427bc1,73e71a2,GPT-4o,ACCEPT,Standardize chatgpt names prior to OLS search,100,0,100,0,95,5,60,1,0
 EXP-004,Taylor DiMenna,11/11/26,73e71a2,5f7bb24,GPT-4o,ACCEPT,Baseline test,100,0,100,0,97.5 for disease names & 100 for IDs (automated mapping error),2.5 for disease names & 0 for IDs (automated mapping error),97.5 (100 if not for automated mapping error),,
+EXP-005,Taylor DiMenna,11/11/26,5f7bb24,99a4d10,GPT-4o,ACCEPT,Baseline test,100,0,100,0,100,0,97.5,,
