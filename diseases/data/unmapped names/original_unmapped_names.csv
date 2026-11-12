@@ -1,0 +1,131 @@
+ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount
+2489,1,amyotrophic lateral sclerosis,,,,,2
+2542,1,herpes simplex virus type 1,,,,,0
+2595,1,lysosomal disease,,,,,0
+2403,1,hiv-1,,,,,0
+2408,1,aneurysm,,,,,0
+2410,1,benign tumor,,,,,0
+2411,1,dystrophy,,,,,0
+2413,1,aplastic anaemia,,,,,0
+2415,1,glomerular disease,,,,,0
+2416,1,fulminant candidiasis,,,,,0
+2419,1,hepatobiliary,,,,,0
+2421,1,fungaemia,,,,,0
+2422,1,lysosomal storage diseases,,,,,0
+2423,1,carbohydrate-deficient- glycoprotein syndrome,,,,,0
+2425,1,b-lymphoma,,,,,0
+2427,2,mucolipidosis i,,,,,0
+2428,1,lysosome,,,,,0
+2429,1,psoriasis vulgaris,,,,,0
+2438,2,tay-sachs,,,,,0
+2439,1,thalassemia major,,,,,0
+2443,1,carbohydrate-deficient glycoprotein syndrome type i,,,,,0
+2444,1,sanfilippo syndrome,,,,,0
+2445,1,.beta.-mannosidosis,,,,,0
+2448,1,nocturnal hemoglobinuria,,,,,0
+2450,1,waldenstrom,,,,,0
+2451,1,benign pelvic mass,,,,,0
+2452,1,invasive mole,,,,,0
+2453,1,ductal cell carcinoma,,,,,0
+2455,1,ovarial clear cell carcinoma,,,,,0
+2456,1,uteri,,,,,0
+2459,1,hempas,,,,,0
+2461,1,hiv,,,,,0
+2463,1,recklinghausens's disease,,,,,0
+2464,1,cyst,,,,,0
+2467,1,morquio disease,,,,,0
+2471,1,colonic polyps,,,,,0
+2472,1,deep mycosis,,,,,0
+2473,1,hodgkin's disease,,,,,0
+2474,1,pre-cancer,,,,,0
+2475,1,tamm-horsfall,,,,,0
+2479,1,malignant lymphoma,,,,,0
+2480,1,murine retrovirus,,,,,0
+2482,1,diffuse panbronchiolitis,,,,,0
+2483,1,.alpha.-n-acetylgalactosaminidase deficiency,,,,,0
+2485,1,ependymoblastoma cells,,,,,0
+2487,1,egg,,,,,0
+2494,1,guam amyotrophic lateral sclerosis,,,,,0
+2497,1,benign,,,,,0
+2501,1,juvenile chronic arthritis,,,,,0
+2502,1,cancer-related,,,,,0
+2503,1,ceramide galactosyltransferase knockout,,,,,0
+2505,1,leukocyte adhesion deficiency type 1,,,,,0
+2506,1,targeted disruption of the sphingoid activator protein gene,,,,,0
+2507,1,colonic diverticulum,,,,,0
+2508,1,galactosuria,,,,,0
+2509,1,myoclonic epileptic encephalopathy,,,,,0
+2510,1,morquio a syndrome,,,,,0
+2512,1,l. donovani-infected,,,,,0
+2513,1,f-sffvp-infected,,,,,0
+2514,1,infantile ceroid-lipofuscinosis,,,,,0
+2515,1,batten's disease,,,,,0
+2518,1,sialidosis type 2,,,,,0
+2519,1,ceramide galactosyl transferase deficient mouse,,,,,0
+2521,1,wilms tumor,,,,,0
+2522,1,fungal sepsis,,,,,0
+2523,1,invasive deep mycosis,,,,,0
+2526,1,carbohydrate-deficient glycoprotein syndrome type ii,,,,,0
+2527,1,huntington chorea,,,,,0
+2529,1,fibrosis,,,,,0
+2534,1,polycystic kidney,,,,,0
+2535,1,small-cell carcinoma,,,,,0
+2538,1,candidemia,,,,,0
+2539,1,fungemia,,,,,0
+2540,1,glioma,,,,,0
+2543,1,gammopathy,,,,,0
+2544,1,carbohydrate deficient glycoprotein syndrome type ii,,,,,0
+2547,1,trophoblastic disease,,,,,0
+2548,1,mucopolysaccharidosis type vi,,,,,0
+2549,1,fulminant hepatitis,,,,,0
+2550,1,shiga toxin exposure,,,,,0
+2554,1,galactosidosis,,,,,0
+2555,1,fatty acid lipidosis,,,,,0
+2557,1,.alpha.-mannosidosis,,,,,0
+2558,1,syncytiotrophoblast membrane,,,,,0
+2559,1,recessive myotonia,,,,,0
+2560,1,engelbreth-holm-swarm tumor,,,,,0
+2562,1,fucosidosis type 2,,,,,0
+2563,1,twitcher,,,,,0
+2564,1,tumor,,,,,0
+2566,1,invasive choriocarcinoma,,,,,0
+2567,1,eastern equine encephalitis virus,,,,,0
+2568,1,plasmodium-falciparum-infection,,,,,0
+2569,1,hyperlipidemia,,,,,0
+2571,1,hemolytic- uremic syndrome,,,,,0
+2573,1,non-hodgkin's lymphoma,,,,,0
+2574,1,tn polyagglutinability syndrome,,,,,0
+2581,1,ceramide galactosyltransferase gene knock-out,,,,,0
+2583,1,scrapie infection,,,,,0
+2584,1,263k,,,,,0
+2586,1,morquio-b,,,,,0
+2592,1,gastric polyps,,,,,0
+2593,1,collagen vascular disease,,,,,0
+2596,1,glycogen storage disease type iii,,,,,0
+2597,1,renal disease,,,,,0
+2599,1,sanfilippo d syndrome,,,,,0
+12863,1,f-sffvp-infected,,,,,0
+12865,1,herpes simplex virus,,,,,0
+12869,2,tumor,,,,,0
+12870,2,sialidosis type 2,,,,,0
+12873,1,lewis lung cancer,,,,,0
+12874,1,waldenstrom,,,,,0
+12875,1,lysosomal disease,,,,,0
+12876,1,syncytiotrophoblast membrane,,,,,0
+12877,1,carbohydrate deficient glycoprotein,,,,,0
+12878,1,fucosidosis type 2,,,,,0
+12880,1,b-mannosidosis,,,,,0
+12882,1,hsv-1,,,,,0
+12883,1,a-mannosidosis,,,,,0
+12839,6,mucolipidosis i,,,,,0
+12842,2,carbohydrate-deficient,,,,,0
+12843,7,tamm-horsfall,,,,,0
+12847,7,morquio-b,,,,,0
+12850,4,murine retrovirus,,,,,0
+12851,8,trophoblastic disease,,,,,0
+12852,8,invasive mole,,,,,0
+12853,7,engelbreth-holm-swarm tumor,,,,,0
+12857,1,hiv,,,,,0
+12859,2,hiv-1,,,,,0
+12860,2,metastasis,,,,,0
+12861,3,normal,,,,,0
