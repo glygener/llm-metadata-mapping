@@ -85,6 +85,19 @@ Output:
 
 Input:
 [
+  "Kanzaki disease"
+]
+
+Output:
+[
+  {
+    "input": "Kanzaki disease",
+    "scientific_name": "Kanzaki disease"
+  }
+]
+
+Input:
+[
   "XYZ syndrome abbreviation"
 ]
 
