@@ -47,6 +47,9 @@ def normalize_text(text):
     """Prepare text for comparisons."""
     return str(text).strip().casefold()
 
+def normalize_identifier(identifier):
+    """Normalize DOID separators before comparing identifiers."""
+    return normalize_text(identifier).replace("_", ":")
 
 def get_synonyms(document):
     """Return synonyms as a list."""
@@ -409,7 +412,7 @@ def create_output(data, lookup_cache):
             id_match = ""
         elif (
             ols_id
-            and normalize_text(ols_id) == normalize_text(expected_id)
+            and normalize_identifier(ols_id) == normalize_identifier(expected_id)
         ):
             id_match = "yes"
         else:
