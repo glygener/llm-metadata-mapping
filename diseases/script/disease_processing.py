@@ -11,7 +11,7 @@ from openai import OpenAI
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DISEASE_DIR = SCRIPT_DIR.parent
-DATA_DIR = DISEASE_DIR / "data" / "without mapping names"
+DATA_DIR = DISEASE_DIR / "data" / "unmapped names"
 REPO_DIR = DISEASE_DIR.parent
 API_FILE = REPO_DIR / "species" / "script" / "api_key.txt"
 PROMPT_FILE = (
@@ -22,8 +22,8 @@ PROMPT_FILE = (
 
 DATASET = [
     (
-        DATA_DIR / "original_data_without_mapping_names.csv",
-        DATA_DIR / "chatgpt_matched_without_mapping_names.csv",
+        DATA_DIR / "original_unmapped_names.csv",
+        DATA_DIR / "chatgpt_unmapped_names.csv",
     ),
 ]
 
@@ -62,8 +62,8 @@ OUTPUT_COLUMNS = [
 ]
 
 #rows to be tested
-START_ROW = 40
-END_ROW = 82
+START_ROW = 0
+END_ROW = 45
 
 def normalize_text(text):
     """Prepare text for comparisons, ignoring accents and capitalization."""
@@ -495,7 +495,7 @@ def create_output(data, lookup_cache):
 
         #comparing namespacename to chatgpt name
         original_namespacename = str(row["namespacename"]).strip()        
-        if not original_namespacename or not chatgpt_name:
+        if original_namespacename.lower() in ["", "nan", "none"] or not chatgpt_name:
             name_match = ""
         elif normalize_text(original_namespacename) == normalize_text(chatgpt_name):
             name_match = "Yes"
@@ -503,7 +503,7 @@ def create_output(data, lookup_cache):
             name_match = "No"
 
         #comparing namespacename to ols name
-        if not original_namespacename or not ols_name:
+        if original_namespacename.lower() in ["", "nan", "none"] or not ols_name:
             ols_name_match = ""
         elif normalize_text(original_namespacename) == normalize_text(ols_name):
             ols_name_match = "Yes"
@@ -512,7 +512,7 @@ def create_output(data, lookup_cache):
 
         #comparing namespaceid to ols id
         original_namespaceid = str(row["namespaceid"]).strip()
-        if not original_namespaceid or not ols_id:
+        if original_namespaceid.lower() in ["", "nan", "none"] or not ols_id:
             ols_id_match = ""
         elif normalize_text(original_namespaceid) == normalize_text(ols_id):
             ols_id_match = "Yes"
