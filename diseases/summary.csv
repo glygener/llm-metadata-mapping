@@ -5,3 +5,4 @@ EXP-003,Taylor DiMenna,11/10/26,6427bc1,73e71a2,GPT-4o,ACCEPT,Standardize chatgp
 EXP-004,Taylor DiMenna,11/11/26,73e71a2,5f7bb24,GPT-4o,ACCEPT,Baseline test,100,0,100,0,97.5 for disease names & 100 for IDs (automated mapping error),2.5 for disease names & 0 for IDs (automated mapping error),97.5 (100 if not for automated mapping error),,
 EXP-005,Taylor DiMenna,11/11/26,5f7bb24,99a4d10,GPT-4o,ACCEPT,Baseline test,100,0,100,0,100,0,97.5,,
 EXP-006,Taylor DiMenna,11/13/26,755ad2e,477ee5b,GPT-4o,Baseline,Baseline test of unmapped names,82.2,17.8,97.2,2.8,,,,,
+EXP-007,Taylor DiMenna,11/19/26,80307ab,95ef814,GPT-4o,Baseline,Second baseline test of unmapped names,84.4,15.6,86.6,13.4,,,,,
