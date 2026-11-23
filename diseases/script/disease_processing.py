@@ -11,7 +11,7 @@ from openai import OpenAI
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DISEASE_DIR = SCRIPT_DIR.parent
-DATA_DIR = DISEASE_DIR / "data" / "unmapped names"
+DATA_DIR = DISEASE_DIR / "data" / "manually mapped names"
 REPO_DIR = DISEASE_DIR.parent
 API_FILE = REPO_DIR / "species" / "script" / "api_key.txt"
 PROMPT_FILE = (
@@ -22,8 +22,8 @@ PROMPT_FILE = (
 
 DATASET = [
     (
-        DATA_DIR / "original_unmapped_names.csv",
-        DATA_DIR / "chatgpt_unmapped_names.csv",
+        DATA_DIR / "original_manually_mapped_names.csv",
+        DATA_DIR / "chatgpt_manually_mapped_names.csv",
     ),
 ]
 
@@ -63,7 +63,7 @@ OUTPUT_COLUMNS = [
 
 #rows to be tested
 START_ROW = 0
-END_ROW = 45
+END_ROW = 53
 
 def normalize_text(text):
     """Prepare text for comparisons, ignoring accents and capitalization."""

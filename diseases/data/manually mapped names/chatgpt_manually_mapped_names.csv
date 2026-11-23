@@ -1,1 +1,54 @@
 ID,count,name,namespacename,namespaceid,mappingname,rank,matchCount,chatgpt_name,name_match,ols_name,ols_name_match,ols_id,ols_id_match
+2489,1,amyotrophic lateral sclerosis,amyotrophic lateral sclerosis,DOID:332,,,2,amyotrophic lateral sclerosis,Yes,amyotrophic lateral sclerosis,Yes,DOID:332,Yes
+2542,1,herpes simplex virus type 1,herpes simplex,DOID:8566,,,0,herpes simplex virus type 1,No,,,,
+2595,1,lysosomal disease,lysosomal storage disease,DOID:3211,,,0,lysosomal disease,No,lysosomal storage disease,Yes,DOID:3211,Yes
+2403,1,hiv-1,human immunodeficiency virus infectious disease,DOID:526,,,0,human immunodeficiency virus infectious disease,Yes,human immunodeficiency virus infectious disease,Yes,DOID:526,Yes
+2410,1,benign tumor,benign neoplasm,DOID:0060072,,,0,benign neoplasm,Yes,benign neoplasm,Yes,DOID:0060072,Yes
+2413,1,aplastic anaemia,aplastic anemia,DOID:12449,,,0,aplastic anemia,Yes,aplastic anemia,Yes,DOID:12449,Yes
+2422,1,lysosomal storage diseases,lysosomal storage diseases,DOID:3211,,,0,lysosomal storage disease,No,lysosomal storage disease,No,DOID:3211,Yes
+2423,1,carbohydrate-deficient- glycoprotein syndrome,congenital disorder of glycosylation,DOID:5212,,,0,congenital disorder of glycosylation,Yes,congenital disorder of glycosylation,Yes,DOID:5212,Yes
+2425,1,b-lymphoma,B-cell lymphoma,DOID:707,,,0,B-cell lymphoma,Yes,B-cell lymphoma,Yes,DOID:707,Yes
+2438,2,tay-sachs,Tay-Sachs disease,DOID:3320,,,0,Tay-Sachs disease,Yes,Tay-Sachs disease,Yes,DOID:3320,Yes
+2439,1,thalassemia major,beta-thalassemia major,DOID:80771,,,0,thalassemia major,No,beta-thalassemia major,Yes,DOID:0080771,No
+2443,1,carbohydrate-deficient glycoprotein syndrome type i,congenital disorder of glycosylation type I,DOID:0050570,,,0,congenital disorder of glycosylation type Ia,No,,,,
+2444,1,sanfilippo syndrome,mucopolysaccharidosis III,DOID:12801,,,0,mucopolysaccharidosis III,Yes,mucopolysaccharidosis III,Yes,DOID:12801,Yes
+2445,1,.beta.-mannosidosis,beta-mannosidosis,DOID:3633,,,0,beta-mannosidosis,Yes,beta-mannosidosis,Yes,DOID:3633,Yes
+2448,1,nocturnal hemoglobinuria,paroxysmal nocturnal hemoglobinuria,DOID:0060284,,,0,paroxysmal nocturnal hemoglobinuria,Yes,paroxysmal nocturnal hemoglobinuria,Yes,DOID:0060284,Yes
+2450,1,waldenstrom,lymphoplasmacytic lymphoma,DOID:0060901,,,0,Waldenström macroglobulinemia,No,lymphoplasmacytic lymphoma,Yes,DOID:0060901,Yes
+2455,1,ovarial clear cell carcinoma,ovarian clear cell carcinoma,DOID:0050934,,,0,ovarian clear cell carcinoma,Yes,ovarian clear cell carcinoma,Yes,DOID:0050934,Yes
+2459,1,hempas,congenital dyserythropoietic anemia type II,DOID:0111401,,,0,hereditary erythroblastic multinuclearity with a positive acidified serum test,No,congenital dyserythropoietic anemia type II,Yes,DOID:0111401,Yes
+2461,1,hiv,human immunodeficiency virus infectious disease,DOID:526,,,0,human immunodeficiency virus infectious disease,Yes,human immunodeficiency virus infectious disease,Yes,DOID:526,Yes
+2463,1,recklinghausens's disease,neurofibromatosis 1,DOID:0111253,,,0,neurofibromatosis type 1,No,neurofibromatosis-Noonan syndrome,No,DOID:0111683,No
+2467,1,morquio disease,mucopolysaccharidosis IV,DOID:12804,,,0,mucopolysaccharidosis IV,Yes,mucopolysaccharidosis IV,Yes,DOID:12804,Yes
+2473,1,hodgkin's disease,Hodgkin's lymphoma,DOID:8567,,,0,Hodgkin lymphoma,No,Hodgkin's lymphoma,Yes,DOID:8567,Yes
+2474,1,pre-cancer,pre-malignant neoplasm,DOID:0060071,,,0,precancerous condition,No,,,,
+2479,1,malignant lymphoma,lymphoma,DOID:0060058,,,0,malignant lymphoma,No,mediastinal malignant lymphoma,No,DOID:6868,No
+2483,1,.alpha.-n-acetylgalactosaminidase deficiency,Schindler disease,DOID:0112317,,,0,Schindler disease,Yes,Schindler disease,Yes,DOID:0112317,Yes
+2564,1,tumor,disease of cellular proliferation,DOID:14566,,,0,neoplasm,No,disease of cellular proliferation,Yes,DOID:14566,Yes
+2566,1,invasive choriocarcinoma,choriocarcinoma,DOID:3594,,,0,choriocarcinoma,Yes,choriocarcinoma,Yes,DOID:3594,Yes
+2567,1,eastern equine encephalitis virus,Eastern equine encephalitis,DOID:10841,,,0,eastern equine encephalitis,Yes,Eastern equine encephalitis,Yes,DOID:10841,Yes
+2568,1,plasmodium-falciparum-infection,Plasmodium falciparum malaria,DOID:14067,,,0,Plasmodium falciparum malaria,Yes,Plasmodium falciparum malaria,Yes,DOID:14067,Yes
+2571,1,hemolytic- uremic syndrome,hemolytic-uremic syndrome,DOID:12554,,,0,hemolytic uremic syndrome,No,hemolytic-uremic syndrome,Yes,DOID:12554,Yes
+2573,1,non-hodgkin's lymphoma,non-Hodgkin lymphoma,DOID:0060060,,,0,non-Hodgkin lymphoma,Yes,non-Hodgkin lymphoma,Yes,DOID:0060060,Yes
+2574,1,tn polyagglutinability syndrome,Tn polyagglutination syndrome,DOID:0080520,,,0,No Match Found,No,,,,
+2586,1,morquio-b,mucopolysaccharidosis type IVB,DOID:0111392,,,0,mucopolysaccharidosis IVB,No,mucopolysaccharidosis type IVB,Yes,DOID:0111392,Yes
+2593,1,collagen vascular disease,collagen disease,DOID:854,,,0,connective tissue disease,No,connective tissue disease,No,DOID:65,No
+2596,1,glycogen storage disease type iii,glycogen storage disease III,DOID:2748,,,0,glycogen storage disease III,Yes,glycogen storage disease III,Yes,DOID:2748,Yes
+2597,1,renal disease,kidney disease,DOID:557,,,0,kidney disease,Yes,kidney disease,Yes,DOID:557,Yes
+2599,1,sanfilippo d syndrome,mucopolysaccharidosis type IIID,DOID:0111402,,,0,mucopolysaccharidosis IIID,No,mucopolysaccharidosis type IIID,Yes,DOID:0111402,Yes
+12865,1,herpes simplex virus,herpes simplex,DOID:8566,,,0,herpes simplex,Yes,herpes simplex,Yes,DOID:8566,Yes
+12869,2,tumor,disease of cellular proliferation,DOID:14566,,,0,neoplasm,No,disease of cellular proliferation,Yes,DOID:14566,Yes
+12870,2,sialidosis type 2,glycoproteinosis,DOID:3343,,,0,sialidosis,No,glycoproteinosis,Yes,DOID:3343,Yes
+12874,1,waldenstrom,lymphoplasmacytic lymphoma,DOID:0060901,,,0,Waldenström macroglobulinemia,No,lymphoplasmacytic lymphoma,Yes,DOID:0060901,Yes
+12875,1,lysosomal disease,lysosomal storage disease,DOID:3211,,,0,lysosomal disease,No,lysosomal storage disease,Yes,DOID:3211,Yes
+12877,1,carbohydrate deficient glycoprotein,congenital disorder of glycosylation,DOID:5212,,,0,congenital disorder of glycosylation,Yes,congenital disorder of glycosylation,Yes,DOID:5212,Yes
+12878,1,fucosidosis type 2,fucosidosis,DOID:14500,,,0,No Match Found,No,,,,
+12880,1,b-mannosidosis,beta-mannosidosis,DOID:3633,,,0,beta-mannosidosis,Yes,beta-mannosidosis,Yes,DOID:3633,Yes
+12882,1,hsv-1,herpes simplex,DOID:8566,,,0,herpes simplex virus 1,No,,,,
+12883,1,a-mannosidosis,alpha-mannosidosis,DOID:3413,,,0,alpha-mannosidosis,Yes,alpha-mannosidosis,Yes,DOID:3413,Yes
+12839,6,mucolipidosis i,glycoproteinosis,DOID:3343,,,0,sialidosis,No,glycoproteinosis,Yes,DOID:3343,Yes
+12847,7,morquio-b,mucopolysaccharidosis type IVB,DOID:0111392,,,0,mucopolysaccharidosis IVB,No,mucopolysaccharidosis type IVB,Yes,DOID:0111392,Yes
+12851,8,trophoblastic disease,trophoblastic neoplasm,DOID:4085,,,0,gestational trophoblastic disease,No,,,,
+12852,8,invasive mole,gestational trophoblastic neoplasm,DOID:3590,,,0,invasive hydatidiform mole,No,,,,
+12857,1,hiv,human immunodeficiency virus infectious disease,DOID:526,,,0,human immunodeficiency virus infectious disease,Yes,human immunodeficiency virus infectious disease,Yes,DOID:526,Yes
+12859,2,hiv-1,human immunodeficiency virus infectious disease,DOID:526,,,0,human immunodeficiency virus infectious disease,Yes,human immunodeficiency virus infectious disease,Yes,DOID:526,Yes
