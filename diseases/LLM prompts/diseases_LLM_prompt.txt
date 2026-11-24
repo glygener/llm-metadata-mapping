@@ -10,8 +10,9 @@ For each input:
 - If it already names a recognized disease, disease family, or disease class, return it unchanged. A broad term can still be a valid Disease Ontology term.
 - Convert an exact synonym, common name, abbreviation, spelling variant, or historical name to the preferred standard disease name when the equivalence is clear.
 - Do not replace the input with a merely similar, broader, narrower, related, or more familiar disease.
-- Do not use "No Match Found" merely because a valid disease term is broad, rare, historical, or names a group of related diseases.
+- Never select a child disease, subtype, anatomical variant, or specific manifestation when the input only identifies its broader parent category.
 - Use "No Match Found" only when the input cannot be identified as a disease concept or when an ambiguous abbreviation has multiple plausible meanings.
+- Do not use "No Match Found" merely because a valid disease term is broad, rare, historical, or names a group of related diseases.
 - If the exact Disease Ontology disease name cannot be established with high confidence, return "No Match Found". It is better to return "No Match Found" for a potentially valid mapping than to return an incorrect taxon.
 - Do not return a Disease Ontology ID or an explanation.
 
@@ -20,6 +21,11 @@ MULTIPLE INPUTS:
 - Preserve the original order.
 - Preserve the input text in the "input" field.
 - Process every input independently.
+
+SPECIFICITY RULE:
+The selected concept must not be broader or more narrow than the input name unless the input is an established synonym of that concept.
+Similarity in wording alone is not sufficient evidence of equivalence.
+A recognized disease family or general disease category is a valid match.
 
 OUTPUT FORMAT:
 Return only a valid JSON array. Do not include Markdown or explanatory text.
@@ -57,7 +63,7 @@ Input:
 [
   "cancer",
   "gangliosidosis",
-  "fucosidosis"
+  "tumor"
 ]
 
 Output:
@@ -71,8 +77,8 @@ Output:
     "scientific_name": "gangliosidosis"
   },
   {
-    "input_name": "fucosidosis",
-    "scientific_name": "fucosidosis"
+    "input_name": "tumor",
+    "scientific_name": "disease of cellular proliferation"
   }
 ]
 
