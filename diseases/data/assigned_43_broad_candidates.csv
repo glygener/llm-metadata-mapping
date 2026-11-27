@@ -1,0 +1,78 @@
+﻿ID,original_name,chatgpt_name,ols_name,ols_id,similarity_score,synonyms,search_queries
+2487,egg,No Match Found,egg allergy,DOID:4377,0.42857142857142855,[],original: egg
+2487,egg,No Match Found,chicken egg allergy,DOID:0060492,0.2727272727272727,[],original: egg
+2494,guam amyotrophic lateral sclerosis,guam amyotrophic lateral sclerosis,amyotrophic lateral sclerosis-parkinsonism/dementia complex 1,DOID:0111246,0.6105263157894737,[],original: guam amyotrophic lateral sclerosis
+2497,benign,No Match Found,benign teratoma,DOID:0080602,0.5714285714285714,[],original: benign
+2497,benign,No Match Found,benign neoplasm,DOID:0060072,0.5714285714285714,[],original: benign
+2497,benign,No Match Found,benign meningioma,DOID:4587,0.5217391304347826,[],original: benign
+2497,benign,No Match Found,benign mesothelioma,DOID:2645,0.48,[],original: benign
+2497,benign,No Match Found,bone benign neoplasm,DOID:0060094,0.46153846153846156,[],original: benign
+2501,juvenile chronic arthritis,juvenile idiopathic arthritis,systemic juvenile rheumatoid arthritis,DOID:676,0.6875,[],chatgpt: juvenile idiopathic arthritis; original: juvenile chronic arthritis
+2505,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency 1,DOID:0110910,0.9253731343283582,[],original: leukocyte adhesion deficiency type 1
+2505,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency 3,DOID:0110912,0.8955223880597015,[],original: leukocyte adhesion deficiency type 1
+2509,myoclonic epileptic encephalopathy,myoclonic epileptic encephalopathy,Dravet syndrome,DOID:0080422,0.08163265306122448,[],original: myoclonic epileptic encephalopathy
+2510,morquio a syndrome,mucopolysaccharidosis IV A,mucopolysaccharidosis IVA,DOID:0111391,0.9803921568627451,[],chatgpt: mucopolysaccharidosis IV A; original: morquio a syndrome
+2510,morquio a syndrome,mucopolysaccharidosis IV A,mucopolysaccharidosis IV,DOID:12804,0.96,[],chatgpt: mucopolysaccharidosis IV A
+2510,morquio a syndrome,mucopolysaccharidosis IV A,mucopolysaccharidosis type IVB,DOID:0111392,0.8571428571428571,[],chatgpt: mucopolysaccharidosis IV A; original: morquio a syndrome
+2510,morquio a syndrome,mucopolysaccharidosis IV A,spondyloepiphyseal dysplasia Maroteaux type,DOID:0111553,0.26229508196721313,[],original: morquio a syndrome
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis,DOID:14503,1.0,[],chatgpt: neuronal ceroid lipofuscinosis
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis 3,DOID:0110731,0.967741935483871,[],chatgpt: neuronal ceroid lipofuscinosis; original: batten's disease
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis 4,DOID:0110720,0.967741935483871,[],chatgpt: neuronal ceroid lipofuscinosis
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis 1,DOID:0110721,0.967741935483871,[],chatgpt: neuronal ceroid lipofuscinosis
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis 5,DOID:0110728,0.967741935483871,[],chatgpt: neuronal ceroid lipofuscinosis
+2515,batten's disease,neuronal ceroid lipofuscinosis,myotonia congenita,DOID:2106,0.29411764705882354,[],original: batten's disease
+2521,wilms tumor,Wilms' tumor,renal Wilms' tumor,DOID:5176,0.8,[],chatgpt: Wilms' tumor; original: wilms tumor
+2521,wilms tumor,Wilms' tumor,cervical Wilms' tumor,DOID:5190,0.7272727272727273,[],chatgpt: Wilms' tumor; original: wilms tumor
+2521,wilms tumor,Wilms' tumor,hereditary Wilms' tumor,DOID:5183,0.6857142857142857,[],chatgpt: Wilms' tumor; original: wilms tumor
+2521,wilms tumor,Wilms' tumor,metachronous kidney Wilms' tumor,DOID:5178,0.5454545454545454,[],chatgpt: Wilms' tumor; original: wilms tumor
+2521,wilms tumor,Wilms' tumor,mixed cell type kidney Wilms' tumor,DOID:5179,0.5106382978723404,[],chatgpt: Wilms' tumor; original: wilms tumor
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type II,DOID:0050571,1.0,[],chatgpt: congenital disorder of glycosylation type II
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIa,DOID:0070253,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIl,DOID:0070264,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIh,DOID:0070260,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIo,DOID:0070267,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIe,DOID:0070257,0.4742268041237113,[],original: carbohydrate-deficient glycoprotein syndrome type ii
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIi,DOID:0070261,0.4742268041237113,[],original: carbohydrate-deficient glycoprotein syndrome type ii
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIj,DOID:0070262,0.4742268041237113,[],original: carbohydrate-deficient glycoprotein syndrome type ii
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIk,DOID:0070263,0.4742268041237113,[],original: carbohydrate-deficient glycoprotein syndrome type ii
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIn,DOID:0070266,0.4742268041237113,[],original: carbohydrate-deficient glycoprotein syndrome type ii
+2527,huntington chorea,Huntington's disease,Huntington's disease,DOID:12858,1.0,[],chatgpt: Huntington's disease; original: huntington chorea
+2527,huntington chorea,Huntington's disease,Huntington's disease-like 1,DOID:0090103,0.851063829787234,[],chatgpt: Huntington's disease
+2527,huntington chorea,Huntington's disease,Huntington's disease-like 2,DOID:0090104,0.851063829787234,[],chatgpt: Huntington's disease
+2529,fibrosis,fibrosis,myelofibrosis,DOID:4971,0.7619047619047619,[],original: fibrosis
+2529,fibrosis,fibrosis,renal fibrosis,DOID:0050855,0.7272727272727273,[],original: fibrosis
+2529,fibrosis,fibrosis,cystic fibrosis,DOID:1485,0.6956521739130435,[],original: fibrosis
+2529,fibrosis,fibrosis,hepatic fibrosis,DOID:0061215,0.6666666666666666,[],original: fibrosis
+2529,fibrosis,fibrosis,pulmonary fibrosis,DOID:3770,0.6153846153846154,[],original: fibrosis
+2534,polycystic kidney,No Match Found,polycystic kidney disease,DOID:0080322,0.8095238095238095,[],original: polycystic kidney
+2534,polycystic kidney,No Match Found,polycystic kidney disease 4,DOID:0080212,0.7727272727272727,[],original: polycystic kidney
+2534,polycystic kidney,No Match Found,polycystic kidney disease 1,DOID:0110858,0.7727272727272727,[],original: polycystic kidney
+2534,polycystic kidney,No Match Found,polycystic kidney disease 3,DOID:0110860,0.7727272727272727,[],original: polycystic kidney
+2534,polycystic kidney,No Match Found,polycystic kidney disease 2,DOID:0110859,0.7727272727272727,[],original: polycystic kidney
+2535,small-cell carcinoma,small cell carcinoma,small cell carcinoma,DOID:0050685,1.0,[],chatgpt: small cell carcinoma; original: small-cell carcinoma
+2535,small-cell carcinoma,small cell carcinoma,lung small cell carcinoma,DOID:5409,0.8888888888888888,[],chatgpt: small cell carcinoma; original: small-cell carcinoma
+2535,small-cell carcinoma,small cell carcinoma,colon small cell carcinoma,DOID:6727,0.8695652173913043,[],chatgpt: small cell carcinoma; original: small-cell carcinoma
+2535,small-cell carcinoma,small cell carcinoma,cervix small cell carcinoma,DOID:6740,0.851063829787234,[],chatgpt: small cell carcinoma; original: small-cell carcinoma
+2535,small-cell carcinoma,small cell carcinoma,ureter small cell carcinoma,DOID:6886,0.851063829787234,[],chatgpt: small cell carcinoma; original: small-cell carcinoma
+2540,glioma,glioma,mixed glioma,DOID:5076,0.6666666666666666,[],original: glioma
+2540,glioma,glioma,brain glioma,DOID:0060108,0.6666666666666666,[],original: glioma
+2540,glioma,glioma,chordoid glioma,DOID:3774,0.5714285714285714,[],original: glioma
+2540,glioma,glioma,low grade glioma,DOID:0080829,0.5454545454545454,[],original: glioma
+2540,glioma,glioma,high grade glioma,DOID:3070,0.5217391304347826,[],original: glioma
+2543,gammopathy,gammopathy,monoclonal gammopathy of uncertain significance,DOID:7442,0.3508771929824561,[],original: gammopathy
+2543,gammopathy,gammopathy,lymphoplasmacytic lymphoma,DOID:0060901,0.3333333333333333,[],original: gammopathy
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type II,DOID:0050571,1.0,[],chatgpt: congenital disorder of glycosylation type II
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIa,DOID:0070253,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIl,DOID:0070264,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIh,DOID:0070260,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIo,DOID:0070267,0.9887640449438202,[],chatgpt: congenital disorder of glycosylation type II
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIe,DOID:0070257,0.4742268041237113,[],original: carbohydrate deficient glycoprotein syndrome type ii
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIi,DOID:0070261,0.4742268041237113,[],original: carbohydrate deficient glycoprotein syndrome type ii
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIj,DOID:0070262,0.4742268041237113,[],original: carbohydrate deficient glycoprotein syndrome type ii
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIk,DOID:0070263,0.4742268041237113,[],original: carbohydrate deficient glycoprotein syndrome type ii
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type IIn,DOID:0070266,0.4742268041237113,[],original: carbohydrate deficient glycoprotein syndrome type ii
+2548,mucopolysaccharidosis type vi,mucopolysaccharidosis VI,mucopolysaccharidosis VI,DOID:12800,1.0,[],chatgpt: mucopolysaccharidosis VI
+2548,mucopolysaccharidosis type vi,mucopolysaccharidosis VI,mucopolysaccharidosis type VII,DOID:12803,0.9830508474576272,[],chatgpt: mucopolysaccharidosis VI; original: mucopolysaccharidosis type vi
+2557,.alpha.-mannosidosis,alpha-mannosidosis,alpha-mannosidosis,DOID:3413,1.0,[],chatgpt: alpha-mannosidosis; original: .alpha.-mannosidosis
+2559,recessive myotonia,No Match Found,Gamstorp-Wohlfart syndrome,DOID:0050526,0.18181818181818182,[],original: recessive myotonia
+2562,fucosidosis type 2,fucosidosis,fucosidosis,DOID:14500,1.0,[],chatgpt: fucosidosis

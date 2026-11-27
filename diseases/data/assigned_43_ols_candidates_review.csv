@@ -1,0 +1,23 @@
+ID,original_name,scientific_name,candidate_rank,candidate_name,candidate_id,similarity_score
+2494,guam amyotrophic lateral sclerosis,guam amyotrophic lateral sclerosis,1,amyotrophic lateral sclerosis-parkinsonism/dementia complex 1,DOID:0111246,0.611
+2501,juvenile chronic arthritis,juvenile idiopathic arthritis,1,systemic juvenile rheumatoid arthritis,DOID:676,0.627
+2505,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency type 1,1,leukocyte adhesion deficiency 1,DOID:0110910,0.925
+2505,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency type 1,2,leukocyte adhesion deficiency 3,DOID:0110912,0.896
+2509,myoclonic epileptic encephalopathy,myoclonic epileptic encephalopathy,1,Dravet syndrome,DOID:0080422,0.082
+2521,wilms tumor,Wilms' tumor,1,renal Wilms' tumor,DOID:5176,0.8
+2521,wilms tumor,Wilms' tumor,2,cervical Wilms' tumor,DOID:5190,0.727
+2521,wilms tumor,Wilms' tumor,3,hereditary Wilms' tumor,DOID:5183,0.686
+2521,wilms tumor,Wilms' tumor,4,metachronous kidney Wilms' tumor,DOID:5178,0.545
+2521,wilms tumor,Wilms' tumor,5,mixed cell type kidney Wilms' tumor,DOID:5179,0.511
+2529,fibrosis,fibrosis,1,myelofibrosis,DOID:4971,0.762
+2529,fibrosis,fibrosis,2,renal fibrosis,DOID:0050855,0.727
+2529,fibrosis,fibrosis,3,cystic fibrosis,DOID:1485,0.696
+2529,fibrosis,fibrosis,4,hepatic fibrosis,DOID:0061215,0.667
+2529,fibrosis,fibrosis,5,pulmonary fibrosis,DOID:3770,0.615
+2540,glioma,glioma,1,mixed glioma,DOID:5076,0.667
+2540,glioma,glioma,2,brain glioma,DOID:0060108,0.667
+2540,glioma,glioma,3,chordoid glioma,DOID:3774,0.571
+2540,glioma,glioma,4,low grade glioma,DOID:0080829,0.545
+2540,glioma,glioma,5,high grade glioma,DOID:3070,0.522
+2543,gammopathy,gammopathy,1,monoclonal gammopathy of uncertain significance,DOID:7442,0.351
+2543,gammopathy,gammopathy,2,lymphoplasmacytic lymphoma,DOID:0060901,0.333

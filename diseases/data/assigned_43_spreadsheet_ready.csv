@@ -1,0 +1,44 @@
+﻿ID,name,chatgpt_name,ols_name,ols_id,validation_status,notes
+2487,egg,No Match Found,,,Needs manual review,
+2494,guam amyotrophic lateral sclerosis,guam amyotrophic lateral sclerosis,,,Needs manual review,
+2497,benign,No Match Found,,,Needs manual review,
+2501,juvenile chronic arthritis,juvenile idiopathic arthritis,,,Needs manual review,
+2502,cancer-related,No Match Found,,,Needs manual review,
+2503,ceramide galactosyltransferase knockout,No Match Found,,,Needs manual review,
+2505,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency type 1,leukocyte adhesion deficiency 1,DOID:0110910,Candidate mapping - verify,Strong candidate; retain for team review.
+2506,targeted disruption of the sphingoid activator protein gene,No Match Found,,,Needs manual review,
+2507,colonic diverticulum,colonic diverticulum,,,Needs manual review,
+2508,galactosuria,galactosuria,,,Needs manual review,
+2509,myoclonic epileptic encephalopathy,myoclonic epileptic encephalopathy,,,Needs manual review,
+2510,morquio a syndrome,mucopolysaccharidosis IV A,mucopolysaccharidosis IVA,DOID:0111391,Candidate mapping - verify,Strong candidate; retain for team review.
+2512,l. donovani-infected,No Match Found,,,Needs manual review,
+2513,f-sffvp-infected,No Match Found,,,Needs manual review,
+2514,infantile ceroid-lipofuscinosis,infantile neuronal ceroid lipofuscinosis,,,Needs manual review,
+2515,batten's disease,neuronal ceroid lipofuscinosis,neuronal ceroid lipofuscinosis,DOID:14503,Candidate mapping - verify,Strong candidate; retain for team review.
+2518,sialidosis type 2,sialidosis type 2,,,Needs manual review,
+2519,ceramide galactosyl transferase deficient mouse,No Match Found,,,Needs manual review,
+2521,wilms tumor,Wilms' tumor,,,Needs manual review,
+2522,fungal sepsis,fungal sepsis,,,Needs manual review,
+2523,invasive deep mycosis,invasive deep mycosis,,,Needs manual review,
+2526,carbohydrate-deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type II,DOID:0050571,Candidate mapping - verify,Strong candidate; retain for team review.
+2527,huntington chorea,Huntington's disease,Huntington's disease,DOID:12858,Candidate mapping - verify,Strong candidate; retain for team review.
+2529,fibrosis,fibrosis,,,Needs manual review,
+2534,polycystic kidney,No Match Found,,,Needs manual review,
+2535,small-cell carcinoma,small cell carcinoma,small cell carcinoma,DOID:0050685,Candidate mapping - verify,Strong candidate; retain for team review.
+2538,candidemia,candidemia,,,Needs manual review,
+2539,fungemia,fungemia,,,Needs manual review,
+2540,glioma,glioma,,,Needs manual review,
+2543,gammopathy,gammopathy,,,Needs manual review,
+2544,carbohydrate deficient glycoprotein syndrome type ii,congenital disorder of glycosylation type II,congenital disorder of glycosylation type II,DOID:0050571,Candidate mapping - verify,Strong candidate; retain for team review.
+2547,trophoblastic disease,gestational trophoblastic disease,,,Needs manual review,
+2548,mucopolysaccharidosis type vi,mucopolysaccharidosis VI,mucopolysaccharidosis VI,DOID:12800,Candidate mapping - verify,Strong candidate; retain for team review.
+2549,fulminant hepatitis,fulminant hepatitis,,,Needs manual review,
+2550,shiga toxin exposure,No Match Found,,,Needs manual review,
+2554,galactosidosis,galactosidosis,,,Needs manual review,
+2555,fatty acid lipidosis,fatty acid lipidosis,,,Needs manual review,
+2557,.alpha.-mannosidosis,alpha-mannosidosis,alpha-mannosidosis,DOID:3413,Candidate mapping - verify,Strong candidate; retain for team review.
+2558,syncytiotrophoblast membrane,No Match Found,,,Needs manual review,
+2559,recessive myotonia,No Match Found,,,Needs manual review,
+2560,engelbreth-holm-swarm tumor,No Match Found,,,Needs manual review,
+2562,fucosidosis type 2,fucosidosis,,,Needs manual review,Fucosidosis type 2 may be more specific than the parent concept.
+2563,twitcher,No Match Found,,,Needs manual review,
